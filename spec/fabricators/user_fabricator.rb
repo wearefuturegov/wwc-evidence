@@ -3,5 +3,5 @@
 Fabricator(:user) do
   email { FFaker::Internet.email }
   password 'Password123'
-  password_confirmation 'Password123'
+  before_validation { |user, _transients| user.password_confirmation = user.password }
 end
