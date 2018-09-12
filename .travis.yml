@@ -9,6 +9,6 @@ before_script:
 - bundle exec rake db:create db:migrate
 script:
 - "bundle exec rake"
-- "bundle exec bundle-audit update && bundle exec bundle-audit check"
+- "bundle exec rubocop"
 addons:
   postgresql: '9.6'
