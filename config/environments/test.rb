@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -24,7 +26,7 @@ Rails.application.configure do
 
   # Raise exceptions instead of rendering exception templates.
   config.action_dispatch.show_exceptions = false
-  
+
   config.action_mailer.default_url_options = { host: 'example.org' }
 
   # Disable request forgery protection in test environment.
