@@ -44,6 +44,7 @@ group :development, :test do
   gem 'brakeman'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara'
+  gem 'coveralls', require: false
   gem 'fabrication'
   gem 'ffaker'
   gem 'rspec-rails'
