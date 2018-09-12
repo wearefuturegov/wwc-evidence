@@ -1,0 +1,2 @@
+Fabricator(:evidence) do
+end
