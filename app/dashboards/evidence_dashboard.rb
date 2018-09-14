@@ -11,7 +11,8 @@ class EvidenceDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    description: Field::String
+    description: Field::String,
+    files: MultifileField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -37,7 +38,12 @@ class EvidenceDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     description
+    files
   ].freeze
+
+  def permitted_attributes
+    super + [files: [], files_to_delete: []]
+  end
 
   # Overwrite this method to customize how evidences are displayed
   # across all pages of the admin dashboard.

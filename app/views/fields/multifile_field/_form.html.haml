@@ -1,0 +1,14 @@
+.field-unit__label
+  = f.label field.attribute
+.field-unit__field
+  - if field.data.count > 0
+    %ul
+      - field.data.each do |f|
+        %li
+          = f.filename.to_s
+          %button.small.remove-file{ data: { file_id: f.id }}
+            X
+          
+  = f.file_field field.attribute, multiple: true
+  
+#files_to_delete

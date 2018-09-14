@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 module LoginSteps
+  step 'I am logged in' do
+    create_user
+    log_in
+  end
+
   step 'I have a user account' do
-    @password = 'Password123'
-    @user = Fabricate(:user, password: @password)
-    @user.confirm
+    create_user
   end
 
   step 'I should be prompted for a login' do
@@ -12,14 +15,24 @@ module LoginSteps
   end
 
   step 'I log in' do
-    visit new_user_session_path
-    fill_in 'user_email', with: @user.email
-    fill_in 'user_password', with: @password
-    click_on 'Log in'
+    log_in
   end
 
   step 'I should be logged into the admin section' do
     expect(current_path).to eq(admin_root_path)
+  end
+
+  def create_user
+    @password = 'Password123'
+    @user = Fabricate(:user, password: @password)
+    @user.confirm
+  end
+
+  def log_in
+    visit new_user_session_path
+    fill_in 'user_email', with: @user.email
+    fill_in 'user_password', with: @password
+    click_on 'Log in'
   end
 end
 
