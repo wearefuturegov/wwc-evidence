@@ -18,6 +18,10 @@ class Intervention < ApplicationRecord
   has_many :ineffective_subjects, through: :ineffective_interventions_subjects, source: :subject
   has_many :negative_subjects, through: :negative_interventions_subjects, source: :subject
 
+  belongs_to :implementation
+
+  accepts_nested_attributes_for :implementation
+
   attr_accessor :files_to_delete
 
   after_update :delete_files

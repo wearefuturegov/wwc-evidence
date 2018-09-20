@@ -4,10 +4,20 @@ require 'rails_helper'
 
 RSpec.describe Intervention, type: :model do
   let(:title) { FFaker::BaconIpsum.phrase }
-  let(:intervention) { Fabricate(:intervention, title: title) }
+  let(:more_effective) { [FFaker::BaconIpsum.phrase, FFaker::BaconIpsum.phrase] }
+  let(:intervention) { Fabricate(:intervention, title: title, more_effective: more_effective) }
 
   it 'creates an intervention' do
     expect(intervention.title).to eq(title)
+    expect(intervention.more_effective).to eq(more_effective)
+  end
+
+  it 'can have an implementation' do
+    implementation = Fabricate.build(:implementation)
+    intervention.implementation = implementation
+    intervention.save
+    intervention.reload
+    expect(intervention.implementation).to eq(implementation)
   end
 
   it 'can have many outcomes' do
