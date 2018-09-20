@@ -17,4 +17,29 @@ RSpec.describe Intervention, type: :model do
     intervention.reload
     expect(intervention.outcomes).to eq(outcomes)
   end
+
+  describe 'subjects' do
+    let(:effective_subjects) { Fabricate.build_times(4, :subject) }
+    let(:ineffective_subjects) { Fabricate.build_times(2, :subject) }
+    let(:negative_subjects) { Fabricate.build_times(2, :subject) }
+
+    let(:intervention) do
+      Fabricate(:intervention,
+                effective_subjects: effective_subjects,
+                ineffective_subjects: ineffective_subjects,
+                negative_subjects: negative_subjects)
+    end
+
+    it 'has effective subjects' do
+      expect(intervention.effective_subjects).to eq(effective_subjects)
+    end
+
+    it 'has ineffective subjects' do
+      expect(intervention.ineffective_subjects).to eq(ineffective_subjects)
+    end
+
+    it 'has negative subjects' do
+      expect(intervention.negative_subjects).to eq(negative_subjects)
+    end
+  end
 end
