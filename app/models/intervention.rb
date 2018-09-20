@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Evidence < ApplicationRecord
+class Intervention < ApplicationRecord
   has_many_attached :files
   attr_accessor :files_to_delete
 

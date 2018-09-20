@@ -2,7 +2,7 @@
 
 require 'administrate/base_dashboard'
 
-class EvidenceDashboard < Administrate::BaseDashboard
+class InterventionDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -11,7 +11,7 @@ class EvidenceDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    description: Field::String,
+    intro: Field::String,
     files: MultifileField
   }.freeze
 
@@ -22,14 +22,14 @@ class EvidenceDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     title
-    description
+    intro
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     title
-    description
+    intro
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -37,7 +37,7 @@ class EvidenceDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
-    description
+    intro
     files
   ].freeze
 
