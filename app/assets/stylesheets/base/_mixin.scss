@@ -1,0 +1,22 @@
+@mixin borderbox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin max-width {
+  max-width: 1600px;
+}
+
+@mixin grid-reset {
+  float: none;
+  margin-left: 0;
+  width: initial;
+}
+
+@mixin ease {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+}

@@ -1,0 +1,13 @@
+section.bar {
+  padding-top: $baseline;
+  padding-bottom: $baseline;
+  border: $style $thin $color;
+  h2, p {
+    font-weight: 700;
+  }
+}
+
+.color_block {
+  background-color: $gray;
+  padding: $baseline*1.5;
+}

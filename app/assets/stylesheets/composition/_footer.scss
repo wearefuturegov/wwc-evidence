@@ -1,0 +1,17 @@
+footer {
+  clear: both;
+  .footer {
+    .signup, .contact {
+      margin-top: $baseline;
+      margin-bottom: $baseline;
+      @include grid-column(6);
+    }
+    .social {
+      margin-bottom: $baseline*0.5;
+    }
+    nav.nav {
+      text-algn: left;
+      @include grid-column(10);
+    }
+  }
+}

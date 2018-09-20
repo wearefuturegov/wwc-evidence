@@ -1,0 +1,15 @@
+footer {
+  border-top: $thin $style $brand;
+  .footer {
+    nav.nav {
+      ul li {
+        margin-left: 0;
+        margin-right: $gutter;
+        a {
+          text-decoration: underline;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+footer {
+  .footer {
+    .signup, .contact {
+      @include grid-column(4, $mobile);
+    }
+    nav.nav {
+      @include grid-column(4, $mobile);
+    }
+  }
+}

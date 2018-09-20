@@ -1,0 +1,14 @@
+.cta, .button {
+  font-size: $body;
+  font-weight: 600;
+  line-height: $baseline;
+  border: none;
+  background: transparentize($brand, $amount);
+  width: auto;
+  &:hover {
+    cursor: pointer;
+  }
+  & a:hover {
+    color: $black;
+  }
+}
