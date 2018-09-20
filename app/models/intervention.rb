@@ -2,6 +2,8 @@
 
 class Intervention < ApplicationRecord
   has_many_attached :files
+  has_many :outcomes
+
   attr_accessor :files_to_delete
 
   after_update :delete_files
