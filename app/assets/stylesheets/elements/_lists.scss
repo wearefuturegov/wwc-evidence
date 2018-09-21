@@ -1,0 +1,16 @@
+ul, ol {
+  margin-top: $baseline;
+  margin-bottom: $baseline;
+  list-style: disc;
+  li {
+    margin-top: $baseline*0.25;
+    margin-bottom: $baseline*0.25;
+    p {
+      display: inline;
+    }
+  }
+}
+
+ol {
+  list-style: decimal;
+}

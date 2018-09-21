@@ -1,0 +1,20 @@
+.sub nav.nav ul {
+  @include grid-column(3, $mobile);
+  @include grid-push(1, $mobile);
+}
+
+.header nav.nav, .sub nav.nav {
+  ul li {
+    display: block;
+  }
+}
+
+.header nav.nav,
+.sub nav.nav {
+  @include grid-column(2, $mobile);
+  line-height: $baseline;
+}
+
+.sub nav.nav {
+  margin-left: 0;
+}

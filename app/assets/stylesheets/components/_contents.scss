@@ -1,0 +1,21 @@
+.contents {
+  ul {
+    padding: 0;
+    @include off-brand;
+    padding: $baseline;
+    margin: 0;
+    list-style: none;
+    li {
+      margin-bottom: $baseline*0.125;
+    }
+    & li:first-child {
+      font-weight: 600;
+      margin-bottom: $baseline*0.5;
+    }
+    li a {
+      font-size: $small;
+      font-weight: 400;
+
+    }
+  }
+}

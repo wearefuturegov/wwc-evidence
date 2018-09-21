@@ -1,0 +1,40 @@
+nav.nav {
+  line-height: $logo;
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    li {
+      display: inline;
+      margin-left: $gutter;
+      white-space: nowrap;
+      a {
+        font-weight: 400;
+        text-decoration: none;
+      }
+      &.selected {
+        background: transparentize($brand, $amount);
+        margin-left: 0;
+        padding-left: $gutter;
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.sub, footer .footer {
+  nav.nav {
+    line-height: $logo*0.5;
+    ul li {
+      &.selected {
+        background: none;
+        margin-left: 0;
+        padding-left: $gutter;
+        a {
+          color: $brand;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+label {
+  display: block;
+  font-size: $smaller;
+  font-weight: 400;
+  color: $gray;
+  text-transform: uppercase;
+  margin-bottom: $baseline*0.5;
+}
+
+.effect, .evidence {
+  float: left;
+  margin-right: $gutter;
+}

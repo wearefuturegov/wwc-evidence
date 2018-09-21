@@ -1,0 +1,29 @@
+.spot {
+  float: left;
+  margin-right: $gutter*0.05;
+  width: $baseline*0.7;
+  height: $baseline*0.7;
+  // background: $gray-c;
+  border-radius: 100%;
+  background: $gray-b;
+  border: $thin $style $gray-b;
+  &.fill {
+    background: $brand-d;
+    border-color: $brand-d;
+    &.negative {
+      border-color: $negative;
+      background: $negative;
+    }
+  }
+  &.positive {
+    border-color: $positive;
+    background: $positive;
+  }
+  &.neutral {
+    background: $neutral;
+  }
+  &.negative {
+    border-color: $negative;
+    background: $negative;
+  }
+}

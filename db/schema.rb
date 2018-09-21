@@ -43,6 +43,11 @@ ActiveRecord::Schema.define(version: 2018_09_20_085517) do
     t.index ["intervention_id"], name: "index_contacts_on_intervention_id"
   end
 
+  create_table "evidences", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+  end
+
   create_table "implementations", force: :cascade do |t|
     t.text "intro"
     t.string "deliverer"

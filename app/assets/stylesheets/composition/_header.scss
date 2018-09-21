@@ -1,0 +1,7 @@
+header {
+  .header {
+    .logo {
+      @include grid-column(2);
+    }
+  }
+}
