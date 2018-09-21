@@ -7,3 +7,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = Fabricate(:user,
+                 email: 'dev@wearefuturegov.com',
+                 password: 'Password123',
+                 password_confirmation: 'Password123')
+user.confirm
+
+Fabricate.times(10, :intervention)

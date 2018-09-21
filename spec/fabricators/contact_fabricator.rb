@@ -1,5 +1,4 @@
 Fabricator(:contact) do
   title { FFaker::BaconIpsum.phrase }
-  url { FFaker::Intenet.http_url }
-  intervention { Fabricate(:intervention) }
+  url { FFaker::Internet.http_url }
 end
