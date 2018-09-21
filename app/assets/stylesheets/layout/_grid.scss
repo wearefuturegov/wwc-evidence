@@ -10,9 +10,7 @@ header .header,
 .container,
 .partners,
 footer .footer {
-  // float: left;
-  // width: 100%;
-  @include grid-visual;
+  // @include grid-visual;
   width: 100%;
   margin: 0 auto;
   @include max-width;

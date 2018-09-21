@@ -56,20 +56,22 @@ h2, h3 {
 
 // these calculations are not complete, just placeholder for now.
 
+
 h1 {
   // color: $brand;
   font-family: $stack-b;
   font-size: $h1;
   font-weight: 900;
   line-height: calc(#{$h1} + #{$baseline*0.15});
-  margin-bottom: $baseline*0.25;
+  margin-bottom: $baseline;
 }
 
 h2 {
-  font-family: $stack-b;
+  font-family: $stack;
   font-size: $h2;
   font-weight: 700;
   line-height: calc(#{$h2} + #{$baseline*0.05});
+  margin-bottom: $baseline*0.5;
 }
 
 .team h2 {
@@ -108,7 +110,7 @@ h4 {
   font-family: $stack;
   font-size: $h4;
   font-weight: 300;
-  line-height: calc(#{$h4} + #{$baseline*0.24});
+  line-height: calc(#{$h4} + #{$baseline*0.15});
   margin-top: 0;
   margin-bottom: $baseline;
   p.subheading {
@@ -125,7 +127,7 @@ blockquote {
     line-height: $baseline;
     padding-left: $gutter;
     padding-right: $gutter;
-    border-left: $medium $style $brand;
+    // border-left: $medium $style $brand;
     &:before {
       content: "“";
       margin-right: $gutter*0.25;
