@@ -1,0 +1,2 @@
+Fabricator(:subject) do
+end

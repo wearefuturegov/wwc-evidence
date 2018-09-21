@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_13_161556) do
+ActiveRecord::Schema.define(version: 2018_09_20_085517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,9 +36,67 @@ ActiveRecord::Schema.define(version: 2018_09_13_161556) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.bigint "intervention_id"
+    t.index ["intervention_id"], name: "index_contacts_on_intervention_id"
+  end
+
   create_table "evidences", force: :cascade do |t|
     t.string "title"
     t.string "description"
+  end
+
+  create_table "implementations", force: :cascade do |t|
+    t.text "intro"
+    t.string "deliverer"
+    t.string "training_requirements"
+    t.string "supervision"
+    t.string "fidelity"
+    t.string "support"
+  end
+
+  create_table "interventions", force: :cascade do |t|
+    t.string "title"
+    t.text "intro"
+    t.text "how"
+    t.text "studies"
+    t.string "more_effective", default: [], array: true
+    t.string "works_best", default: [], array: true
+    t.text "in_practice"
+    t.text "costs_benefits"
+    t.string "key_points", default: [], array: true
+    t.bigint "implementation_id"
+    t.index ["implementation_id"], name: "index_interventions_on_implementation_id"
+  end
+
+  create_table "interventions_subjects", force: :cascade do |t|
+    t.bigint "intervention_id"
+    t.bigint "subject_id"
+    t.integer "classification_type"
+    t.index ["intervention_id"], name: "index_interventions_subjects_on_intervention_id"
+    t.index ["subject_id"], name: "index_interventions_subjects_on_subject_id"
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.bigint "intervention_id"
+    t.index ["intervention_id"], name: "index_links_on_intervention_id"
+  end
+
+  create_table "outcomes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "effect"
+    t.integer "evidence"
+    t.bigint "intervention_id"
+    t.index ["intervention_id"], name: "index_outcomes_on_intervention_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|
