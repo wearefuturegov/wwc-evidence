@@ -48,35 +48,6 @@
   .effect {
     margin-right: $gutter;
   }
-  .spot {
-    width: $baseline*0.75;
-    height: $baseline*0.75;
-    // background: $gray-c;
-    display: inline-block;
-    border-radius: 100%;
-    left: -$baseline*1.5;
-    background: $gray-b;
-    border: $thin $style $gray-b;
-    &.fill {
-      background: $brand-d;
-      border-color: $brand-d;
-      &.negative {
-        border-color: $negative;
-        background: $negative;
-      }
-    }
-    &.positive {
-      border-color: $positive;
-      background: $positive;
-    }
-    &.neutral {
-      background: $neutral;
-    }
-    &.negative {
-      border-color: $negative;
-      background: $negative;
-    }
-  }
   .indent, .indent_b, .col_9 {
     position: relative;
     margin-top: $baseline;
@@ -127,8 +98,12 @@
     .outcome_wrap {
       float: left;
       width: calc(50% - #{$gutter*0.5});
+      margin-top: $baseline*0.25;
+      margin-bottom: $baseline*0.25;
       // width: calc(58.3333333333%);
       // margin-left: 0;
+      .spot {
+      }
     }
     .outcome {
       font-size: $small;
@@ -142,8 +117,9 @@
     .score {
       float: left;
       width: 50%;
+      margin-top: 4px;
       .effect, .evidence {
-        margin: $baseline*0.5 $gutter*0.5;
+        margin: 0 $gutter*0.5;
         width: calc(50% - #{$gutter});
       }
     }

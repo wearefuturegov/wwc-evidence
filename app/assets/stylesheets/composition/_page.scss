@@ -4,3 +4,7 @@ section.page {
   @include grid-column(8);
   @include grid-push(2);
 }
+
+.bump {
+  margin-top: $baseline*2;
+}
