@@ -1,4 +1,3 @@
 class InterventionController < ApplicationController
-  def index
-  end
+  def index; end
 end
