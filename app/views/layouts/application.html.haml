@@ -7,9 +7,9 @@
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
+  %body{:class => page_class, :id => @page&.slug}
     = render template: "partials/header"
-    %p.notice= notice
-    %p.alert= alert
+    / %p.notice= notice
+    / %p.alert= alert
     = yield
     = render template: "partials/footer"

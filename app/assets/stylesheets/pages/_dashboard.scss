@@ -1,0 +1,377 @@
+.dashboard {
+  background: $gray-b;
+  padding-top: $baseline*2;
+  padding-bottom: $baseline*2;
+  section.section {
+    margin-top: $baseline*2.5;
+    margin-bottom: $baseline*2.5;
+  }
+  section.background {
+    padding-top: $baseline;
+    padding-bottom: $baseline;
+    background: $black;
+    color: $white;
+    h2, h3, p, a, a:visited {
+      color: $white;
+    }
+    h2, h3 {
+      font-weight: 600;
+    }
+    p, li, a, a:visited {
+      font-weight: 300;
+    }
+    &.hero {
+      background: $brand;
+    }
+    &.brand {
+      background: $brand-d;
+    }
+    &.gray {
+      background: $gray-b;
+    }
+    + section h2 {
+      margin-top: $baseline*0.5;
+    }
+    + section.background {
+      padding-top: 0;
+    }
+  }
+  nav, #involved, .top, #main_cont {
+    display: none;
+  }
+  .contents {
+    ul {
+      padding: 0;
+      @include off-brand;
+      padding: $baseline;
+      margin: 0;
+      list-style: none;
+      li {
+        margin-bottom: $baseline*0.125;
+      }
+      & li:first-child {
+        font-weight: 600;
+        margin-bottom: $baseline*0.5;
+      }
+      li a {
+        font-size: $small;
+        font-weight: 400;
+
+      }
+    }
+  }
+  .effect, .evidence {
+    float: left;
+  }
+  .effect {
+    margin-right: $gutter;
+  }
+  .spot {
+    width: $baseline*0.75;
+    height: $baseline*0.75;
+    // background: $gray-c;
+    display: inline-block;
+    border-radius: 100%;
+    left: -$baseline*1.5;
+    background: $gray-b;
+    border: $thin $style $gray-b;
+    &.fill {
+      background: $brand-d;
+      border-color: $brand-d;
+      &.negative {
+        border-color: $negative;
+        background: $negative;
+      }
+    }
+    &.positive {
+      border-color: $positive;
+      background: $positive;
+    }
+    &.neutral {
+      background: $neutral;
+    }
+    &.negative {
+      border-color: $negative;
+      background: $negative;
+    }
+  }
+  .indent, .indent_b, .col_9 {
+    position: relative;
+    margin-top: $baseline;
+    margin-bottom: $baseline;
+  }
+  .no-bullet {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul {
+    margin-bottom: $baseline;
+  }
+  .date {
+    margin: $baseline*0.5 0 $baseline*0.25 0;
+  }
+  .items {
+    .tags {
+      margin-top: $baseline*0.25;
+      span {
+        font-size: 18px;
+        line-height: 20px;
+        display: inline-block;
+        margin-right: $gutter*0.25;
+        margin-bottom: $baseline*0.25;
+        border: 1px $style $black;
+        padding: $baseline*0.125 $baseline*0.25;
+        &.selected {
+          background: rgba($brand, 0.1);
+          border-color: $brand;
+          color: $brand;
+        }
+      }
+    }
+  }
+  .item {
+    float: left;
+    display: block;
+    background: $white;
+    margin-bottom: $baseline*0.125;
+    padding: $baseline $gutter;
+    .details {
+      float: left;
+      width: calc(50% - #{$gutter*0.5});
+      // width: calc(41.6666666667% - #{$gutter});
+      // margin-left: 0;
+      margin-right: $gutter;
+    }
+    .outcome_wrap {
+      float: left;
+      width: calc(50% - #{$gutter*0.5});
+      // width: calc(58.3333333333%);
+      // margin-left: 0;
+    }
+    .outcome {
+      font-size: $small;
+      float: left;
+      width: 50%;
+      p {
+        font-size: $smaller;
+        margin-bottom: 0;
+      }
+    }
+    .score {
+      float: left;
+      width: 50%;
+      .effect, .evidence {
+        margin: $baseline*0.5 $gutter*0.5;
+        width: calc(50% - #{$gutter});
+      }
+    }
+    &:not(.button), a:active, a:visited {
+      color: $black;
+      text-decoration: none;
+    }
+    h3, p {
+      color: $black;
+      text-decoration: none;
+    }
+    h3 {
+      font-family: $stack;
+      font-size: $h2*0.8;
+      line-height: calc(#{$h3} + #{$baseline*0.2});
+      margin-bottom: $baseline*0.25;
+    }
+    p {
+      font-size: $smaller;
+      line-height: $baseline*0.9;
+    }
+    .tags {
+      margin-top: $baseline*0.25;
+      span {
+        font-size: 14px;
+        line-height: 15px;
+        display: inline-block;
+        margin-right: $gutter*0.25;
+        margin-bottom: $baseline*0.25;
+        border: 1px $style $black;
+        padding: $baseline*0.125 $baseline*0.25;
+      }
+    }
+  }
+  a.item {
+    &:hover {
+      -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.07);
+      cursor: pointer;
+    }
+  }
+  .menu.item {
+    float: left;
+    background: $white;
+    padding: $baseline*0.5 $gutter;
+    color: $gray;
+    .details, .outcome, .effect, .evidence {
+      font-size: $smaller;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    .score {
+      .effect, .evidence {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+  button.update {
+    margin-top: $baseline;
+  }
+  body {
+    font-family: $stack;
+    color: $black;
+    font-size: $body;
+    font-weight: 400;
+    line-height: $baseline;
+  }
+
+  strong {
+    color: $black;
+    font-weight: 700;
+  }
+
+  a {
+    &:not(.button), a:active, a:visited  {
+      color: $black;
+      text-decoration: underline;
+      // @include ease;
+      // border-bottom: $medium $style transparentize($brand, $amount);
+    }
+    &:hover {
+      color: $brand;
+      border-bottom-color: $white;
+      // @include ease;
+    }
+  }
+
+  u {
+    text-decoration: none;
+  }
+
+  p {
+    color: $black;
+    margin-bottom: $baseline;
+  }
+
+  .summary p,
+  .role {
+    font-weight: 400;
+  }
+
+  // small
+  .single p,
+  .date,
+  cite,
+  blockquote + p,
+  footer .footer p, .footer ul li {
+    font-size: $small;
+    font-weight: 400;
+    line-height: calc(#{$small} + #{$baseline*0.3});
+  }
+
+  h2, h3 {
+    margin-bottom: $baseline*0.125;
+  }
+
+  // // these calculations are not complete, just placeholder for now.
+
+  h1 {
+    // color: $brand;
+    font-family: $stack-b;
+    font-size: $h1;
+    font-weight: 900;
+    line-height: calc(#{$h1} + #{$baseline*0.15});
+    margin-bottom: $baseline;
+  }
+
+  h2 {
+    font-family: $stack;
+    font-size: $h2;
+    font-weight: 700;
+    line-height: calc(#{$h2} + #{$baseline*0.05});
+    margin-bottom: $baseline*0.5;
+  }
+
+  .team h2 {
+    margin-bottom: $baseline*0.5;
+  }
+
+  .impact h2 {
+    font-family: $stack;
+    color: $gray;
+    font-size: $h2*0.75;
+    font-weight: 300;
+    line-height: calc(#{$h2*0.75} + #{$baseline*0.2});
+  }
+
+  h3,
+  .page h2,
+  .page h3,
+  .summary h2,
+  .team h2 {
+    font-family: $stack;
+    font-size: $h3;
+    font-weight: 700;
+    line-height: calc(#{$h3} + #{$baseline*0.25});
+  }
+
+  .page p, 
+  .overview p {
+    & + h2,
+    & + h3 {
+      margin-top: $baseline;
+    }
+  }
+
+  h4 {
+    color: $gray;
+    font-family: $stack;
+    font-size: $h4;
+    font-weight: 300;
+    line-height: calc(#{$h4} + #{$baseline*0.15});
+    margin-top: 0;
+    margin-bottom: $baseline;
+    p.subheading {
+      color: $gray;
+      margin-top: 0;
+      margin-bottom: $baseline;
+    }
+  }
+
+  blockquote {
+    p {
+      font-family: $stack-b;
+      font-size: $body;
+      line-height: $baseline;
+      padding-left: $gutter;
+      padding-right: $gutter;
+      // border-left: $medium $style $brand;
+      &:before {
+        content: "“";
+        margin-right: $gutter*0.25;
+      }
+      &:after {
+        content: "”";
+        margin-left: $gutter*0.25;
+      }
+    }
+  }
+
+  cite {
+    color: $gray;
+    font-style: italic;
+    display: block;
+    padding-left: $gutter;
+    margin-bottom: $baseline*3;
+    &:before {
+      content: "– ";
+    }
+  }
+}

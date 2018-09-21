@@ -7,12 +7,12 @@ body {
 }
 
 strong {
-  color: $black;
   font-weight: 700;
 }
 
 a {
-  &:not(.button), a:active, a:visited  {
+  color: $black;
+  a:active, a:visited  {
     color: $black;
     font-weight: 600;
     text-decoration: underline;
@@ -31,7 +31,6 @@ u {
 }
 
 p {
-  color: $black;
   margin-bottom: $baseline;
 }
 

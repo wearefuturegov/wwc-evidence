@@ -1,35 +1,40 @@
 $stack: 'Source Sans Pro', sans-serif;
 $stack-b: 'Playfair Display', serif;
 
-$breakpoint: 1040px;
+$hd-desktop-width: 1360px;
+$desktop-width: 960px;
 
-$body: 20px;
-$baseline: 1.6em; // 28px
-$gutter: 20px;
+$body: 19px;
+$baseline: 1.45em;
+$gutter: 40px;
+
 $small: 16px;
+$smaller: 14px;
 
-$logo: 135px;
-
-$black: #201D20;
+$black: #333;
 $white: #fff;
 $gray: #666;
+$gray-b: #f0f0f0;
+$gray-c: #bbbbbb;
+
+$logo: $gutter*2.5;
 
 // Unique Colors
 $blue: #1565c0;
 $red: #c71f16;
 
-$h1: 70px;
-$h2: 40px;
-$h3: 26px;
-$h4: 24px;
+$h1: 50px;
+$h2: 32px;
+$h3: 20px;
+$h4: 28px;
 $p: $body;
 $impact: 40px;
 
-$brand: #E62D8C; // pink
-$brand-b: #FFAA41; // mustard
+$brand: #FFAA41; // mustard
+$brand-b: #E62D8C; // pink
 $brand-c: #821982; // purple
 $brand-d: #28AFA0; // turquoise
-$highlight: #f387bb; //pink transparancy as picker
+$highlight: #FFD9AA;
 
 // transparancy
 $amount: 0.4;
@@ -43,3 +48,21 @@ $color: $gray;
 
 $base-border-radius: 0;
 $time: 200ms;
+
+$positive: $brand;
+$neutral: $white;
+$negative: #ff4141;
+
+$moderate: $brand-b;
+$no-effect: $brand-c;
+
+$base-border-radius: 0;
+
+$neat-grid: (
+  gutter: $gutter,
+);
+
+$no_gutter_grid: (
+  columns: 12,
+  gutter: 0px,
+);
