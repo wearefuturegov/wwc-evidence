@@ -3,6 +3,8 @@
 class Intervention < ApplicationRecord
   has_many_attached :files
   has_many :outcomes
+  has_many :links
+  has_many :contacts
 
   has_many :effective_interventions_subjects,
            -> { where(classification_type: :effective) },
