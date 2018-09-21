@@ -8,7 +8,7 @@ $.fn.addFileToRemovals = function() {
     var fileID = $this.data('fileId');
     
     $('<input>').attr({
-      name: 'evidence[files_to_delete][]',
+      name: 'intervention[files_to_delete][]',
       value: fileID,
       type: 'hidden'
     }).appendTo($filesToDelete);
