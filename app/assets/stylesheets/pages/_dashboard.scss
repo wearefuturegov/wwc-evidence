@@ -63,25 +63,6 @@
   .date {
     margin: $baseline*0.5 0 $baseline*0.25 0;
   }
-  .items {
-    .tags {
-      margin-top: $baseline*0.25;
-      span {
-        font-size: 18px;
-        line-height: 20px;
-        display: inline-block;
-        margin-right: $gutter*0.25;
-        margin-bottom: $baseline*0.25;
-        border: 1px $style $black;
-        padding: $baseline*0.125 $baseline*0.25;
-        &.selected {
-          background: rgba($brand, 0.1);
-          border-color: $brand;
-          color: $brand;
-        }
-      }
-    }
-  }
   .item {
     float: left;
     display: block;
@@ -143,18 +124,6 @@
       font-size: $smaller;
       line-height: $baseline*0.9;
     }
-    .tags {
-      margin-top: $baseline*0.25;
-      span {
-        font-size: 14px;
-        line-height: 15px;
-        display: inline-block;
-        margin-right: $gutter*0.25;
-        margin-bottom: $baseline*0.25;
-        border: 1px $style $black;
-        padding: $baseline*0.125 $baseline*0.25;
-      }
-    }
   }
   a.item {
     &:hover {
@@ -183,7 +152,7 @@
     &.sticky {
       position: fixed;
       top: 0;
-      border-bottom: $thin $color $style;
+      border-bottom: $thin $brand $style;
     }
   }
   button.update {
