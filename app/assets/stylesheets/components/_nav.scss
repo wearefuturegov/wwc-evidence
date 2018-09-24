@@ -5,9 +5,10 @@ nav.nav {
     margin-bottom: 0;
     li {
       display: inline;
-      margin-left: $gutter;
+      margin-left: $gutter*0.25;
       white-space: nowrap;
       a {
+        font-size: $small;
         font-weight: 400;
         text-decoration: none;
       }

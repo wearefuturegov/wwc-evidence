@@ -98,8 +98,8 @@
     .outcome_wrap {
       float: left;
       width: calc(50% - #{$gutter*0.5});
-      margin-top: $baseline*0.25;
-      margin-bottom: $baseline*0.25;
+      // margin-top: $baseline*0.25;
+      // margin-bottom: $baseline*0.25;
       // width: calc(58.3333333333%);
       // margin-left: 0;
       .spot {
@@ -117,10 +117,12 @@
     .score {
       float: left;
       width: 50%;
-      margin-top: 4px;
       .effect, .evidence {
         margin: 0 $gutter*0.5;
         width: calc(50% - #{$gutter});
+        .spot {
+          margin-top: 4px;
+        }
       }
     }
     &:not(.button), a:active, a:visited {
