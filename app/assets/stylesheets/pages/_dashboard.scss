@@ -33,6 +33,7 @@
 
 .dashboard {
   background: $gray-b;
+  @include off-brand-d;
   padding-top: $baseline;
   padding-bottom: $baseline*2;
   section.section {
@@ -127,9 +128,9 @@
   }
   a.item {
     &:hover {
-      -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07);
-      -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07);
-      box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.07);
+      -webkit-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
+      -moz-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
+      box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
       cursor: pointer;
     }
   }
@@ -138,6 +139,7 @@
     background: $white;
     padding: $baseline*0.5 $gutter;
     color: $gray;
+    margin-bottom: $thin;
     .details, .outcome, .effect, .evidence {
       font-size: $smaller;
       font-weight: 400;

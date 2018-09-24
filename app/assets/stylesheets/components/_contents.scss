@@ -1,7 +1,7 @@
 .contents {
   ul {
     padding: 0;
-    @include off-brand;
+    @include off-brand-d;
     padding: $baseline;
     margin: 0;
     list-style: none;
