@@ -21,10 +21,14 @@
   transition: all $time;
 }
 
-$amount: 0.07;
+$amount: 0.2;
+
+@mixin off-brand-d {
+  background: rgba($brand-d, $amount);
+}
 
 @mixin off-brand {
-  background: rgba($brand-d, $amount);
+  background: rgba($brand, $amount);
 }
 
 @mixin shadow {
