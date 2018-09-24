@@ -1,0 +1,26 @@
+.tags {
+  span {
+    font-family: $stack-b;
+    float: left;
+    color: $gray;
+    font-size: $tiny;
+    line-height: $small;
+    font-weight: 300;
+    // text-transform: uppercase;
+    margin-right: $gutter*0.125;
+    // margin-bottom: $baseline*0.25;
+    // border: 1px $style $black;
+    // padding: 0 $gutter*0.25 0 0;
+    // &.selected {
+    //   background: rgba($brand, 0.1);
+    //   border-color: $brand;
+    //   color: $brand;
+    // }
+    &:after {
+      content: ",";
+    }
+    &:last-child:after {
+      content: ".";
+    }
+  }
+}

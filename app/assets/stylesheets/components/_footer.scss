@@ -9,6 +9,9 @@ footer {
     color: $white;
   }
   .footer {
+    ul {
+      list-style: none;
+    }
     p {
       font-size: $smaller;
       font-weight: 300;
@@ -16,14 +19,16 @@ footer {
     nav.nav {
       font-size: $smaller;
       font-weight: 300;
-      ul li {
-        font-size: $smaller;
-        font-weight: 300;
-        margin-left: 0;
-        margin-right: $gutter*0.5;
-        a {
-          text-decoration: underline;
-          font-weight: 600;
+      ul {
+        li {
+          font-size: $smaller;
+          font-weight: 300;
+          margin-left: 0;
+          margin-right: $gutter*0.5;
+          a {
+            text-decoration: underline;
+            font-weight: 300;
+          }
         }
       }
     }
