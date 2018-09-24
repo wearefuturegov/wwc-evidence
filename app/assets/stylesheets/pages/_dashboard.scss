@@ -178,6 +178,11 @@
         margin-bottom: 0;
       }
     }
+    &.sticky {
+      position: fixed;
+      top: 0;
+      border-bottom: $thin $color $style;
+    }
   }
   button.update {
     margin-top: $baseline;
