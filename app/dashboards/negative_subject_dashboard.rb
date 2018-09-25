@@ -1,0 +1,2 @@
+class NegativeSubjectDashboard < SubjectDashboard
+end

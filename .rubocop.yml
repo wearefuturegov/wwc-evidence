@@ -15,3 +15,15 @@ AllCops:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+Metrics/ModuleLength:
+    Exclude:
+      - 'spec/**/*'
+      
+Metrics/AbcSize:
+    Exclude:
+      - 'spec/**/*'
+
+Metrics/MethodLength:
+    Exclude:
+      - 'spec/**/*'

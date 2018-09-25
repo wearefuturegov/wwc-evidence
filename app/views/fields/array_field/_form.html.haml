@@ -1,0 +1,8 @@
+.array_field
+  .field-unit__label
+    = f.label field.attribute
+  .field-unit__field{ class: field.resource.class.name.parameterize }
+    = render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: true }
+.add_array
+  %a.button{ data: { field: "#{render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: false }}", target: ".#{field.resource.class.name.parameterize}" } }
+    = t("helpers.array_field.add", field: field.name.humanize.singularize.downcase)
