@@ -1,7 +1,6 @@
 .menu.card {
   float: left;
   background: $white;
-  // padding: $baseline*0.5 $gutter;
   color: $gray;
   margin-bottom: $thin;
   .details, .label, .effect, .evidence {
@@ -34,16 +33,6 @@
     p {
       font-size: $smaller;
       margin-bottom: 0;
-    }
-  }
-  .score {
-    .effect, .evidence {
-      margin: 0 $gutter*0.5;
-      margin-left: 0;
-      width: calc(50% - #{$gutter});
-      .spot {
-        
-      }
     }
   }
   &:not(.button), a:active, a:visited {

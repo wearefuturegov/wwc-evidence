@@ -11,7 +11,11 @@ footer .footer {
   @include grid-column(12);
 }
 
-.dashboard .item {
-  @include grid-column(12);
-  width: calc(100% - #{$gutter*4} + #{$gutter});
+.dashboard {
+  .main,
+  .outcome, 
+  .effect,
+  .evidence {
+    @include grid-column(12, $card-grid);
+  }
 }
