@@ -1,8 +1,16 @@
-label {
-  display: block;
-  font-size: $smaller;
-  font-weight: 400;
-  color: $gray;
-  text-transform: uppercase;
-  margin-bottom: $baseline*0.5;
+.intervention {
+  label {
+    float: left;
+    width: 100%;
+    font-size: $smaller;
+    font-weight: 400;
+    color: $gray;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .evidence, .effect {
+    float: left;
+    width: 100%;
+    margin-bottom: $baseline*0.5;
+  }
 }
