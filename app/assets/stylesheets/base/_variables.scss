@@ -63,7 +63,10 @@ $neat-grid: (
   gutter: $gutter,
 );
 
-$no_gutter_grid: (
+$card-grid-color: rgba(255, 0, 255, 0.25);
+
+$card-grid: (
   columns: 12,
-  gutter: 0px,
+  gutter: $gutter*0.5,
+  color: $card-grid-color,
 );

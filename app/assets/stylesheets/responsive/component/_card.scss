@@ -1,0 +1,42 @@
+.dashboard {
+  .card {
+    padding-top: $baseline;
+    padding-bottom: $baseline*0.5;
+    .tags {
+      margin-bottom: $baseline*0.5;
+    }
+    .effect, .evidence {
+      margin-top: $baseline*0.125;
+      margin-bottom: $baseline*0.25;
+      width: calc(100%);
+      &:before {
+        color: $gray;
+        font-size: $smaller;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: $small;
+        float: left;
+        width: 100%;
+        margin-bottom: $baseline*0.125;
+      }
+      .effect {
+        &:before {
+          content: "Effect";
+        }
+      }
+      .evidence {
+        &:before {
+          content: "Evidence strength";
+        }
+      }
+    }  
+  }
+  .menu.item {
+    display: none;
+    .effect, .evidence {
+      &:before {
+        content: "";
+      }
+    }
+  }
+}
