@@ -14,4 +14,8 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w[admin/add_file_to_removals.js admin/application.js]
+Rails.application.config.assets.precompile += %w[
+  admin/add_file_to_removals.js
+  admin/application.js
+  admin/add_array_field.js
+]

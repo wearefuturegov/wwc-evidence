@@ -31,3 +31,24 @@
 
 en:
   hello: "Hello world"
+  helpers:
+    array_field:
+      add: "Add %{field}"
+    label:
+      intervention[outcomes_attributes][new_outcomes]:
+        title: Title
+        description: Descripion
+        effect: Effect
+        evidence: Evidence
+      intervention[effective_subjects_attributes][new_effective_subjects]:
+        title: Title
+      intervention[ineffective_subjects_attributes][new_ineffective_subjects]:
+        title: Title
+      intervention[negative_subjects_attributes][new_negative_subjects]:
+        title: Title
+      intervention[links_attributes][new_links]:
+        title: Title
+        url: URL
+      intervention[contacts_attributes][new_contacts]:
+        title: Title
+        url: URL

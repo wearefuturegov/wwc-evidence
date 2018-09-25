@@ -1,0 +1,19 @@
+%fieldset.field-unit--nested{class: field.association_name.downcase}
+  %legend= f.label field.attribute
+  = f.fields_for field.association_name do |nested_form|
+    = render(                                     |
+        partial: "fields/nested_has_many/fields", |
+        locals: {                                 |
+          f: nested_form,                         |
+          field: field,                           |
+        },                                        |
+      )                                           |
+  %div
+    = link_to_add_association(                                                                             |
+        I18n.t("administrate.fields.nested_has_many.add", resource: field.associated_class_name.titleize), |
+        f,                                                                                                 |
+        field.association_name,                                                                            |
+        class: 'button',                                                                                   |
+        partial: "fields/nested_has_many/fields",                                                          |
+        render_options: { locals: { field: field } },                                                      |
+      )                                                                                                    |

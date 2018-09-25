@@ -11,9 +11,22 @@ class InterventionDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    intro: Field::String,
+    intro: Field::Text,
+    how: Field::Text,
+    outcomes: Field::NestedHasMany,
+    studies: Field::Text,
+    effective_subjects: Field::NestedHasMany,
+    ineffective_subjects: Field::NestedHasMany,
+    negative_subjects: Field::NestedHasMany,
+    more_effective: Field::Text,
+    works_best: Field::Text,
+    in_practice: Field::Text,
+    costs_benefits: Field::Text,
+    implementation: Field::HasOne,
+    key_points: ArrayField,
     files: MultifileField,
-    implementation: Field::HasOne
+    links: Field::NestedHasMany,
+    contacts: Field::NestedHasMany
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -39,12 +52,25 @@ class InterventionDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     title
     intro
-    files
+    how
+    outcomes
+    studies
+    effective_subjects
+    ineffective_subjects
+    negative_subjects
+    more_effective
+    works_best
+    in_practice
+    costs_benefits
     implementation
+    key_points
+    files
+    links
+    contacts
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: []]
+    super + [files: [], files_to_delete: [], key_points: []]
   end
 
   # Overwrite this method to customize how evidences are displayed
