@@ -9,10 +9,10 @@
       width: calc(100% - #{$gutter*0.5});
       margin-right: $gutter;
     }
-    .outcome_wrap {
+    .outcome {
       width: calc(100% - #{$gutter*0.5});
     }
-    .outcome {
+    .label {
       width: 100%;
     }
     .score {
@@ -42,7 +42,7 @@
       }
       .evidence {
         &:before {
-          content: "Evidence";
+          content: "Evidence strength";
         }
       }
     }  

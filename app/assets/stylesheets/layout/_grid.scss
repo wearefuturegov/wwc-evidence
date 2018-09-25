@@ -21,11 +21,11 @@ footer .footer {
   @include grid-push(1);
 }
 
-.item, .menu {
-  // @include grid-column(6);
-  // @include grid-push(1);
-  width: calc(83.3333333333% - 73.3333333333px);
-  margin-left: calc(8.3333333333% - 43.3333333333px + 80px - #{$gutter});
+.dashboard {
+  .card, .menu.card {
+    // @include grid-visual; // grid within a grid for the cards
+    @include grid-column(12);
+  }
 }
 
 .indent_b, .col_9 {
@@ -34,4 +34,16 @@ footer .footer {
 
 .contents {
   @include grid-column(3);
+}
+
+.dashboard {
+  .main {
+    @include grid-column(5);
+  }
+  .outcome {
+    @include grid-column(3);
+  }
+  .score {
+    @include grid-column(4);
+  }
 }
