@@ -1,12 +1,15 @@
 .spot {
   float: left;
   margin-right: $gutter*0.05;
-  width: $baseline*0.7;
-  height: $baseline*0.7;
+  width: 1em;
+  height: 1em;
+  font-size: 21px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   // background: $gray-c;
   border-radius: 100%;
   background: $gray-b;
-  border: $thin $style $gray-b;
+  // border: $thin $style $gray-b;
   &.fill {
     background: $brand-d;
     border-color: $brand-d;

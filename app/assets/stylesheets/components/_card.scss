@@ -1,0 +1,76 @@
+.menu.card {
+  float: left;
+  background: $white;
+  // padding: $baseline*0.5 $gutter;
+  color: $gray;
+  margin-bottom: $thin;
+  .details, .label, .effect, .evidence {
+    font-size: $smaller;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .score {
+    .effect, .evidence {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    border-bottom: $thin $brand $style;
+  }
+}
+.card {
+  float: left;
+  display: block;
+  background: $white;
+  margin-bottom: $baseline*0.125;
+  padding-top: $baseline;
+  padding-bottom: $baseline;
+  .label {
+    font-size: $small;
+    float: left;
+    p {
+      font-size: $smaller;
+      margin-bottom: 0;
+    }
+  }
+  .score {
+    .effect, .evidence {
+      margin: 0 $gutter*0.5;
+      margin-left: 0;
+      width: calc(50% - #{$gutter});
+      .spot {
+        
+      }
+    }
+  }
+  &:not(.button), a:active, a:visited {
+    color: $black;
+    text-decoration: none;
+  }
+  h3, p {
+    color: $black;
+    text-decoration: none;
+  }
+  h3 {
+    font-family: $stack;
+    font-size: $h2*0.8;
+    line-height: calc(#{$h3} + #{$baseline*0.2});
+    margin-bottom: $baseline*0.25;
+  }
+  p {
+    font-size: $smaller;
+    line-height: $baseline*0.9;
+    display: block;
+  }
+}
+a.card {
+  &:hover {
+    -webkit-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
+    -moz-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
+    box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
+    cursor: pointer;
+  }
+}
