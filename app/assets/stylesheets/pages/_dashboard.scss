@@ -77,20 +77,19 @@
     background: $white;
     margin-bottom: $baseline*0.125;
     padding: $baseline $gutter;
+    .tags {
+      float: left;
+      width: calc(50% - #{$gutter*0.5});
+      margin-right: $gutter;
+    }
     .details {
       float: left;
       width: calc(50% - #{$gutter*0.5});
-      // width: calc(41.6666666667% - #{$gutter});
-      // margin-left: 0;
       margin-right: $gutter;
     }
     .outcome_wrap {
       float: left;
       width: calc(50% - #{$gutter*0.5});
-      // margin-top: $baseline*0.25;
-      // margin-bottom: $baseline*0.25;
-      // width: calc(58.3333333333%);
-      // margin-left: 0;
     }
     .outcome {
       font-size: $small;
@@ -183,13 +182,10 @@
     &:not(.button), a:active, a:visited  {
       color: $black;
       text-decoration: underline;
-      // @include ease;
-      // border-bottom: $medium $style transparentize($brand, $amount);
     }
     &:hover {
       color: $brand;
       border-bottom-color: $white;
-      // @include ease;
     }
   }
 
