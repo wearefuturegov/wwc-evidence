@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'maternal-child', to: 'intervention#maternal-child'
   get 'mellow-parenting', to: 'intervention#mellow-parenting'
 
+  resources :interventions
+
   devise_for :users
   namespace :admin do
     resources :interventions
