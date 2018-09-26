@@ -1,0 +1,187 @@
+%section
+  .container.bump
+    .contents
+      %ul
+        %li
+          Contents
+        %li
+          = link_to 'How is it meant to work?', '#how'
+        %li
+          = link_to 'What are the evaluated outcomes?', '#outcomes'
+        %li
+          = link_to 'How effective is it?', '#effective'
+        %li
+          = link_to 'Where has it been studied?', '#studies'
+        %li
+          = link_to 'Who does this work for?', '#work_for'
+        %li
+          = link_to 'When does it work best?', '#link_6'
+        %li
+          = link_to 'How does it work in practice?', '#link_7'
+        %li
+          = link_to 'What are the costs and benefits?', '#link_8'
+        %li
+          = link_to 'How is it implemented?', '#link_9'
+        %li
+          = link_to 'Summary of key points', '#link_10'
+        %li
+          = link_to 'Further resources', '#link_11'
+      / %ul
+      /   %li
+      /     Links and files
+      /   %li
+      /     = link_to 'Pdf' ''
+      /   %li
+      /     = link_to 'Another Pdf' ''
+    .col_9
+      / .tags
+      /   %span Child safety
+      /   %span crisis
+      /   %span family functioning
+      /   %span intensive family preservation programmes
+      /   %span out-of-home placement
+
+      %h1= intervention.title
+      
+      %h4= intervention.intro
+        
+      %section.section
+        %h2#how
+          How is it meant to work?
+        %p= intervention.how
+        
+      %section.section
+        %h2#outcomes
+          What are the evaluated outcomes?
+        %ul
+          - intervention.outcomes.each do |i|
+            %li= "#{i.title} - #{i.description}"
+
+      %section.section
+        %h2#effective
+          How effective is it?
+          
+        - intervention.outcomes.each do |o|
+        
+          %section.section
+          
+            %p
+              %strong= o.title
+              \- Overall, this intervention had a
+              %strong= o.effect
+              effect. This is based on
+              %strong= o.evidence
+              evidence.
+            
+            .measurement
+            
+              .effect
+                %label
+                  Effect
+                - (0..2).each do |i|
+                  .spot.measure{ class: i < o.effect_before_type_cast ? 'fill' : '' }
+
+              .evidence
+                %label
+                  Evidence
+                - (0..2).each do |i|
+                  .spot.measure{ class: i <= o.evidence_before_type_cast ? 'fill' : '' }
+
+      %section.section
+        %h2#studies
+          Where has it been studied?
+        %p= intervention.studies
+        
+      %section.section
+        %h2#work_for
+          Who does this work for?
+        %strong Effective for…
+        - intervention.effective_subjects.each do |i|
+          %p= i.title
+
+        %strong Not effective for…
+        - intervention.ineffective_subjects.each do |i|
+          %p= i.title
+
+        Has a
+        %strong negative effective
+        for…
+        - intervention.negative_subjects.each do |i|
+          %p= i.title
+
+        %p
+          This intervention has been shown to be more effective for:
+
+        %ul
+          - intervention.more_effective.each do |e|
+            %li= e
+
+
+      %section.section
+        %h2#link_6
+          When does it work best?
+        %ul
+          - intervention.works_best.each do |e|
+            %li= e
+
+      %section.section
+        %h2#link_7
+          How does it work in practice?
+        %p= intervention.in_practice
+
+      %section.section
+        %h2#link_8
+          What are the costs and benefits?
+        %p= intervention.costs_benefits
+
+
+      %section.section
+        %h2#link_9
+          How is it implemented?
+        %p= intervention.implementation.intro
+        
+        %h3
+          Who can deliver it?
+        %p= intervention.implementation.deliverer
+        
+        %h3
+          What are the training requirements?
+        %p= intervention.implementation.training_requirements
+        
+        %h3
+          How are the practitioners supervised?
+        %p= intervention.implementation.supervision
+        
+        %h3
+          What are the systems for maintaining fidelity?
+        %p= intervention.implementation.fidelity
+
+
+        %h3
+          What else supports good implementation?
+        %p= intervention.implementation.support
+
+      %section.section
+        %h2#link_10
+          Summary of key points
+        %ul
+          - intervention.key_points.each do |i|
+            %li= i
+          
+      %section.section
+        %h2#link_11
+          Further resources
+
+        %h3
+          Useful contacts
+
+        %ul.no-bullet
+          - intervention.contacts.each do |i|
+            %li= link_to i.title, i.url
+
+        %h3
+          Links and files
+
+        %ul.no-bullet
+          - intervention.links.each do |i|
+            %li= link_to i.title, i.url
