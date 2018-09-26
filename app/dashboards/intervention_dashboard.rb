@@ -70,7 +70,7 @@ class InterventionDashboard < Administrate::BaseDashboard
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], key_points: []]
+    super + [files: [], files_to_delete: [], key_points: [], more_effective: [], works_best: []]
   end
 
   # Overwrite this method to customize how evidences are displayed
