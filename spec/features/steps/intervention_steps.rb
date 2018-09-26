@@ -59,12 +59,12 @@ module InterventionSteps
     complete_subjects(3, 'effective')
     complete_subjects(2, 'ineffective')
     complete_subjects(1, 'negative')
-    complete_field 'more_effective', FFaker::BaconIpsum.sentence
-    complete_field 'works_best', FFaker::BaconIpsum.sentence
+    complete_array_field 'more_effective', 2
+    complete_array_field 'works_best', 3
     complete_field 'in_practice', FFaker::BaconIpsum.sentence
     complete_field 'costs_benefits', FFaker::BaconIpsum.sentence
     complete_implementation
-    complete_array_field 'key_points', [FFaker::BaconIpsum.phrase, FFaker::BaconIpsum.phrase]
+    complete_array_field 'key_points', 2
     attach_file('intervention_files', generate_files(num_files)) if num_files > 0
     complete_links(2)
     complete_contacts(3)
@@ -78,13 +78,15 @@ module InterventionSteps
     @fields[field_name] = content
   end
 
-  def complete_array_field(field_name, array)
+  def complete_array_field(field_name, num = 1)
     @fields ||= {}
-    array.each do |item|
+    @fields[field_name] = []
+    num.times do |i|
+      item = FFaker::BaconIpsum.phrase
       all(:css, "input[name='intervention[#{field_name}][]']").last.set(item)
-      find(:css, '.add_array a').click unless item == array.last
+      find(:css, "a#add_#{field_name}").click unless (i + 1) == num
+      @fields[field_name] << item
     end
-    @fields[field_name] = array
   end
 
   def complete_outcome_field(field_name, content, index = 0)
