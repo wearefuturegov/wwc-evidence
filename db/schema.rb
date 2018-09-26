@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_24_102438) do
+ActiveRecord::Schema.define(version: 2018_09_20_085517) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 2018_09_24_102438) do
     t.text "intro"
     t.text "how"
     t.text "studies"
-    t.text "more_effective"
-    t.text "works_best"
+    t.string "more_effective", default: [], array: true
+    t.string "works_best", default: [], array: true
     t.text "in_practice"
     t.text "costs_benefits"
     t.string "key_points", default: [], array: true

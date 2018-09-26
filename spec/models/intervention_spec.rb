@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Intervention, type: :model do
   let(:title) { FFaker::BaconIpsum.phrase }
-  let(:more_effective) { FFaker::BaconIpsum.phrase }
+  let(:more_effective) { [FFaker::BaconIpsum.phrase] }
   let(:intervention) { Fabricate(:intervention, title: title, more_effective: more_effective) }
 
   it 'creates an intervention' do
