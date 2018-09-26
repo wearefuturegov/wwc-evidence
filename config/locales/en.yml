@@ -33,7 +33,12 @@ en:
   hello: "Hello world"
   helpers:
     array_field:
-      add: "Add %{field}"
+      more_effective:
+        add: 'Add more effective'
+      works_best:
+        add: 'Add works best'
+      key_points:
+        add: 'Add key point'
     label:
       intervention[outcomes_attributes][new_outcomes]:
         title: Title
