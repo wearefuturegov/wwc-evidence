@@ -1,0 +1,5 @@
+%section
+  .container
+    %ul
+      - interventions.all.each do |i|
+        %li= link_to i.title, i
