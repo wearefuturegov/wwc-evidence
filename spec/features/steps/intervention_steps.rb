@@ -131,8 +131,8 @@ module InterventionSteps
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
           complete_outcome_field('title', FFaker::BaconIpsum.phrase, i)
           complete_outcome_field('description', FFaker::BaconIpsum.sentence, i)
-          complete_outcome_field('effect', rand(0..2), i)
-          complete_outcome_field('evidence', rand(0..2), i)
+          complete_outcome_field('effect', Outcome.effects.keys.sample, i)
+          complete_outcome_field('evidence', Outcome.evidences.keys.sample, i)
         end
       end
     end
