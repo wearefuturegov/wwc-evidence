@@ -2,7 +2,10 @@
   .field-unit__label
     = f.label field.attribute
   .field-unit__field{ class: field.attribute }
-    = render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: true }
+    - hide_minus_button = true
+    - field.data.each do |value|
+      = render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: hide_minus_button, value: value }
+      - hide_minus_button = false
 .add_array
-  %a.button{ data: { field: "#{render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: false }}", target: ".#{field.attribute}" }, id: "add_#{field.attribute}" }
+  %a.button{ data: { field: "#{render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: false, value: nil }}", target: ".#{field.attribute}" }, id: "add_#{field.attribute}" }
     = t("helpers.array_field.#{field.attribute}.add")
