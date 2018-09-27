@@ -14,4 +14,8 @@ user = Fabricate(:user,
                  password_confirmation: 'Password123')
 user.confirm
 
-Fabricate.times(10, :intervention)
+interventions = YAML.safe_load(File.open(Rails.root.join('db', 'seed_data', 'interventions.yml')))
+
+interventions.each do |i|
+  Intervention.create(i)
+end
