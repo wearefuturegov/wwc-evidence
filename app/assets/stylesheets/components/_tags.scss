@@ -1,11 +1,13 @@
 .tags {
   span {
+    border: $gray $thin $style; 
     font-family: $stack-b;
     float: left;
     color: $gray;
     font-size: $tiny;
     line-height: $small;
     font-weight: 300;
+    padding: $baseline $baseline*4;
     // text-transform: uppercase;
     margin-right: $gutter*0.125;
     // margin-bottom: $baseline*0.25;
@@ -16,11 +18,11 @@
     //   border-color: $brand;
     //   color: $brand;
     // }
-    &:after {
-      content: ",";
-    }
-    &:last-child:after {
-      content: ".";
-    }
+    // &:after {
+    //   content: ",";
+    // }
+    // &:last-child:after {
+    //   content: ".";
+    // }
   }
 }

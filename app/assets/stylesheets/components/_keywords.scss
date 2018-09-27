@@ -1,0 +1,19 @@
+.keywords {
+  display: none;
+  .keyword {
+    margin-top: $baseline*0.25;
+    span {
+      background: $white;
+      font-size: $small;
+      line-height: 20px;
+      display: inline-block;
+      margin-right: $thin;
+      margin-bottom: $baseline*0.25;
+      padding: $baseline*0.125 $baseline*0.25;
+      &.selected {
+        background: $white;
+        color: $brand;
+      }
+    }
+  }
+}

@@ -22,7 +22,7 @@ footer .footer {
 }
 
 .dashboard {
-  .card, .menu.card {
+  .card, .menu.card, .keywords {
     // @include grid-visual($card-grid-color, $card-grid); 
     // grid within a grid for the cards
     @include grid-column(12, $card-grid);
