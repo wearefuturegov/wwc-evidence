@@ -78,14 +78,12 @@
               .effect
                 %label
                   Effect
-                - (0..2).each do |i|
-                  .spot.measure{ class: i < o.effect_before_type_cast ? 'fill' : '' }
+                  = o.effect_meter
 
               .evidence
                 %label
                   Evidence
-                - (0..2).each do |i|
-                  .spot.measure{ class: i <= o.evidence_before_type_cast ? 'fill' : '' }
+                  = o.evidence_meter
 
       %section.section
         %h2#studies

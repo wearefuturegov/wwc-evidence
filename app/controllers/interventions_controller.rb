@@ -1,5 +1,5 @@
 class InterventionsController < ApplicationController
-  expose :intervention
+  expose :intervention, -> { Intervention.find(params[:id]).decorate }
   expose :interventions, -> { Intervention.all }
 
   def index; end

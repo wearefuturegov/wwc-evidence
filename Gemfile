@@ -42,6 +42,7 @@ gem 'administrate-field-nested_has_many'
 gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
+gem 'draper'
 gem 'haml-rails', '~> 1.0'
 
 group :development, :test do
@@ -56,6 +57,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'i18n-debug'
   gem 'launchy'
+  gem 'rspec-html-matchers'
   gem 'rspec-rails'
   gem 'rubocop', '~> 0.59.0', require: false
   gem 'turnip'
