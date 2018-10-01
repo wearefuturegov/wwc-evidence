@@ -43,6 +43,7 @@ gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'draper'
+gem 'fabrication'
 gem 'haml-rails', '~> 1.0'
 
 group :development, :test do
@@ -53,7 +54,6 @@ group :development, :test do
   gem 'capybara-selenium'
   gem 'chromedriver-helper'
   gem 'coveralls', require: false
-  gem 'fabrication'
   gem 'ffaker'
   gem 'i18n-debug'
   gem 'launchy'
