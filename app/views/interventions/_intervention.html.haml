@@ -1,0 +1,18 @@
+%li
+  = link_to intervention, class: 'card' do
+    .main
+      .tags
+        %span tags
+        %span go
+        %span here
+      .details
+        %h3= intervention.title
+        %p= intervention.intro
+    - intervention.outcomes.each do |o|
+      .outcome
+        .label
+          %strong= o.title
+        .effect
+          = o.effect_meter
+        .evidence
+          = o.evidence_meter

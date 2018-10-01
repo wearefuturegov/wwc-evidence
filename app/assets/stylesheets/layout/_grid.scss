@@ -23,7 +23,7 @@ footer .footer {
 
 .dashboard {
   .card, .menu.card {
-    // @include grid-visual($card-grid-color, $card-grid); 
+    // @include grid-visual($card-grid-color, $card-grid);
     // grid within a grid for the cards
     @include grid-column(12, $card-grid);
     // original grid gutter for dashboard card placement
@@ -52,5 +52,27 @@ footer .footer {
   }
   .evidence {
     @include grid-column(2, $card-grid);
+  }
+  
+  #interventions {
+    .main {
+      @include grid-column(7, $card-grid);
+    }
+    
+    .outcome {
+      @include grid-column(5, $card-grid);
+      margin: 0 0 $baseline*0.5 0;
+      
+      .label {
+        @include grid-column(5, $card-grid);
+      }
+      
+      .effect {
+        @include grid-column(3, $card-grid);
+      }
+      .evidence {
+        @include grid-column(3, $card-grid);
+      }
+    }
   }
 }

@@ -1,5 +1,16 @@
-%section
+%section.dashboard
   .container
-    %ul
-      - interventions.all.each do |i|
-        %li= link_to i.title, i
+
+    #sticky-nav.menu.card
+      .main
+        .details
+          Intervention
+      .outcome
+        .label
+          Outcome
+      .effect
+        Effect
+      .evidence
+        Evidence Strength
+    %ul#interventions
+      = render interventions
