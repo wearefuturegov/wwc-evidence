@@ -1,5 +1,15 @@
-class OutcomeDecorator < Draper::Decorator
+class OutcomeDecorator < ApplicationDecorator
   delegate_all
+
+  def description
+    h.content_tag('p') do
+      [
+        h.content_tag('strong', "#{title} - "),
+        I18n.t("outcome.description.effect.#{effect}"),
+        I18n.t("outcome.description.evidence.#{evidence}")
+      ].join.html_safe
+    end
+  end
 
   def evidence_meter
     meter(object.evidence_before_type_cast)

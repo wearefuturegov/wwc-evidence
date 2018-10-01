@@ -5,27 +5,27 @@
         %li
           Contents
         %li
-          = link_to 'How is it meant to work?', '#how'
+          = link_to t('intervention.titles.how'), '#how'
         %li
-          = link_to 'What are the evaluated outcomes?', '#outcomes'
+          = link_to t('intervention.titles.outcomes'), '#outcomes'
         %li
-          = link_to 'How effective is it?', '#effective'
+          = link_to t('intervention.titles.effective'), '#effective'
         %li
-          = link_to 'Where has it been studied?', '#studies'
+          = link_to t('intervention.titles.studies'), '#studies'
         %li
-          = link_to 'Who does this work for?', '#work_for'
+          = link_to t('intervention.titles.work_for'), '#work_for'
         %li
-          = link_to 'When does it work best?', '#link_6'
+          = link_to t('intervention.titles.works_best'), '#works_best'
         %li
-          = link_to 'How does it work in practice?', '#link_7'
+          = link_to t('intervention.titles.in_practice'), '#in_practice'
         %li
-          = link_to 'What are the costs and benefits?', '#link_8'
+          = link_to t('intervention.titles.costs_benefits'), '#costs_benefits'
         %li
-          = link_to 'How is it implemented?', '#link_9'
+          = link_to t('intervention.titles.implementation'), '#implementation'
         %li
-          = link_to 'Summary of key points', '#link_10'
+          = link_to t('intervention.titles.key_points'), '#key_points'
         %li
-          = link_to 'Further resources', '#link_11'
+          = link_to t('intervention.titles.resources'), '#contacts'
       / %ul
       /   %li
       /     Links and files
@@ -45,54 +45,23 @@
       
       %h4= intervention.intro
         
-      %section.section
-        %h2#how
-          How is it meant to work?
-        %p= intervention.how
+      %section.section#how
+        = intervention.how
         
-      %section.section
-        %h2#outcomes
-          What are the evaluated outcomes?
-        %ul
-          - intervention.outcomes.each do |i|
-            %li= "#{i.title} - #{i.description}"
+      %section.section#outcomes
+        = intervention.outcomes.list_with_header
 
       %section.section
-        %h2#effective
-          How effective is it?
-          
-        - intervention.outcomes.each do |o|
-        
-          %section.section
-          
-            %p
-              %strong= o.title
-              \- Overall, this intervention had a
-              %strong= o.effect
-              effect. This is based on
-              %strong= o.evidence
-              evidence.
+        %h2#effective= t('intervention.titles.effective')
+                
+        = render intervention.outcomes
             
-            .measurement
-            
-              .effect
-                %label
-                  Effect
-                  = o.effect_meter
-
-              .evidence
-                %label
-                  Evidence
-                  = o.evidence_meter
-
       %section.section
-        %h2#studies
-          Where has it been studied?
+        %h2#studies= t('intervention.titles.studies')
         %p= intervention.studies
         
       %section.section
-        %h2#work_for
-          Who does this work for?
+        %h2#work_for= t('intervention.titles.work_for')
         %strong Effective for…
         - intervention.effective_subjects.each do |i|
           %p= i.title
@@ -114,72 +83,30 @@
           - intervention.more_effective.each do |e|
             %li= e
 
-
       %section.section
-        %h2#link_6
-          When does it work best?
+        %h2#works_best= t('intervention.titles.works_best')
         %ul
           - intervention.works_best.each do |e|
             %li= e
 
       %section.section
-        %h2#link_7
-          How does it work in practice?
+        %h2#in_practice= t('intervention.titles.in_practice')
         %p= intervention.in_practice
 
       %section.section
-        %h2#link_8
-          What are the costs and benefits?
+        %h2#costs_benefits= t('intervention.titles.costs_benefits')
         %p= intervention.costs_benefits
 
+      = render intervention.implementation
 
       %section.section
-        %h2#link_9
-          How is it implemented?
-        %p= intervention.implementation.intro
-        
-        %h3
-          Who can deliver it?
-        %p= intervention.implementation.deliverer
-        
-        %h3
-          What are the training requirements?
-        %p= intervention.implementation.training_requirements
-        
-        %h3
-          How are the practitioners supervised?
-        %p= intervention.implementation.supervision
-        
-        %h3
-          What are the systems for maintaining fidelity?
-        %p= intervention.implementation.fidelity
-
-
-        %h3
-          What else supports good implementation?
-        %p= intervention.implementation.support
-
-      %section.section
-        %h2#link_10
-          Summary of key points
+        %h2#key_points= t('intervention.titles.key_points')
         %ul
           - intervention.key_points.each do |i|
             %li= i
           
       %section.section
-        %h2#link_11
-          Further resources
+        %h2#contacts= t('intervention.titles.resources')
 
-        %h3
-          Useful contacts
-
-        %ul.no-bullet
-          - intervention.contacts.each do |i|
-            %li= link_to i.title, i.url
-
-        %h3
-          Links and files
-
-        %ul.no-bullet
-          - intervention.links.each do |i|
-            %li= link_to i.title, i.url
+        = render 'contacts/contacts', contacts: intervention.contacts
+        = render 'links/links', links: intervention.links
