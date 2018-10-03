@@ -19,6 +19,7 @@ class Intervention < ApplicationRecord
   has_many :effective_subjects, through: :effective_interventions_subjects, source: :subject
   has_many :ineffective_subjects, through: :ineffective_interventions_subjects, source: :subject
   has_many :negative_subjects, through: :negative_interventions_subjects, source: :subject
+  has_and_belongs_to_many :tags
 
   belongs_to :implementation
 

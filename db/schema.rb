@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_20_085517) do
+ActiveRecord::Schema.define(version: 2018_10_03_085933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,13 @@ ActiveRecord::Schema.define(version: 2018_09_20_085517) do
     t.index ["subject_id"], name: "index_interventions_subjects_on_subject_id"
   end
 
+  create_table "interventions_tags", id: false, force: :cascade do |t|
+    t.bigint "intervention_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["intervention_id", "tag_id"], name: "index_interventions_tags_on_intervention_id_and_tag_id"
+    t.index ["tag_id", "intervention_id"], name: "index_interventions_tags_on_tag_id_and_intervention_id"
+  end
+
   create_table "links", force: :cascade do |t|
     t.string "title"
     t.string "url"
@@ -92,6 +99,12 @@ ActiveRecord::Schema.define(version: 2018_09_20_085517) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "title"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
