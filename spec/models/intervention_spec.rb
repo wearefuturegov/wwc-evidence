@@ -5,7 +5,18 @@ require 'rails_helper'
 RSpec.describe Intervention, type: :model do
   let(:title) { FFaker::BaconIpsum.phrase }
   let(:more_effective) { [FFaker::BaconIpsum.phrase] }
-  let(:intervention) { Fabricate(:intervention, title: title, more_effective: more_effective) }
+  let(:implementation) { Fabricate.build(:implementation) }
+  let(:outcomes) { Fabricate.build_times(4, :outcome) }
+  let(:tags) { Fabricate.build_times(4, :tag) }
+
+  let(:intervention) do
+    Fabricate(:intervention,
+              title: title,
+              more_effective: more_effective,
+              implementation: implementation,
+              outcomes: outcomes,
+              tags: tags)
+  end
 
   it 'creates an intervention' do
     expect(intervention.title).to eq(title)
@@ -13,19 +24,15 @@ RSpec.describe Intervention, type: :model do
   end
 
   it 'can have an implementation' do
-    implementation = Fabricate.build(:implementation)
-    intervention.implementation = implementation
-    intervention.save
-    intervention.reload
     expect(intervention.implementation).to eq(implementation)
   end
 
   it 'can have many outcomes' do
-    outcomes = Fabricate.build_times(4, :outcome)
-    intervention.outcomes = outcomes
-    intervention.save
-    intervention.reload
     expect(intervention.outcomes).to eq(outcomes)
+  end
+
+  it 'can have many tags' do
+    expect(intervention.tags).to eq(tags)
   end
 
   describe 'subjects' do

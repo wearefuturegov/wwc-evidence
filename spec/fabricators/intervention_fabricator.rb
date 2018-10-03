@@ -18,4 +18,5 @@ Fabricator(:intervention) do
   effective_subjects(rand: 5) { Fabricate.build(:subject) }
   ineffective_subjects(rand: 5) { Fabricate.build(:subject) }
   negative_subjects(rand: 5) { Fabricate.build(:subject) }
+  tags(rand: 5) { Fabricate.build(:tag) }
 end
