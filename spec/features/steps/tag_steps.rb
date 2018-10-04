@@ -1,5 +1,4 @@
 module TagSteps
-
   step 'there is an intervention with the tags :string' do |tags|
     @tags = tags.split(',')
     @intervention = Fabricate(:intervention, tags: @tags.map { |t| Fabricate(:tag, name: t) })
@@ -28,7 +27,6 @@ module TagSteps
       first('.tagify__input').send_keys(tag, ',')
     end
   end
-
 end
 
 RSpec.configure { |c| c.include TagSteps }
