@@ -1,5 +1,7 @@
 {
   "name": "wwc-evidence",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@yaireo/tagify": "2.5.1"
+  }
 }
