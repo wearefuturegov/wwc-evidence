@@ -45,12 +45,20 @@ module InterventionSteps
     end
   end
 
+  step 'the intervention should have the correct tags' do
+    expect(@intervention.tags.count).to eq(@tags.count)
+
+    @tags.each do |t|
+      expect(@intervention.tags.find_by(name: t)).to_not be_nil
+    end
+  end
+
   step 'the intervention should have :num file(s) attached' do |num_files|
     @intervention.reload
     expect(@intervention.files.count).to eq(num_files.to_i)
   end
 
-  def create_intervention(num_files = 0)
+  def create_intervention(num_files = 0, tags = [])
     complete_field 'title', FFaker::BaconIpsum.phrase
     complete_field 'intro', FFaker::BaconIpsum.sentence
     complete_field 'how', FFaker::BaconIpsum.sentence
@@ -68,6 +76,7 @@ module InterventionSteps
     attach_file('intervention_files', generate_files(num_files)) if num_files > 0
     complete_links(2)
     complete_contacts(3)
+    complete_tags(tags)
     first('input[name="commit"]').click
     @intervention = Intervention.last
   end

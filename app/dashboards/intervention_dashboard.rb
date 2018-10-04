@@ -26,7 +26,8 @@ class InterventionDashboard < Administrate::BaseDashboard
     key_points: ArrayField,
     files: MultifileField,
     links: Field::NestedHasMany,
-    contacts: Field::NestedHasMany
+    contacts: Field::NestedHasMany,
+    tags: TagField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -67,10 +68,11 @@ class InterventionDashboard < Administrate::BaseDashboard
     files
     links
     contacts
+    tags
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], key_points: [], more_effective: [], works_best: []]
+    super + [files: [], files_to_delete: [], key_points: [], more_effective: [], works_best: [], tag_ids: []]
   end
 
   # Overwrite this method to customize how evidences are displayed

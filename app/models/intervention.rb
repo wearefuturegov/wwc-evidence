@@ -24,7 +24,7 @@ class Intervention < ApplicationRecord
   belongs_to :implementation
 
   accepts_nested_attributes_for :implementation, :outcomes, :effective_subjects, :ineffective_subjects,
-                                :negative_subjects, :links, :contacts
+                                :negative_subjects, :links, :contacts, :tags
 
   attr_accessor :files_to_delete
 

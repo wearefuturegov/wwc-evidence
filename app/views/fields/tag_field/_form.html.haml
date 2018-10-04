@@ -1,0 +1,8 @@
+.field-unit__label
+  = f.label field.attribute
+.field-unit__field
+  = text_field :tag, :tags, class: 'tagify-field', value: field.data.map { |t| t.name }.join(','), name: nil
+  #tag_wrapper
+    - field.data.each do |d|
+      = hidden_field :intervention, :tag_ids, value: d.id, multiple: true
+    
