@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :interventions
+    resources :tags, only: :index
 
     root to: 'interventions#index'
   end
