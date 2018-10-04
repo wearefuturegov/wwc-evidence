@@ -1,10 +1,7 @@
 %li
   = link_to intervention, class: 'card' do
     .main
-      .tags
-        %span tags
-        %span go
-        %span here
+      .tags= intervention.tag_list
       .details
         %h3= intervention.title
         %p= intervention.intro

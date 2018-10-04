@@ -12,4 +12,10 @@ class InterventionDecorator < ApplicationDecorator
   def implementation
     super.decorate
   end
+
+  def tag_list
+    tags.all.map do |t|
+      h.content_tag('span', t.name)
+    end.join.html_safe
+  end
 end
