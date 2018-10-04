@@ -1,6 +1,8 @@
 //= require @yaireo/tagify/dist/jQuery.tagify.min.js
 
 $.fn.activateTagify = function() {
+  if (this.length === 0) { return false; }
+
   $.get('/admin/tags.json', function(data) {
     $('#tag_tags').tagify({
       whitelist: data.map(function(obj) {
@@ -18,5 +20,5 @@ $.fn.activateTagify = function() {
     }).on('remove', function(e, tag) {
       $('#tag_wrapper input[value='+ tag.id +']').remove()
     })
-  })
+  });
 }
