@@ -2,46 +2,63 @@
 
 module InterventionSteps
   step 'I create an intervention' do
-    create_intervention(1)
+    @intervention = Fabricate(:intervention)
+    create_intervention
   end
 
   step 'I create an intervention with :num file(s)' do |num_files|
+    @intervention = Fabricate(:intervention)
     create_intervention(num_files.to_i)
+    @intervention = Intervention.last
   end
 
   step 'the correct fields should be saved' do
-    @fields.each do |k, v|
-      expect(@intervention.send(k)).to eq(v)
+    intervention = Intervention.last
+
+    expect(intervention.title).to eq(@intervention.title)
+    expect(intervention.intro).to eq(@intervention.intro)
+    expect(intervention.how).to eq(@intervention.how)
+    expect(intervention.studies).to eq(@intervention.studies)
+    expect(intervention.more_effective).to eq(@intervention.more_effective)
+    expect(intervention.works_best).to eq(@intervention.works_best)
+    expect(intervention.in_practice).to eq(@intervention.in_practice)
+    expect(intervention.costs_benefits).to eq(@intervention.costs_benefits)
+    expect(intervention.key_points).to eq(@intervention.key_points)
+
+    intervention.outcomes.each_with_index do |outcome, i|
+      expect(outcome.title).to eq(@intervention.outcomes[i].title)
+      expect(outcome.description).to eq(@intervention.outcomes[i].description)
+      expect(outcome.effect).to eq(@intervention.outcomes[i].effect)
+      expect(outcome.evidence).to eq(@intervention.outcomes[i].evidence)
     end
 
-    @outcome_fields.each_with_index do |f, i|
-      f.each do |k, v|
-        expect(@intervention.outcomes[i].send(k)).to eq(v)
-      end
+    intervention.effective_subjects.each_with_index do |subject, i|
+      expect(subject.title).to eq(@intervention.effective_subjects[i].title)
     end
 
-    @subject_fields.each do |subject, value|
-      value.each_with_index do |f, i|
-        f.each do |k, v|
-          expect(@intervention.send("#{subject}_subjects")[i].send(k)).to eq(v)
-        end
-      end
+    intervention.ineffective_subjects.each_with_index do |subject, i|
+      expect(subject.title).to eq(@intervention.ineffective_subjects[i].title)
     end
 
-    @implementation_fields.each do |k, v|
-      expect(@intervention.implementation.send(k)).to eq(v)
+    intervention.negative_subjects.each_with_index do |subject, i|
+      expect(subject.title).to eq(@intervention.negative_subjects[i].title)
     end
 
-    @link_fields.each_with_index do |link, i|
-      link.each do |k, v|
-        expect(@intervention.links[i].send(k)).to eq(v)
-      end
+    expect(intervention.implementation.intro).to eq(@intervention.implementation.intro)
+    expect(intervention.implementation.deliverer).to eq(@intervention.implementation.deliverer)
+    expect(intervention.implementation.training_requirements).to eq(@intervention.implementation.training_requirements)
+    expect(intervention.implementation.supervision).to eq(@intervention.implementation.supervision)
+    expect(intervention.implementation.fidelity).to eq(@intervention.implementation.fidelity)
+    expect(intervention.implementation.support).to eq(@intervention.implementation.support)
+
+    intervention.links.each_with_index do |link, i|
+      expect(link.title).to eq(@intervention.links[i].title)
+      expect(link.url).to eq(@intervention.links[i].url)
     end
 
-    @contact_fields.each_with_index do |contact, i|
-      contact.each do |k, v|
-        expect(@intervention.contacts[i].send(k)).to eq(v)
-      end
+    intervention.contacts.each_with_index do |contact, i|
+      expect(contact.title).to eq(@intervention.contacts[i].title)
+      expect(contact.url).to eq(@intervention.contacts[i].url)
     end
   end
 
@@ -54,141 +71,121 @@ module InterventionSteps
   end
 
   step 'the intervention should have :num file(s) attached' do |num_files|
-    @intervention.reload
-    expect(@intervention.files.count).to eq(num_files.to_i)
+    intervention = Intervention.last
+    expect(intervention.files.count).to eq(num_files.to_i)
   end
 
-  def create_intervention(num_files = 0, tags = [])
-    complete_field 'title', FFaker::BaconIpsum.phrase
-    complete_field 'intro', FFaker::BaconIpsum.sentence
-    complete_field 'how', FFaker::BaconIpsum.sentence
-    complete_outcomes(2)
-    complete_field 'studies', FFaker::BaconIpsum.sentence
-    complete_subjects(3, 'effective')
-    complete_subjects(2, 'ineffective')
-    complete_subjects(1, 'negative')
-    complete_array_field 'more_effective', 2
-    complete_array_field 'works_best', 3
-    complete_field 'in_practice', FFaker::BaconIpsum.sentence
-    complete_field 'costs_benefits', FFaker::BaconIpsum.sentence
+  def create_intervention(num_files = 0)
+    complete_field :title
+    complete_field :intro
+    complete_field :how
+    complete_outcomes
+    complete_field :studies
+    complete_subjects :effective
+    complete_subjects :ineffective
+    complete_subjects :negative
+    complete_array_field :more_effective
+    complete_array_field :works_best
+    complete_field :in_practice
+    complete_field :costs_benefits
     complete_implementation
-    complete_array_field 'key_points', 2
+    complete_array_field :key_points
     attach_file('intervention_files', generate_files(num_files)) if num_files > 0
-    complete_links(2)
-    complete_contacts(3)
-    complete_tags(tags)
+    complete_links
+    complete_contacts
+    complete_tags
     first('input[name="commit"]').click
-    @intervention = Intervention.last
   end
 
-  def complete_field(field_name, content)
-    @fields ||= {}
-    fill_in "intervention_#{field_name}", with: content
-    @fields[field_name] = content
+  def complete_field(field_name)
+    fill_in "intervention_#{field_name}", with: @intervention.send(field_name)
   end
 
-  def complete_array_field(field_name, num = 1)
-    @fields ||= {}
-    @fields[field_name] = []
-    num.times do |i|
-      item = FFaker::BaconIpsum.phrase
+  def complete_array_field(field_name)
+    array = @intervention.send(field_name)
+    array.each_with_index do |item, i|
       all(:css, "input[name='intervention[#{field_name}][]']").last.set(item)
-      find(:css, "a#add_#{field_name}").click unless (i + 1) == num
-      @fields[field_name] << item
+      find(:css, "a#add_#{field_name}").click unless (i + 1) == array.length
     end
   end
 
-  def complete_outcome_field(field_name, content, index = 0)
-    @outcome_fields ||= []
-    @outcome_fields[index] ||= {}
-    fill_in I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}"), with: content
-    @outcome_fields[index][field_name] = content
+  def complete_outcome_field(field_name, outcome)
+    fill_in I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}"), with: outcome.send(field_name)
   end
 
-  def complete_link_field(field_name, content, index = 0)
-    @link_fields ||= []
-    @link_fields[index] ||= {}
-    fill_in I18n.t("helpers.label.intervention[links_attributes][new_links].#{field_name}"), with: content
-    @link_fields[index][field_name] = content
+  def complete_link_field(field_name, link)
+    fill_in I18n.t("helpers.label.intervention[links_attributes][new_links].#{field_name}"), with: link.send(field_name)
   end
 
-  def complete_contact_field(field_name, content, index = 0)
-    @contact_fields ||= []
-    @contact_fields[index] ||= {}
-    fill_in I18n.t("helpers.label.intervention[contacts_attributes][new_contacts].#{field_name}"), with: content
-    @contact_fields[index][field_name] = content
+  def complete_contact_field(field_name, contact)
+    fill_in I18n.t("helpers.label.intervention[contacts_attributes][new_contacts].#{field_name}"), with: contact.send(field_name)
   end
 
-  def complete_implementation_field(field_name, content)
-    @implementation_fields ||= {}
-    fill_in "intervention_implementation_attributes_#{field_name}", with: content
-    @implementation_fields[field_name] = content
+  def complete_implementation_field(field_name)
+    fill_in "intervention_implementation_attributes_#{field_name}", with: @intervention.implementation.send(field_name)
   end
 
-  def complete_subject_field(field_name, content, index, type)
-    @subject_fields ||= {}
-    @subject_fields[type] ||= []
-    @subject_fields[type][index] ||= {}
-    fill_in I18n.t("helpers.label.intervention[#{type}_subjects_attributes][new_#{type}_subjects].#{field_name}"), with: content
-    @subject_fields[type][index][field_name] = content
+  def complete_subject_field(field_name, subject, type)
+    fill_in I18n.t("helpers.label.intervention[#{type}_subjects_attributes][new_#{type}_subjects].#{field_name}"), with: subject.send(field_name)
   end
 
-  def complete_outcomes(num = 1)
-    num.times do |i|
+  def complete_outcomes
+    @intervention.outcomes.each do |outcome|
       within 'fieldset.outcomes' do
         click_on I18n.t('administrate.fields.nested_has_many.add', resource: 'Outcome')
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
-          complete_outcome_field('title', FFaker::BaconIpsum.phrase, i)
-          complete_outcome_field('description', FFaker::BaconIpsum.sentence, i)
-          complete_outcome_field('effect', Outcome.effects.keys.sample, i)
-          complete_outcome_field('evidence', Outcome.evidences.keys.sample, i)
+          complete_outcome_field :title, outcome
+          complete_outcome_field :description, outcome
+          complete_outcome_field :effect, outcome
+          complete_outcome_field :evidence, outcome
         end
       end
     end
   end
 
-  def complete_subjects(num = 1, type = 'effective')
-    num.times do |i|
+  def complete_subjects(type = :effective)
+    subjects = @intervention.send("#{type}_subjects")
+    subjects.each do |subject|
       within "fieldset.#{type}_subjects" do
-        click_on I18n.t('administrate.fields.nested_has_many.add', resource: "#{type.titleize} Subject")
+        click_on I18n.t('administrate.fields.nested_has_many.add', resource: "#{type.to_s.titleize} Subject")
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
-          complete_subject_field('title', FFaker::BaconIpsum.phrase, i, type)
+          complete_subject_field('title', subject, type)
         end
       end
     end
   end
 
-  def complete_links(num = 1)
-    num.times do |i|
+  def complete_links
+    @intervention.links.each do |link|
       within '.field-unit--nested.links' do
         click_on I18n.t('administrate.fields.nested_has_many.add', resource: 'Link')
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
-          complete_link_field('title', FFaker::BaconIpsum.phrase, i)
-          complete_link_field('url', FFaker::Internet.http_url, i)
+          complete_link_field :title, link
+          complete_link_field :url, link
         end
       end
     end
   end
 
-  def complete_contacts(num = 1)
-    num.times do |i|
+  def complete_contacts
+    @intervention.contacts.each do |contact|
       within '.field-unit--nested.contacts' do
         click_on I18n.t('administrate.fields.nested_has_many.add', resource: 'Contact')
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
-          complete_contact_field('title', FFaker::BaconIpsum.phrase, i)
-          complete_contact_field('url', FFaker::Internet.http_url, i)
+          complete_contact_field :title, contact
+          complete_contact_field :url, contact
         end
       end
     end
   end
 
   def complete_implementation
-    complete_implementation_field('intro', FFaker::BaconIpsum.sentence)
-    complete_implementation_field('deliverer', FFaker::BaconIpsum.phrase)
-    complete_implementation_field('training_requirements', FFaker::BaconIpsum.phrase)
-    complete_implementation_field('supervision', FFaker::BaconIpsum.phrase)
-    complete_implementation_field('fidelity', FFaker::BaconIpsum.phrase)
-    complete_implementation_field('support', FFaker::BaconIpsum.phrase)
+    complete_implementation_field :intro
+    complete_implementation_field :deliverer
+    complete_implementation_field :training_requirements
+    complete_implementation_field :supervision
+    complete_implementation_field :fidelity
+    complete_implementation_field :support
   end
 end
 

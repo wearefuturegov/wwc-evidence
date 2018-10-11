@@ -1,16 +1,13 @@
 module TagSteps
   step 'there is an intervention with the tags :string' do |tags|
     @tags = tags.split(',')
-    @intervention = Fabricate(:intervention, tags: @tags.map { |t| Fabricate(:tag, name: t) })
+    @intervention = create_intervention_with_tags
   end
 
   step 'I create an intervention with the tags :string' do |tags|
     @tags = tags.split(',')
-    create_intervention(0, @tags)
-  end
-
-  step 'there should be a total of :num tags' do |i|
-    expect(Tag.all.count).to eq(i)
+    @intervention = create_intervention_with_tags
+    create_intervention
   end
 
   step 'I remove the tag :string' do |tag|
@@ -22,9 +19,13 @@ module TagSteps
     first('input[name="commit"]').click
   end
 
-  def complete_tags(tags)
-    tags.each do |tag|
-      first('.tagify__input').send_keys(tag, ',')
+  def create_intervention_with_tags
+    Fabricate(:intervention, tags: @tags.map { |t| Fabricate(:tag, name: t) })
+  end
+
+  def complete_tags
+    @intervention.tags.each do |tag|
+      first('.tagify__input').send_keys(tag.name, ',')
     end
   end
 end
