@@ -77,6 +77,28 @@ en:
       key_points:
         add: 'Add key point'
     label:
+      intervention:
+        intro: Introduction
+        how: How is is meant to work?
+        outcomes: What are the evaluated outcomes?
+        effective: How effective is it?
+        studies: Where has it been studied?
+        work_for: Who does this work for?
+        works_best: When does it work best?
+        in_practice: How does it work in practice?
+        costs_benefits: What are the costs and benefits?
+        How is it implemented?: How is it implemented?
+        key_points: Summary of key points
+        resources: Further resources
+        contacts: Useful contacts
+        links: Links and files
+      implementation:
+        intro: How is it implemented?
+        deliverer: Who can deliver it?
+        training_requirements: What are the training requirements?
+        supervision: How are the practitioners supervised?
+        fidelity: What are the systems for maintaining fidelity?
+        support: What else supports good implementation?
       intervention[outcomes_attributes][new_outcomes]:
         title: Title
         description: Descripion
