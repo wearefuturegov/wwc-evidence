@@ -2,6 +2,7 @@
   "name": "wwc-evidence",
   "private": true,
   "dependencies": {
-    "@yaireo/tagify": "2.5.1"
+    "@yaireo/tagify": "2.5.1",
+    "simplemde": "^1.11.2"
   }
 }
