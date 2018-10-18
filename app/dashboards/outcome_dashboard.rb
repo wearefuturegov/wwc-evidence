@@ -9,7 +9,7 @@ class OutcomeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    description: Field::Text,
+    description: MarkdownField,
     effect: Field::Number,
     evidence: Field::Number
   }.freeze
