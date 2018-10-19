@@ -1,8 +1,24 @@
 class InterventionDecorator < ApplicationDecorator
   delegate_all
 
+  def intro
+    parse_markdown(super).html_safe
+  end
+
   def how
-    field_with_header(:how, 'h2')
+    field_with_header(:how, 'h2', true)
+  end
+
+  def in_practice
+    field_with_header(:in_practice, 'h2', true)
+  end
+
+  def costs_benefits
+    field_with_header(:costs_benefits, 'h2', true)
+  end
+
+  def studies
+    field_with_header(:studies, 'h2', true)
   end
 
   def outcomes

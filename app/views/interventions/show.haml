@@ -43,7 +43,8 @@
 
       %h1= intervention.title
       
-      %h4= intervention.intro
+      %section.section#intro
+        = intervention.intro
         
       %section.section#how
         = intervention.how
@@ -56,9 +57,8 @@
                 
         = render intervention.outcomes
             
-      %section.section
-        %h2#studies= t('intervention.titles.studies')
-        %p= intervention.studies
+      %section.section#studies
+        = intervention.studies
         
       %section.section
         %h2#work_for= t('intervention.titles.work_for')
@@ -89,13 +89,11 @@
           - intervention.works_best.each do |e|
             %li= e
 
-      %section.section
-        %h2#in_practice= t('intervention.titles.in_practice')
-        %p= intervention.in_practice
-
-      %section.section
-        %h2#costs_benefits= t('intervention.titles.costs_benefits')
-        %p= intervention.costs_benefits
+      %section.section#in_practice
+        = intervention.in_practice
+        
+      %section.section#costs_benefits
+        = intervention.costs_benefits
 
       = render intervention.implementation
 
