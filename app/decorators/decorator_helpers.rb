@@ -3,11 +3,17 @@ module DecoratorHelpers
     args.join('').html_safe
   end
 
-  def field_with_header(field_name, heading_tag = 'h3')
+  def field_with_header(field_name, heading_tag = 'h3', markdown = false)
+    content = object.send(field_name) || 'DK'
+    parsed_content = markdown ? parse_markdown(content) : h.content_tag('p', content)
     output_html(
       header(field_name, heading_tag),
-      h.content_tag('p', object.send(field_name) || 'DK')
+      parsed_content
     )
+  end
+
+  def parse_markdown(content)
+    Kramdown::Document.new(content).to_html
   end
 
   def array_list_with_header(field_name, heading_tag = 'h2')

@@ -190,6 +190,7 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
+    kramdown (1.17.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -390,6 +391,7 @@ DEPENDENCIES
   haml-rails (~> 1.0)
   i18n-debug
   jbuilder (~> 2.5)
+  kramdown
   launchy
   listen (>= 3.0.5, < 3.2)
   neat

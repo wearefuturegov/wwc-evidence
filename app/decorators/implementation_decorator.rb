@@ -2,7 +2,7 @@ class ImplementationDecorator < ApplicationDecorator
   delegate_all
 
   def intro
-    field_with_header(:intro, 'h2')
+    field_with_header(:intro, 'h2', true)
   end
 
   def deliverer
