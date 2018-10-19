@@ -10,8 +10,8 @@ class OutcomeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     title: Field::String,
     description: Field::Text,
-    effect: Field::Number,
-    evidence: Field::Number
+    effect: EnumField,
+    evidence: EnumField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
