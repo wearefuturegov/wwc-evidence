@@ -121,6 +121,10 @@ module InterventionSteps
     fill_in I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}"), with: outcome.send(field_name)
   end
 
+  def complete_outcome_select_field(field_name, outcome)
+    select outcome.send(field_name).titleize, from: I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}")
+  end
+
   def complete_link_field(field_name, link)
     fill_in I18n.t("helpers.label.intervention[links_attributes][new_links].#{field_name}"), with: link.send(field_name)
   end
@@ -152,8 +156,8 @@ module InterventionSteps
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
           complete_outcome_field :title, outcome
           complete_outcome_field :description, outcome
-          complete_outcome_field :effect, outcome
-          complete_outcome_field :evidence, outcome
+          complete_outcome_select_field :effect, outcome
+          complete_outcome_select_field :evidence, outcome
         end
       end
     end
