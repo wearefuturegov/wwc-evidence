@@ -77,17 +77,17 @@ module InterventionSteps
 
   def create_intervention(num_files = 0)
     complete_field :title
-    complete_field :intro
-    complete_field :how
+    complete_markdown_field :intro
+    complete_markdown_field :how
     complete_outcomes
-    complete_field :studies
+    complete_markdown_field :studies
     complete_subjects :effective
     complete_subjects :ineffective
     complete_subjects :negative
     complete_array_field :more_effective
     complete_array_field :works_best
-    complete_field :in_practice
-    complete_field :costs_benefits
+    complete_markdown_field :in_practice
+    complete_markdown_field :costs_benefits
     complete_implementation
     complete_array_field :key_points
     attach_file('intervention_files', generate_files(num_files)) if num_files > 0
@@ -95,6 +95,14 @@ module InterventionSteps
     complete_contacts
     complete_tags
     first('input[name="commit"]').click
+  end
+
+  def complete_markdown_field(field_name)
+    within ".markdown-field-wrapper__intervention__#{field_name}" do
+      value = @intervention.send(field_name)
+      element = find('.CodeMirror', visible: false)
+      execute_script("arguments[0].CodeMirror.getDoc().setValue('#{value}')", element)
+    end
   end
 
   def complete_field(field_name)
@@ -123,6 +131,14 @@ module InterventionSteps
 
   def complete_implementation_field(field_name)
     fill_in "intervention_implementation_attributes_#{field_name}", with: @intervention.implementation.send(field_name)
+  end
+
+  def complete_implementation_markdown_field(field_name)
+    within ".markdown-field-wrapper__implementation__#{field_name}" do
+      value = @intervention.implementation.send(field_name)
+      element = find('.CodeMirror', visible: false)
+      execute_script("arguments[0].CodeMirror.getDoc().setValue('#{value}')", element)
+    end
   end
 
   def complete_subject_field(field_name, subject, type)
@@ -180,7 +196,7 @@ module InterventionSteps
   end
 
   def complete_implementation
-    complete_implementation_field :intro
+    complete_implementation_markdown_field :intro
     complete_implementation_field :deliverer
     complete_implementation_field :training_requirements
     complete_implementation_field :supervision
