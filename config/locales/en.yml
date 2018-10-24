@@ -33,6 +33,7 @@ en:
   hello: "Hello world"
   intervention:
     titles:
+      what_is_it: What is this?
       how: How is is meant to work?
       outcomes: What are the evaluated outcomes?
       effective: How effective is it?

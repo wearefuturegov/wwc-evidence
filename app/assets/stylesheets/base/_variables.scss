@@ -67,6 +67,6 @@ $card-grid-color: rgba(255, 0, 255, 0.25);
 
 $card-grid: (
   columns: 12,
-  gutter: $gutter*0.5,
+  gutter: $gutter*0.5, // 20
   color: $card-grid-color,
 );

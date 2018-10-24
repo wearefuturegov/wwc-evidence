@@ -44,6 +44,9 @@
       %h1= intervention.title
       
       %h4= intervention.intro
+
+      %section.section#what_is_it
+        = intervention.what_is_it
         
       %section.section#how
         = intervention.how
@@ -62,6 +65,7 @@
         
       %section.section
         %h2#work_for= t('intervention.titles.work_for')
+        %p= intervention.work_for_intro
         %strong Effective for…
         - intervention.effective_subjects.each do |i|
           %p= i.title

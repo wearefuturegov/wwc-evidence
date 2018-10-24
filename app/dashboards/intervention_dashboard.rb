@@ -11,10 +11,13 @@ class InterventionDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
+    summary: Field::Text,
     intro: Field::Text,
+    what_is_it: Field::Text,
     how: Field::Text,
     outcomes: Field::NestedHasMany,
     studies: Field::Text,
+    work_for_intro: Field::Text,
     effective_subjects: Field::NestedHasMany,
     ineffective_subjects: Field::NestedHasMany,
     negative_subjects: Field::NestedHasMany,
@@ -52,10 +55,13 @@ class InterventionDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    summary
     intro
+    what_is_it
     how
     outcomes
     studies
+    work_for_intro
     effective_subjects
     ineffective_subjects
     negative_subjects
