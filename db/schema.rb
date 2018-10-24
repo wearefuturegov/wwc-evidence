@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_24_151130) do
+ActiveRecord::Schema.define(version: 2018_10_24_160256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 2018_10_24_151130) do
     t.integer "effect"
     t.integer "evidence"
     t.bigint "intervention_id"
+    t.text "evidence_notes"
     t.index ["intervention_id"], name: "index_outcomes_on_intervention_id"
   end
 
