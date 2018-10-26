@@ -9,6 +9,10 @@ ul, ol {
       display: inline;
     }
   }
+  ul {
+    list-style: circle;
+    margin-left: $gutter;
+  }
 }
 
 ol {
