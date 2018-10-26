@@ -5,6 +5,8 @@
         %li
           Contents
         %li
+          = link_to t('intervention.titles.what_is_it'), '#what_is_it'
+        %li
           = link_to t('intervention.titles.how'), '#how'
         %li
           = link_to t('intervention.titles.outcomes'), '#outcomes'
@@ -13,34 +15,28 @@
         %li
           = link_to t('intervention.titles.studies'), '#studies'
         %li
-          = link_to t('intervention.titles.work_for'), '#work_for'
+          = link_to t('intervention.titles.who_does_it_work_for'), '#work_for'
         %li
-          = link_to t('intervention.titles.works_best'), '#works_best'
-        %li
-          = link_to t('intervention.titles.in_practice'), '#in_practice'
+          = link_to t('intervention.titles.when_where_how'), '#when_where_how'
         %li
           = link_to t('intervention.titles.costs_benefits'), '#costs_benefits'
         %li
-          = link_to t('intervention.titles.implementation'), '#implementation'
+          = link_to t('implementation.titles.intro'), '#intro'
+        %li
+          = link_to t('implementation.titles.how_is_it_delivered'), '#how_is_it_delivered'
+        %li
+          = link_to t('implementation.titles.deliverer'), '#deliverer'
+        %li
+          = link_to t('implementation.titles.training_requirements'), '#training_requirements'
+        %li
+          = link_to t('implementation.titles.fidelity'), '#fidelity'
+        %li
+          = link_to t('implementation.titles.support'), '#support'
         %li
           = link_to t('intervention.titles.key_points'), '#key_points'
         %li
           = link_to t('intervention.titles.resources'), '#contacts'
-      / %ul
-      /   %li
-      /     Links and files
-      /   %li
-      /     = link_to 'Pdf' ''
-      /   %li
-      /     = link_to 'Another Pdf' ''
     .col_9
-      / .tags
-      /   %span Child safety
-      /   %span crisis
-      /   %span family functioning
-      /   %span intensive family preservation programmes
-      /   %span out-of-home placement
-
       %h1= intervention.title
       
       %h4= intervention.intro
@@ -58,47 +54,21 @@
         %h2#effective= t('intervention.titles.effective')
                 
         = render intervention.outcomes
+
+        %p= intervention.outcome_notes
             
-      %section.section
-        %h2#studies= t('intervention.titles.studies')
+      %section.section#studies
         %p= intervention.studies
         
       %section.section
-        %h2#work_for= t('intervention.titles.work_for')
-        %p= intervention.work_for_intro
-        %strong Effective for…
-        - intervention.effective_subjects.each do |i|
-          %p= i.title
-
-        %strong Not effective for…
-        - intervention.ineffective_subjects.each do |i|
-          %p= i.title
-
-        Has a
-        %strong negative effective
-        for…
-        - intervention.negative_subjects.each do |i|
-          %p= i.title
-
-        %p
-          This intervention has been shown to be more effective for:
-
-        %ul
-          - intervention.more_effective.each do |e|
-            %li= e
+        %h2#work_for= t('intervention.titles.who_does_it_work_for')
+        %p= intervention.who_does_it_work_for
 
       %section.section
-        %h2#works_best= t('intervention.titles.works_best')
-        %ul
-          - intervention.works_best.each do |e|
-            %li= e
+        %h2#when_where_how= t('intervention.titles.when_where_how')
+        %p= intervention.when_where_how
 
-      %section.section
-        %h2#in_practice= t('intervention.titles.in_practice')
-        %p= intervention.in_practice
-
-      %section.section
-        %h2#costs_benefits= t('intervention.titles.costs_benefits')
+      %section.section#costs_benefits
         %p= intervention.costs_benefits
 
       = render intervention.implementation
