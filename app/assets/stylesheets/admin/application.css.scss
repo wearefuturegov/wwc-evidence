@@ -41,3 +41,50 @@
     width: 90%;
   }
 }
+
+.field-unit--nested-has-many .remove_fields, 
+.field-unit--nested-has-many .add_fields {
+  float: left;
+}
+
+.field-unit--array-field .field-unit__array-text {
+  width: 100%;
+  margin-right: 0;
+}
+
+.field-unit--array-field .field-unit__minus-button {
+  float: left;
+  width: 100%;
+  margin-bottom: $base-spacing*1.5;
+}
+
+a.button,
+button {
+  background-color: #333;
+  float: left;
+  &:hover {
+    background-color: #000;
+  }
+  &.text {
+    background: none;
+    padding: 0;
+    color: #1976d2;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+}
+
+input[type="submit"] {
+  background-color: #28AFA0;
+  &:hover {
+    background-color: #000;
+  }
+}
+
+.remove-file {
+  margin: $base-spacing*0.25 0 $base-spacing 0;
+}
+
+.form-actions {
+  margin-left: 0;
+}
