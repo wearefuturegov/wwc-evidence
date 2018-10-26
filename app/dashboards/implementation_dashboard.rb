@@ -10,11 +10,11 @@ class ImplementationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     intro: MarkdownField,
-    deliverer: Field::String,
-    training_requirements: Field::String,
-    supervision: Field::String,
-    fidelity: Field::String,
-    support: Field::String
+    how_is_it_delivered: MarkdownField,
+    deliverer: MarkdownField,
+    training_requirements: MarkdownField,
+    fidelity: MarkdownField,
+    support: MarkdownField,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -36,7 +36,6 @@ class ImplementationDashboard < Administrate::BaseDashboard
     intro
     deliverer
     training_requirements
-    supervision
     fidelity
     support
   ].freeze
@@ -46,9 +45,9 @@ class ImplementationDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     intro
+    how_is_it_delivered
     deliverer
     training_requirements
-    supervision
     fidelity
     support
   ].freeze

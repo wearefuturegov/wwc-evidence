@@ -13,23 +13,19 @@ class InterventionDashboard < Administrate::BaseDashboard
     title: Field::String,
     summary: Field::Text,
     intro: MarkdownField,
-    what_is_it: Field::Text,
+    what_is_it: MarkdownField,
     how: MarkdownField,
     outcomes: Field::NestedHasMany,
+    outcome_notes: MarkdownField,
     studies: MarkdownField,
-    work_for_intro: Field::Text,
-    effective_subjects: Field::NestedHasMany,
-    ineffective_subjects: Field::NestedHasMany,
-    negative_subjects: Field::NestedHasMany,
-    more_effective: ArrayField,
-    works_best: ArrayField,
-    in_practice: MarkdownField,
+    who_does_it_work_for: MarkdownField,
+    when_where_how: MarkdownField,
     costs_benefits: MarkdownField,
     implementation: Field::HasOne,
     key_points: ArrayField,
-    files: MultifileField,
-    links: Field::NestedHasMany,
     contacts: Field::NestedHasMany,
+    links: Field::NestedHasMany,
+    files: MultifileField,
     tags: TagField
   }.freeze
 
@@ -60,20 +56,16 @@ class InterventionDashboard < Administrate::BaseDashboard
     what_is_it
     how
     outcomes
+    outcome_notes
     studies
-    work_for_intro
-    effective_subjects
-    ineffective_subjects
-    negative_subjects
-    more_effective
-    works_best
-    in_practice
+    who_does_it_work_for
+    when_where_how
     costs_benefits
     implementation
     key_points
-    files
-    links
     contacts
+    links
+    files
     tags
   ].freeze
 
