@@ -25,8 +25,7 @@ class InterventionDashboard < Administrate::BaseDashboard
     key_points: ArrayField,
     contacts: Field::NestedHasMany,
     links: Field::NestedHasMany,
-    files: MultifileField,
-    tags: TagField
+    files: MultifileField
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -66,7 +65,6 @@ class InterventionDashboard < Administrate::BaseDashboard
     contacts
     links
     files
-    tags
   ].freeze
 
   def permitted_attributes
