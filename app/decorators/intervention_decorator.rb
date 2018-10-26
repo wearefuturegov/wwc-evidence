@@ -25,8 +25,20 @@ class InterventionDecorator < ApplicationDecorator
     field_with_header(:studies, 'h2', true)
   end
 
+  def who_does_it_work_for
+    parse_markdown(super).html_safe
+  end
+
+  def when_where_how
+    parse_markdown(super).html_safe
+  end
+
   def outcomes
     OutcomeDecorator.decorate_collection(super)
+  end
+
+  def outcome_notes
+    parse_markdown(super).html_safe
   end
 
   def implementation

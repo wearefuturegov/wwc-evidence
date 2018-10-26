@@ -19,6 +19,10 @@ class OutcomeDecorator < ApplicationDecorator
     meter(object.effect_before_type_cast)
   end
 
+  def intervention_notes
+    parse_markdown(super).html_safe
+  end
+
   def meter(index)
     output = ''
     3.times do |i|
