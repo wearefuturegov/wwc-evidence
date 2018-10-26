@@ -9,7 +9,7 @@ class ImplementationDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    intro: MarkdownField,
+    intro: Field::SimpleMDEMarkdown,
     deliverer: Field::String,
     training_requirements: Field::String,
     supervision: Field::String,
