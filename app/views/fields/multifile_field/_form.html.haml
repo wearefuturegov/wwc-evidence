@@ -6,8 +6,8 @@
       - field.data.each do |f|
         %li
           = f.filename.to_s
-          %button.small.remove-file{ data: { file_id: f.id }}
-            X
+          %button.text.remove-file{ data: { file_id: f.id }}
+            Remove file
           
   = f.file_field field.attribute, multiple: true
   
