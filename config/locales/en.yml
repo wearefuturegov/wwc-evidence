@@ -43,21 +43,21 @@ en:
       outcomes: What are the evaluated outcomes?
       effective: How effective is it?
       studies: Where has it been studied?
-      work_for: Who does this work for?
+      who_does_it_work_for: Who does this work for?
       works_best: When does it work best?
-      in_practice: How does it work in practice?
+      when_where_how: When, where and how does it work?
       costs_benefits: What are the costs and benefits?
-      How is it implemented?: How is it implemented?
-      key_points: Summary of key points
+      how_is_it_delivered: How is it delivered?
+      key_points: In summary
+      contacts: Useful contacts and case studies
       resources: Further resources
-      contacts: Useful contacts
       links: Links and files
   implementation:
     titles:
       intro: How is it implemented?
+      how_is_it_delivered: How is it delivered?
       deliverer: Who can deliver it?
-      training_requirements: What are the training requirements?
-      supervision: How are the practitioners supervised?
+      training_requirements: What are the training and supervision requirements?
       fidelity: What are the systems for maintaining fidelity?
       support: What else supports good implementation?
   outcome:
@@ -89,20 +89,19 @@ en:
         outcomes: What are the evaluated outcomes?
         effective: How effective is it?
         studies: Where has it been studied?
-        work_for: Who does this work for?
+        who_does_it_work_for: Who does this work for?
         works_best: When does it work best?
-        in_practice: How does it work in practice?
+        when_where_how: When, where and how does it work?
         costs_benefits: What are the costs and benefits?
-        How is it implemented?: How is it implemented?
-        key_points: Summary of key points
+        key_points: In summary
+        contacts: Useful contacts and case studies
         resources: Further resources
-        contacts: Useful contacts
         links: Links and files
       implementation:
         intro: How is it implemented?
+        how_is_it_delivered: How is it delivered?
         deliverer: Who can deliver it?
-        training_requirements: What are the training requirements?
-        supervision: How are the practitioners supervised?
+        training_requirements: What are the training and supervision requirements?
         fidelity: What are the systems for maintaining fidelity?
         support: What else supports good implementation?
       intervention[outcomes_attributes][new_outcomes]:
