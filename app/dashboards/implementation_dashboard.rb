@@ -9,12 +9,12 @@ class ImplementationDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    intro: MarkdownField,
-    how_is_it_delivered: MarkdownField,
-    deliverer: MarkdownField,
-    training_requirements: MarkdownField,
-    fidelity: MarkdownField,
-    support: MarkdownField,
+    intro: Field::SimpleMDEMarkdown,
+    how_is_it_delivered: Field::SimpleMDEMarkdown,
+    deliverer: Field::SimpleMDEMarkdown,
+    training_requirements: Field::SimpleMDEMarkdown,
+    fidelity: Field::SimpleMDEMarkdown,
+    support: Field::SimpleMDEMarkdown
   }.freeze
 
   # COLLECTION_ATTRIBUTES

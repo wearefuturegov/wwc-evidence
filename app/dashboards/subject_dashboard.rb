@@ -9,7 +9,7 @@ class SubjectDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    subject_notes: MarkdownField
+    subject_notes: Field::SimpleMDEMarkdown
   }.freeze
 
   # COLLECTION_ATTRIBUTES

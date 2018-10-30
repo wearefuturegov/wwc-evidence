@@ -39,6 +39,7 @@ gem 'decent_exposure', '3.0.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'administrate'
 gem 'administrate-field-nested_has_many'
+gem 'administrate-field-simple_mde_markdown'
 gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'

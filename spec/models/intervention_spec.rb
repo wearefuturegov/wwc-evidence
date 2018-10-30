@@ -31,5 +31,4 @@ RSpec.describe Intervention, type: :model do
   it 'can have many tags' do
     expect(intervention.tags).to eq(tags)
   end
-
 end

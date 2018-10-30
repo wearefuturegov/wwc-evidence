@@ -12,7 +12,7 @@ class OutcomeDashboard < Administrate::BaseDashboard
     description: Field::Text,
     effect: EnumField,
     evidence: EnumField,
-    intervention_notes: MarkdownField
+    intervention_notes: Field::SimpleMDEMarkdown
   }.freeze
 
   # COLLECTION_ATTRIBUTES
