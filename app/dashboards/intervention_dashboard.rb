@@ -11,22 +11,20 @@ class InterventionDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
+    summary: Field::Text,
     intro: Field::SimpleMDEMarkdown,
+    what_is_it: Field::SimpleMDEMarkdown,
     how: Field::SimpleMDEMarkdown,
     outcomes: Field::NestedHasMany,
+    outcome_notes: Field::SimpleMDEMarkdown,
     studies: Field::SimpleMDEMarkdown,
-    effective_subjects: Field::NestedHasMany,
-    ineffective_subjects: Field::NestedHasMany,
-    negative_subjects: Field::NestedHasMany,
-    more_effective: ArrayField,
-    works_best: ArrayField,
-    in_practice: Field::SimpleMDEMarkdown,
+    who_does_it_work_for: Field::SimpleMDEMarkdown,
+    when_where_how: Field::SimpleMDEMarkdown,
     costs_benefits: Field::SimpleMDEMarkdown,
     implementation: Field::HasOne,
-    key_points: ArrayField,
-    files: MultifileField,
-    links: Field::NestedHasMany,
     contacts: Field::NestedHasMany,
+    links: Field::NestedHasMany,
+    files: MultifileField,
     tags: TagField
   }.freeze
 
@@ -52,27 +50,25 @@ class InterventionDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
+    summary
     intro
+    what_is_it
     how
     outcomes
+    outcome_notes
     studies
-    effective_subjects
-    ineffective_subjects
-    negative_subjects
-    more_effective
-    works_best
-    in_practice
+    who_does_it_work_for
+    when_where_how
     costs_benefits
     implementation
-    key_points
-    files
-    links
     contacts
+    links
+    files
     tags
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], key_points: [], more_effective: [], works_best: [], tag_ids: []]
+    super + [files: [], files_to_delete: [], key_points: [], works_best: [], tag_ids: []]
   end
 
   # Overwrite this method to customize how evidences are displayed

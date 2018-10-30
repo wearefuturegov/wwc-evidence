@@ -8,7 +8,8 @@ class SubjectDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    title: Field::String
+    title: Field::String,
+    subject_notes: Field::SimpleMDEMarkdown
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,8 +30,9 @@ class SubjectDashboard < Administrate::BaseDashboard
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :title
+  FORM_ATTRIBUTES = %i[
+    title
+    subject_notes
   ].freeze
 
   # Overwrite this method to customize how subjects are displayed

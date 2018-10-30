@@ -1,2 +1,0 @@
-class EffectiveSubjectDashboard < SubjectDashboard
-end

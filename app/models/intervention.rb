@@ -6,25 +6,11 @@ class Intervention < ApplicationRecord
   has_many :links
   has_many :contacts
 
-  has_many :effective_interventions_subjects,
-           -> { where(classification_type: :effective) },
-           class_name: 'InterventionsSubject'
-  has_many :ineffective_interventions_subjects,
-           -> { where(classification_type: :ineffective) },
-           class_name: 'InterventionsSubject'
-  has_many :negative_interventions_subjects,
-           -> { where(classification_type: :negative) },
-           class_name: 'InterventionsSubject'
-
-  has_many :effective_subjects, through: :effective_interventions_subjects, source: :subject
-  has_many :ineffective_subjects, through: :ineffective_interventions_subjects, source: :subject
-  has_many :negative_subjects, through: :negative_interventions_subjects, source: :subject
   has_and_belongs_to_many :tags
 
   belongs_to :implementation
 
-  accepts_nested_attributes_for :implementation, :outcomes, :effective_subjects, :ineffective_subjects,
-                                :negative_subjects, :links, :contacts, :tags
+  accepts_nested_attributes_for :implementation, :outcomes, :links, :contacts, :tags
 
   attr_accessor :files_to_delete
 

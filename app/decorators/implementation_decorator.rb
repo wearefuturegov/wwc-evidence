@@ -2,26 +2,22 @@ class ImplementationDecorator < ApplicationDecorator
   delegate_all
 
   def intro
-    field_with_header(:intro, 'h2', true)
+    parse_markdown(super).html_safe
   end
 
-  def deliverer
-    field_with_header(:deliverer)
+  def how_is_it_delivered
+    parse_markdown(super).html_safe
   end
 
   def training_requirements
-    field_with_header(:training_requirements)
-  end
-
-  def supervision
-    field_with_header(:supervision)
+    parse_markdown(super).html_safe
   end
 
   def fidelity
-    field_with_header(:fidelity)
+    parse_markdown(super).html_safe
   end
 
   def support
-    field_with_header(:support)
+    parse_markdown(super).html_safe
   end
 end

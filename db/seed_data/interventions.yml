@@ -16,34 +16,11 @@
       effect: not_effective
       evidence: moderate_quality
   studies: The majority of the studies have been carried out in the US. There has been one study in the UK.
-  effective_subjects_attributes:
-    -
-      title: Families with multiple problems
-  ineffective_subjects_attributes:
-    -
-      title: Families where the key concerns relate to abuse or neglect
-  negative_subjects_attributes:
-    -
-      title: Families not initially judged at risk of children entering care
-  more_effective:
-    - Boys compared to girls
-    - Younger compared to older children
-  works_best:
-    - If people delivering intervention have small caseloads
-    - Intensity is more important than duration of the intervention
-  in_practice: The evidence suggests that IFPPs can help families with multiple problems whose issues are not linked to abuse and neglect. They can help to avoid risk escalating and leading to removal of children. There was little evidence about the mechanisms for this.
   costs_benefits: There is no evidence on the cost-benefit of this intervention.
   implementation_attributes:
     intro: There is little information in this study on implementation. The information below comes from original reports.
     deliverer: Social workers
     support: Limited caseloads for those delivering the intervention
-  key_points:
-    -  IFPPs appear to have a positive effect on family functioning, but overall, there was no evidence of a statistically significant effect on reducing numbers of children entering care. Desired outcomes need to be clear
-    -  IFPPs have been used across a wider range of family types than originally intended, and they seem to work better for some groups than for others
-    -  IFPSs seem to have a negative effect when used with low-risk families, so agencies should be cautious about which families this is right for
-    -  Most of the studies included are from the USA and we do not know how the findings relate to the UK context
-    -  We do not know about the costs and benefits of IFPPs
-    -  This is a high-intensity programme – those delivering should have relatively small caseloads
   links_attributes:
     -
       title: Case studies and implementations
@@ -75,28 +52,7 @@
       effect: moderate_effect
       evidence: moderate_quality
   studies:  The majority of the studies have been carried out in the US. There has been one study in the UK. However, location might be less important for interventions of this kind than for other programmes (such as those that involve wider services and community support).
-  effective_subjects_attributes:
-    -
-      title: Maltreated and highly irritable children
-    -
-      title: Mothers of low socioeconomic status
-    -
-      title: Maternal depression
-    -
-      title: Recent adoption
-    -
-      title: High-risk families
-  ineffective_subjects_attributes:
-    -
-      title: Low-risk families
   works_best: Because this isn’t a detailed examination of each intervention, it doesn’t contain an in-depth review of the individual mechanisms. But it does point to some aspects that might be particularly important
-  in_practice: |
-     The theory is that these interventions improve maternal sensitivity and reflective function, which then promotes secure maternal-child attachment.
-
-     It’s argued that a more secure maternal-child attachment lays the foundations for children’s healthy social and mental development.
-
-     But it is also worth noting that there are ongoing debates about the role of attachment in a range of outcomes when interpreting the impact of attachment on the long-term wellbeing of children.
-  in_practice: There is no evidence on the cost-benefit of this intervention.
   implementation_attributes:
     intro: |
       While it’s difficult to compare a range of various interventions, there are some consistent key features:

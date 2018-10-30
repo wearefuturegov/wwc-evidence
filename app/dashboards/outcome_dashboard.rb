@@ -11,7 +11,8 @@ class OutcomeDashboard < Administrate::BaseDashboard
     title: Field::String,
     description: Field::Text,
     effect: EnumField,
-    evidence: EnumField
+    evidence: EnumField,
+    intervention_notes: Field::SimpleMDEMarkdown
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -43,6 +44,7 @@ class OutcomeDashboard < Administrate::BaseDashboard
     description
     effect
     evidence
+    intervention_notes
   ].freeze
 
   # Overwrite this method to customize how outcomes are displayed

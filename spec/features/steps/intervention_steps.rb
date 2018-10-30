@@ -19,11 +19,7 @@ module InterventionSteps
     expect(intervention.intro).to eq(@intervention.intro)
     expect(intervention.how).to eq(@intervention.how)
     expect(intervention.studies).to eq(@intervention.studies)
-    expect(intervention.more_effective).to eq(@intervention.more_effective)
-    expect(intervention.works_best).to eq(@intervention.works_best)
-    expect(intervention.in_practice).to eq(@intervention.in_practice)
     expect(intervention.costs_benefits).to eq(@intervention.costs_benefits)
-    expect(intervention.key_points).to eq(@intervention.key_points)
 
     intervention.outcomes.each_with_index do |outcome, i|
       expect(outcome.title).to eq(@intervention.outcomes[i].title)
@@ -32,22 +28,9 @@ module InterventionSteps
       expect(outcome.evidence).to eq(@intervention.outcomes[i].evidence)
     end
 
-    intervention.effective_subjects.each_with_index do |subject, i|
-      expect(subject.title).to eq(@intervention.effective_subjects[i].title)
-    end
-
-    intervention.ineffective_subjects.each_with_index do |subject, i|
-      expect(subject.title).to eq(@intervention.ineffective_subjects[i].title)
-    end
-
-    intervention.negative_subjects.each_with_index do |subject, i|
-      expect(subject.title).to eq(@intervention.negative_subjects[i].title)
-    end
-
     expect(intervention.implementation.intro).to eq(@intervention.implementation.intro)
     expect(intervention.implementation.deliverer).to eq(@intervention.implementation.deliverer)
     expect(intervention.implementation.training_requirements).to eq(@intervention.implementation.training_requirements)
-    expect(intervention.implementation.supervision).to eq(@intervention.implementation.supervision)
     expect(intervention.implementation.fidelity).to eq(@intervention.implementation.fidelity)
     expect(intervention.implementation.support).to eq(@intervention.implementation.support)
 
@@ -77,22 +60,22 @@ module InterventionSteps
 
   def create_intervention(num_files = 0)
     complete_field :title
+    complete_field :summary
     complete_markdown_field :intro
+    complete_markdown_field :what_is_it
     complete_markdown_field :how
     complete_outcomes
+    complete_markdown_field :outcome_notes
+    complete_markdown_field :who_does_it_work_for
+    complete_markdown_field :when_where_how
+    complete_markdown_field :costs_benefits
+
     complete_markdown_field :studies
-    complete_subjects :effective
-    complete_subjects :ineffective
-    complete_subjects :negative
-    complete_array_field :more_effective
-    complete_array_field :works_best
-    complete_markdown_field :in_practice
     complete_markdown_field :costs_benefits
     complete_implementation
-    complete_array_field :key_points
     attach_file('intervention_files', generate_files(num_files)) if num_files > 0
-    complete_links
     complete_contacts
+    complete_links
     complete_tags
     first('input[name="commit"]').click
   end
@@ -107,14 +90,6 @@ module InterventionSteps
 
   def complete_field(field_name)
     fill_in "intervention_#{field_name}", with: @intervention.send(field_name)
-  end
-
-  def complete_array_field(field_name)
-    array = @intervention.send(field_name)
-    array.each_with_index do |item, i|
-      all(:css, "input[name='intervention[#{field_name}][]']").last.set(item)
-      find(:css, "a#add_#{field_name}").click unless (i + 1) == array.length
-    end
   end
 
   def complete_outcome_field(field_name, outcome)
@@ -134,7 +109,11 @@ module InterventionSteps
   end
 
   def complete_implementation_field(field_name)
-    fill_in "intervention_implementation_attributes_#{field_name}", with: @intervention.implementation.send(field_name)
+    within ".markdown-field-wrapper__implementation__#{field_name}" do
+      value = @intervention.implementation.send(field_name)
+      element = find('.CodeMirror', visible: false)
+      execute_script("arguments[0].CodeMirror.getDoc().setValue('#{value}')", element)
+    end
   end
 
   def complete_implementation_markdown_field(field_name)
@@ -158,18 +137,6 @@ module InterventionSteps
           complete_outcome_field :description, outcome
           complete_outcome_select_field :effect, outcome
           complete_outcome_select_field :evidence, outcome
-        end
-      end
-    end
-  end
-
-  def complete_subjects(type = :effective)
-    subjects = @intervention.send("#{type}_subjects")
-    subjects.each do |subject|
-      within "fieldset.#{type}_subjects" do
-        click_on I18n.t('administrate.fields.nested_has_many.add', resource: "#{type.to_s.titleize} Subject")
-        within :xpath, '(//div[@class="nested-fields"])[last()]' do
-          complete_subject_field('title', subject, type)
         end
       end
     end
@@ -203,7 +170,6 @@ module InterventionSteps
     complete_implementation_markdown_field :intro
     complete_implementation_field :deliverer
     complete_implementation_field :training_requirements
-    complete_implementation_field :supervision
     complete_implementation_field :fidelity
     complete_implementation_field :support
   end
