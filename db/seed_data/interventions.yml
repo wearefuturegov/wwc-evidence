@@ -52,7 +52,6 @@
       effect: moderate_effect
       evidence: moderate_quality
   studies:  The majority of the studies have been carried out in the US. There has been one study in the UK. However, location might be less important for interventions of this kind than for other programmes (such as those that involve wider services and community support).
-  works_best: Because this isn’t a detailed examination of each intervention, it doesn’t contain an in-depth review of the individual mechanisms. But it does point to some aspects that might be particularly important
   implementation_attributes:
     intro: |
       While it’s difficult to compare a range of various interventions, there are some consistent key features:
@@ -69,14 +68,6 @@
 
       Video feedback featured in all but one of the successful interventions. This may be one of the “active ingredients” that help deliver the reported benefits.
     support: Limited caseloads for those delivering the intervention
-  key_points:
-    - There is strong evidence for the benefits of a range of interventions to improve maternal-child attachment security
-    - Varied interventions means that there is less known on individual aspects that create the reported benefits
-    - Key features of effective interventions need further exploration, to better understand which aspects create the benefits
-    - Interventions seem to have the greatest benefit for high-risk families
-    - The use of video feedback appears to be a key feature
-    - Ongoing debates mean that there should be caution when interpreting the impact of attachment on the long-term wellbeing of children
-    - An important question that is not addressed is how long the observed changes
   links_attributes:
     -
       title:  Original technical summary

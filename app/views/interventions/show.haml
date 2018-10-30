@@ -72,12 +72,6 @@
         %p= intervention.costs_benefits
 
       = render intervention.implementation
-
-      %section.section
-        %h2#key_points= t('intervention.titles.key_points')
-        %ul
-          - intervention.key_points.each do |i|
-            %li= i
           
       %section.section
         %h2#contacts= t('intervention.titles.resources')
