@@ -1,4 +1,4 @@
-
+//= require @yaireo/tagify/dist/jQuery.tagify.min.js
 
 $.fn.activateTagify = function() {
   if (this.length === 0) { return false; }
