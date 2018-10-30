@@ -1,2 +1,0 @@
-class IneffectiveSubjectDashboard < SubjectDashboard
-end

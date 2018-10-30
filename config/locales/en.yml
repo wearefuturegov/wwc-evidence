@@ -35,7 +35,7 @@ en:
     fields:
       nested_has_many:
         add: Add item
-        remove: Remove item 
+        remove: Remove item
   intervention:
     titles:
       what_is_it: What is this?
@@ -75,13 +75,6 @@ en:
         moderate_quality: This is based on <strong>moderate quality</strong> evidence.
         high_quality: This is based on <strong>high quality</strong> evidence.
   helpers:
-    array_field:
-      more_effective:
-        add: 'Add item'
-      works_best:
-        add: 'Add item'
-      key_points:
-        add: 'Add item'
     label:
       intervention:
         intro: Introduction
@@ -109,12 +102,6 @@ en:
         description: Descripion
         effect: Effect
         evidence: Evidence
-      intervention[effective_subjects_attributes][new_effective_subjects]:
-        title: Title
-      intervention[ineffective_subjects_attributes][new_ineffective_subjects]:
-        title: Title
-      intervention[negative_subjects_attributes][new_negative_subjects]:
-        title: Title
       intervention[links_attributes][new_links]:
         title: Title
         url: URL

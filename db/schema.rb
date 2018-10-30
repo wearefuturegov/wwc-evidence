@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_135836) do
+ActiveRecord::Schema.define(version: 2018_10_30_100533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 2018_10_26_135836) do
     t.text "intro"
     t.string "deliverer"
     t.string "training_requirements"
-    t.string "supervision"
     t.string "fidelity"
     t.string "support"
     t.text "how_is_it_delivered"
@@ -63,11 +62,7 @@ ActiveRecord::Schema.define(version: 2018_10_26_135836) do
     t.text "intro"
     t.text "how"
     t.text "studies"
-    t.string "more_effective", default: [], array: true
-    t.string "works_best", default: [], array: true
-    t.text "in_practice"
     t.text "costs_benefits"
-    t.string "key_points", default: [], array: true
     t.bigint "implementation_id"
     t.text "summary"
     t.text "what_is_it"
@@ -76,14 +71,6 @@ ActiveRecord::Schema.define(version: 2018_10_26_135836) do
     t.text "when_where_how"
     t.text "outcome_notes"
     t.index ["implementation_id"], name: "index_interventions_on_implementation_id"
-  end
-
-  create_table "interventions_subjects", force: :cascade do |t|
-    t.bigint "intervention_id"
-    t.bigint "subject_id"
-    t.integer "classification_type"
-    t.index ["intervention_id"], name: "index_interventions_subjects_on_intervention_id"
-    t.index ["subject_id"], name: "index_interventions_subjects_on_subject_id"
   end
 
   create_table "interventions_tags", id: false, force: :cascade do |t|
@@ -109,11 +96,6 @@ ActiveRecord::Schema.define(version: 2018_10_26_135836) do
     t.text "evidence_notes"
     t.text "intervention_notes"
     t.index ["intervention_id"], name: "index_outcomes_on_intervention_id"
-  end
-
-  create_table "subjects", force: :cascade do |t|
-    t.string "title"
-    t.text "subject_notes"
   end
 
   create_table "tags", force: :cascade do |t|

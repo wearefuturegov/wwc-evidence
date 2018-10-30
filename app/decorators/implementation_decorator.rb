@@ -9,10 +9,6 @@ class ImplementationDecorator < ApplicationDecorator
     parse_markdown(super).html_safe
   end
 
-  def deliverer
-    parse_markdown(super).html_safe
-  end
-
   def training_requirements
     parse_markdown(super).html_safe
   end

@@ -13,10 +13,6 @@ class InterventionDecorator < ApplicationDecorator
     field_with_header(:how, 'h2', true)
   end
 
-  def in_practice
-    field_with_header(:in_practice, 'h2', true)
-  end
-
   def costs_benefits
     field_with_header(:costs_benefits, 'h2', true)
   end

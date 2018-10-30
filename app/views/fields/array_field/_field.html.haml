@@ -1,7 +1,0 @@
-.array_group
-  .field-unit__array-text{ class: hide_minus_button == true ? 'initial' : '' }
-    = f.text_area field.attribute, value: value, name: "#{field.resource.class.name.parameterize}[#{field.attribute}][]"
-  - if hide_minus_button == false
-    .field-unit__minus-button
-      %a.button
-        \-

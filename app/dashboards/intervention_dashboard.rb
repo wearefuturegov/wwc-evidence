@@ -22,7 +22,6 @@ class InterventionDashboard < Administrate::BaseDashboard
     when_where_how: MarkdownField,
     costs_benefits: MarkdownField,
     implementation: Field::HasOne,
-    key_points: ArrayField,
     contacts: Field::NestedHasMany,
     links: Field::NestedHasMany,
     files: MultifileField,
@@ -62,7 +61,6 @@ class InterventionDashboard < Administrate::BaseDashboard
     when_where_how
     costs_benefits
     implementation
-    key_points
     contacts
     links
     files
@@ -70,7 +68,7 @@ class InterventionDashboard < Administrate::BaseDashboard
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], key_points: [], more_effective: [], works_best: [], tag_ids: []]
+    super + [files: [], files_to_delete: [], key_points: [], works_best: [], tag_ids: []]
   end
 
   # Overwrite this method to customize how evidences are displayed
