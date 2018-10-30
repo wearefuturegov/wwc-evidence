@@ -13,7 +13,7 @@ module DecoratorHelpers
   end
 
   def parse_markdown(content)
-    Kramdown::Document.new(content).to_html
+    Kramdown::Document.new(content.to_s).to_html
   end
 
   def array_list_with_header(field_name, heading_tag = 'h2')
