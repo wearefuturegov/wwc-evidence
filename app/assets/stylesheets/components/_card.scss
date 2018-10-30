@@ -54,6 +54,11 @@
     line-height: $baseline*0.9;
     display: block;
   }
+  .effect, .evidence {
+    .meter {
+      height: 50px;
+    }
+  }
 }
 a.card {
   &:hover {
