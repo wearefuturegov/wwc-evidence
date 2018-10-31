@@ -1,14 +1,15 @@
 %li
   = link_to intervention, class: 'card' do
     .main
-      .tags= intervention.tag_list
       .details
         %h3= intervention.title
         %p= intervention.summary
+        .tags= intervention.tag_list
     - intervention.outcomes.each do |o|
-      .outcome
-        .label
-          %strong= o.title
+      .measure-wrap
+        .outcome
+          .label
+            %strong= o.title
         .effect
           = o.effect_meter
         .evidence

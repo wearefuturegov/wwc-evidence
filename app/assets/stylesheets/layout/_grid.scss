@@ -21,15 +21,12 @@ footer .footer {
   @include grid-push(1);
 }
 
-.dashboard {
-  .card, .menu.card {
-    // @include grid-visual($card-grid-color, $card-grid);
-    // grid within a grid for the cards
-    @include grid-column(12, $card-grid);
-    // original grid gutter for dashboard card placement
-    width: calc(100% - #{$gutter*2});
-    margin-left: $gutter;
-  }
+.dashboard .menu.card,
+.dashboard #interventions .card {
+  // @include grid-visual($card-grid-color, $card-grid);
+  // @include grid-column(12, $card-grid);
+  width: calc(100% - #{$gutter*2});
+  margin-left: $gutter;
 }
 
 .indent_b, .col_9 {
@@ -44,35 +41,33 @@ footer .footer {
   .main {
     @include grid-column(7, $card-grid);
   }
-  .outcome {
-    @include grid-column(2, $card-grid);
-  }
-  .effect {
-    @include grid-column(1, $card-grid);
-  }
-  .evidence {
-    @include grid-column(2, $card-grid);
-  }
-  
-  #interventions {
-    .main {
-      @include grid-column(7, $card-grid);
+  .measure-wrap {
+    @include grid-column(5, $card-grid);
+    margin-bottom: $baseline*0.75;
+    .outcome, .effect, .evidence {
+      margin-right: 20px;
+      float: left;
     }
-    
     .outcome {
-      @include grid-column(5, $card-grid);
-      margin: 0 0 $baseline*0.5 0;
-      
-      .label {
-        @include grid-column(5, $card-grid);
-      }
-      
-      .effect {
-        @include grid-column(3, $card-grid);
-      }
-      .evidence {
-        @include grid-column(3, $card-grid);
-      }
+      width: calc(45% - #{$gutter});
+      margin-right: $gutter*0.5;
+    }
+    .effect {
+      width: calc(30% - #{$gutter});
+      margin-right: $gutter*0.5;
+    }
+    .evidence {
+      width: calc(25% + #{$gutter});
+      margin-right: 0;
     }
   }
+  // .outcome {
+  //   @include grid-column(2, $card-grid);
+  // }
+  // .effect {
+  //   @include grid-column(1, $card-grid);
+  // }
+  // .evidence {
+  //   @include grid-column(2, $card-grid);
+  // }
 }
