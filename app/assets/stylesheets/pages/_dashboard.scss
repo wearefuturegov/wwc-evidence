@@ -36,6 +36,9 @@
   // @include off-brand-d;
   padding-top: $baseline;
   padding-bottom: $baseline*2;
+  #interventions .measure-wrap {
+    margin-bottom: $baseline;
+  }
   section.section {
     margin-top: $baseline*2.5;
     margin-bottom: $baseline*2.5;
