@@ -31,6 +31,7 @@
     position: fixed;
     top: 0;
     border-bottom: $thin $brand $style;
+    z-index: 100;
   }
 }
 #interventions .card {
