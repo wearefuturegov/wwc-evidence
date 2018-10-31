@@ -2,13 +2,13 @@
   @include grid-column(12);
 }
 
-.header nav.nav, .sub nav.nav {
+.sub nav.nav {
   text-align: right;
 }
 
 header {
   nav.nav {
-    @include grid-column(10);
+    @include grid-column(12);
   }
 }
 

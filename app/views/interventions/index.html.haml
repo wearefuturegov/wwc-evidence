@@ -5,12 +5,15 @@
       .main
         .details
           Intervention
-      .outcome
-        .label
-          Outcome
-      .effect
-        Effect
-      .evidence
-        Evidence Strength
+      .measure-wrap
+        .outcome
+          .label
+            Outcome
+        .effect
+          %p
+            Overall effectiveness
+        .evidence
+          %p
+            Quality of evidence
     %ul#interventions
       = render interventions

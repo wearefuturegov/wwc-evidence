@@ -5,14 +5,10 @@
         = image_tag('logo.svg')
     %nav.nav
       %ul
-        / %li{ class: @section&.slug == 'screening-appraisal' ? 'selected' : '' }
-        /   = link_to "Screening & Appraisal", 'screening-appraisal'
-        / %li{ class: @section&.slug == 'standards' ? 'selected' : '' }
-        /   = link_to "Evidence Standards", 'evidence-standards'
-        / %li{ class: @section&.slug == 'outcomes' ? 'selected' : '' }
-        /   = link_to "Outcomes", 'outcomes'
-        / %li{ class: @section&.slug == 'our-story' ? 'selected' : '' }
-        /   = link_to "Our Story", 'our-story'
-        / %li{ class: @section&.slug == 'about-us' ? 'selected' : '' }
-        /   = link_to "About us", 'about-us'
+        %li{ class: @section&.slug == '#' ? 'selected' : '' }
+          = link_to "How to use the store", '#'
+        %li{ class: @section&.slug == '#' ? 'selected' : '' }
+          = link_to "Outcomes framework", '#'
+        %li{ class: @section&.slug == '#' ? 'selected' : '' }
+          = link_to "About the evidence store", '#'
 = render template: "partials/sub" if @section

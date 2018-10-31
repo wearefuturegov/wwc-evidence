@@ -11,8 +11,8 @@ $spot-size: 32px;
   border-radius: 100%;
   background: $gray-b;
   &.fill {
-    background: $brand-d;
-    border-color: $brand-d;
+    background: $brand;
+    border-color: $brand;
     &.negative {
       border-color: $negative;
       background: $negative;
@@ -36,12 +36,13 @@ $spot-size: 32px;
   height: $spot-size;
   padding: 0;
   margin: 0;
-  &.poor_quality:before {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    border-bottom: 4px solid $red;
-    width: ($spot-size * 3) + (($gutter*0.05) * 2);
-  }
+  display: inline-block;
+  // &.poor_quality:before {
+  //   content: " ";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   border-bottom: 4px solid $red;
+  //   width: ($spot-size * 3) + (($gutter*0.05) * 2);
+  // }
 }

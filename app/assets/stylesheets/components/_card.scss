@@ -2,11 +2,24 @@
   float: left;
   background: $white;
   color: $gray;
+  padding-top: $baseline;
+  padding-bottom: $baseline;
   margin-bottom: $thin;
   .details, .label, .effect, .evidence {
     font-size: $smaller;
+    line-height: $body;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
+  }
+  .measure-wrap {
+    p {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  .details, .label {
+    text-align: left;
   }
   .score {
     .effect, .evidence {
@@ -20,13 +33,17 @@
     border-bottom: $thin $brand $style;
   }
 }
-.card {
+#interventions .card {
   float: left;
   display: block;
   background: $white;
   margin-bottom: $baseline*0.125;
   padding-top: $baseline;
   padding-bottom: $baseline;
+  text-transform: initial;
+  .details, .label, .effect, .evidence {
+    text-transform: initial;
+  }
   .label {
     font-size: $small;
     float: left;
@@ -45,9 +62,9 @@
   }
   h3 {
     font-family: $stack;
-    font-size: $h2*0.8;
+    font-size: $h2*0.9;
     line-height: calc(#{$h3} + #{$baseline*0.2});
-    margin-bottom: $baseline*0.25;
+    margin-bottom: $baseline*0.5;
   }
   p {
     font-size: $smaller;
@@ -60,7 +77,7 @@
     }
   }
 }
-a.card {
+#interventions a.card {
   &:hover {
     -webkit-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
     -moz-box-shadow: 0px 0px 4px 1px rgb(175, 175, 175);
