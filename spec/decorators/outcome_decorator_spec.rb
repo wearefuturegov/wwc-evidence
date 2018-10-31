@@ -13,6 +13,7 @@ RSpec.describe OutcomeDecorator do
       it 'shows the right output when poor quality' do
         outcome.evidence = :poor_quality
         outcome.save
+        expect(output).to have_tag('div.evidence_wrapper.poor_quality')
         expect(output).to have_tag('div.spot.measure', count: 3)
         expect(output).to_not have_tag('div.spot.measure.fill')
       end
@@ -20,6 +21,7 @@ RSpec.describe OutcomeDecorator do
       it 'shows the right output when low quality' do
         outcome.evidence = :low_quality
         outcome.save
+        expect(output).to have_tag('div.evidence_wrapper.low_quality')
         expect(output).to have_tag('div.spot.measure', count: 3)
         expect(output).to have_tag('div.spot.measure.fill', count: 1)
       end
@@ -27,6 +29,7 @@ RSpec.describe OutcomeDecorator do
       it 'shows the right output when moderate quality' do
         outcome.evidence = :moderate_quality
         outcome.save
+        expect(output).to have_tag('div.evidence_wrapper.moderate_quality')
         expect(output).to have_tag('div.spot.measure', count: 3)
         expect(output).to have_tag('div.spot.measure.fill', count: 2)
       end
@@ -34,6 +37,7 @@ RSpec.describe OutcomeDecorator do
       it 'shows the right output when high quality' do
         outcome.evidence = :high_quality
         outcome.save
+        expect(output).to have_tag('div.evidence_wrapper.high_quality')
         expect(output).to have_tag('div.spot.measure', count: 3)
         expect(output).to have_tag('div.spot.measure.fill', count: 3)
       end

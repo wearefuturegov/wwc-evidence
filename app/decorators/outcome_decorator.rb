@@ -16,7 +16,7 @@ class OutcomeDecorator < ApplicationDecorator
     3.times do |i|
       output << h.content_tag('div', nil, class: "spot measure #{i >= object.evidence_before_type_cast ? '' : 'fill'}")
     end
-    output.html_safe
+    h.content_tag('div', output.html_safe, class: "evidence_wrapper #{object.evidence}")
   end
 
   def effect_meter

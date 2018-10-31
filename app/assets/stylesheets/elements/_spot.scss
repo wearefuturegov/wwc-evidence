@@ -1,8 +1,10 @@
+$spot-size: 32px;
+
 .spot {
   float: left;
   margin-right: $gutter*0.05;
-  width: 32px;
-  height: 32px;
+  width: $spot-size;
+  height: $spot-size;
   font-size: 21px;
   margin-top: 3px;
   margin-bottom: 3px;
@@ -26,5 +28,20 @@
   &.negative {
     border-color: $negative;
     background: $negative;
+  }
+}
+
+.evidence_wrapper {
+  position: relative;
+  height: $spot-size;
+  padding: 0;
+  margin: 0;
+  &.poor_quality:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-bottom: 4px solid $red;
+    width: ($spot-size * 3) + (($gutter*0.05) * 2);
   }
 }
