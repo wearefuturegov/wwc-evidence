@@ -46,6 +46,7 @@
   }
   .label {
     font-size: $small;
+    line-height: $body;
     float: left;
     p {
       font-size: $smaller;
@@ -73,7 +74,7 @@
   }
   .effect {
     .meter {
-      height: 32px;
+      height: 38px;
     }
   }
 }
