@@ -12,7 +12,11 @@ class OutcomeDecorator < ApplicationDecorator
   end
 
   def evidence_meter
-    h.image_tag "meter_#{object.evidence_before_type_cast}.svg", alt: object.evidence, class: 'meter'
+    output = ''
+    3.times do |i|
+      output << h.content_tag('div', nil, class: "spot measure #{i >= object.evidence_before_type_cast ? '' : 'fill'}")
+    end
+    output.html_safe
   end
 
   def effect_meter
