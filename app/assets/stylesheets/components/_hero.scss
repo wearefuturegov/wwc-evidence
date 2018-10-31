@@ -1,0 +1,15 @@
+.hero {
+  text-align: center;
+  padding-top: $baseline*3;
+  padding-bottom: $baseline*2;
+  background: $brand;
+  .message {
+    font-family: $stack;
+    margin-bottom: $baseline*0.5;
+    font-weight: 400;
+    color: $white;
+  }
+  .sub {
+
+  }
+}
