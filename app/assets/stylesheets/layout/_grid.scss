@@ -43,7 +43,6 @@ footer .footer {
   }
   .measure-wrap {
     @include grid-column(5, $card-grid);
-    margin-bottom: $baseline*0.75;
     .outcome, .effect, .evidence {
       margin-right: 20px;
       float: left;
