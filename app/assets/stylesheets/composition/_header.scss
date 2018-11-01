@@ -2,6 +2,7 @@ header {
   .header {
     .logo {
       @include grid-column(2);
+      margin-left: 0;
     }
   }
 }

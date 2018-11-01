@@ -1,0 +1,2 @@
+module OutcomeFrameworkHelper
+end
