@@ -10,7 +10,7 @@ header .header,
 .container,
 .partners,
 footer .footer {
-  // @include grid-visual;
+  @include grid-visual;
   width: 100%;
   margin: 0 auto;
   @include max-width;
@@ -24,9 +24,9 @@ footer .footer {
 .dashboard .menu.card,
 .dashboard #interventions .card {
   // @include grid-visual($card-grid-color, $card-grid);
-  // @include grid-column(12, $card-grid);
-  width: calc(100% - #{$gutter*2});
-  margin-left: $gutter;
+  @include grid-column(12, $card-grid);
+  // width: 100%;
+  // margin-left: 0;
 }
 
 .indent_b, .col_9 {

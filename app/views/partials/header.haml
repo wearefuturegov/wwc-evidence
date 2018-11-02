@@ -4,9 +4,6 @@
       .logo
         = image_tag('logo.png')
     %nav.nav
-      .logo
-        =link_to root_path do
-          = image_tag('logo.svg')
       %ul
         - pages.all.each do |p|
           %li= link_to p.title, p
