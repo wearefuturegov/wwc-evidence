@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
-
   describe 'GET #show' do
     let!(:page) { Fabricate(:page, title: 'My Page') }
 
@@ -10,5 +9,4 @@ RSpec.describe PagesController, type: :controller do
       expect(controller.page).to eq(page)
     end
   end
-
 end

@@ -9,5 +9,4 @@ class OutcomeFrameworkDecorator < ApplicationDecorator
   def body
     parse_markdown(object.body)
   end
-
 end
