@@ -30,16 +30,16 @@ footer {
     }
     nav.nav {
       font-size: $smaller;
-      font-weight: 300;
       ul {
         li {
-          font-size: $smaller;
-          font-weight: 300;
+          font-size: $body;
+          font-weight: 400;
           margin-left: 0;
           margin-right: $gutter*0.5;
           a {
+            font-size: $body;
             text-decoration: underline;
-            font-weight: 300;
+            font-weight: 400;
           }
         }
       }

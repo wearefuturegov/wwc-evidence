@@ -1,12 +1,11 @@
 .hero {
-  text-align: center;
-  padding-top: $baseline*3;
+  padding-top: $baseline*2;
   padding-bottom: $baseline*2;
   background: $brand;
   .message {
-    font-family: $stack;
+    font-family: $stack-b;
     margin-bottom: $baseline*0.5;
-    font-weight: 400;
+    font-weight: 700;
     color: $white;
   }
   .sub {

@@ -9,8 +9,9 @@ header .header,
 .sub nav.nav,
 .container,
 .partners,
-footer .footer {
-  @include grid-visual;
+footer .footer,
+.hero-wrap {
+  // @include grid-visual;
   width: 100%;
   margin: 0 auto;
   @include max-width;
@@ -37,10 +38,9 @@ footer .footer {
   @include grid-column(3);
 }
 
-.hero {
+.hero-wrap {
   .message, .sub {
-    @include grid-column(10, $card-grid);
-    @include grid-push(1, $card-grid);
+    @include grid-column(12);
   }
 }
 
