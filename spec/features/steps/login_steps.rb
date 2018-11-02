@@ -25,7 +25,6 @@ module LoginSteps
   def create_user
     @password = 'Password123'
     @user = Fabricate(:user, password: @password)
-    @user.confirm
   end
 
   def log_in

@@ -8,11 +8,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = Fabricate(:user,
-                 email: 'dev@wearefuturegov.com',
-                 password: 'Password123',
-                 password_confirmation: 'Password123')
-user.confirm
+Fabricate(:user,
+          email: 'dev@wearefuturegov.com',
+          password: 'Password123',
+          password_confirmation: 'Password123')
 
 interventions = YAML.safe_load(File.open(Rails.root.join('db', 'seed_data', 'interventions.yml')))
 

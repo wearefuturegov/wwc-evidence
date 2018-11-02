@@ -4,7 +4,6 @@ RSpec.describe Admin::TagsController, type: :controller do
   before(:each) do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     user = Fabricate(:user)
-    user.confirm
     sign_in user
   end
 
