@@ -4,11 +4,16 @@
       .logo
         = image_tag('logo.png')
     %nav.nav
+      .logo
+        =link_to root_path do
+          = image_tag('logo.svg')
       %ul
-        %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "How to use the store", '#'
-        %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "Outcomes framework", '#'
-        %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "About the evidence store", '#'
+        - pages.all.each do |p|
+          %li= link_to p.title, p
+        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
+        -#   = link_to "How to use the store", 'how'
+        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
+        -#   = link_to "Outcomes framework", 'outcome-framework'
+        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
+        -#   = link_to "About the evidence store", 'about'
 = render template: "partials/sub" if @section

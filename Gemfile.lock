@@ -151,6 +151,8 @@ GEM
     fabrication (2.20.1)
     ffaker (2.10.0)
     ffi (1.9.25)
+    friendly_id (5.2.4)
+      activerecord (>= 4.0.0)
     gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -395,6 +397,7 @@ DEPENDENCIES
   draper
   fabrication
   ffaker
+  friendly_id (~> 5.2.0)
   haml-rails (~> 1.0)
   i18n-debug
   jbuilder (~> 2.5)
