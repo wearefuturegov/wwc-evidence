@@ -4,9 +4,9 @@ $stack-b: 'Playfair Display', serif;
 $hd-desktop-width: 1360px;
 $desktop-width: 960px;
 
-$body: 19px;
+$body: 20px;
 $baseline: 1.45em;
-$gutter: 40px;
+$gutter: 20px;
 
 $small: 16px;
 $smaller: 14px;
@@ -18,7 +18,7 @@ $gray: #666;
 $gray-b: #f0f0f0;
 $gray-c: #bbbbbb;
 
-$logo: $gutter*2.5;
+$logo: 135px;
 
 // Unique Colors
 $blue: #1565c0;
@@ -67,6 +67,6 @@ $card-grid-color: rgba(255, 0, 255, 0.25);
 
 $card-grid: (
   columns: 12,
-  gutter: $gutter*0.5, // 20
+  gutter: $gutter, 20
   color: $card-grid-color,
 );
