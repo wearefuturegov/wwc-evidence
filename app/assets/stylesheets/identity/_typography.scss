@@ -62,7 +62,7 @@ h1 {
   font-family: $stack-b;
   font-size: $h1;
   font-weight: 900;
-  line-height: calc(#{$h1} + #{$baseline*0.15});
+  line-height: calc(#{$h1} + #{$baseline*0.2});
   margin-bottom: $baseline;
 }
 
@@ -106,7 +106,7 @@ h3,
 }
 
 h4 {
-  color: $gray;
+  color: #2c1b05;
   font-family: $stack;
   font-size: $h4;
   font-weight: 300;

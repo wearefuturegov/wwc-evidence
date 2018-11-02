@@ -9,7 +9,8 @@ header .header,
 .sub nav.nav,
 .container,
 .partners,
-footer .footer {
+footer .footer,
+.hero-wrap {
   // @include grid-visual;
   width: 100%;
   margin: 0 auto;
@@ -24,9 +25,9 @@ footer .footer {
 .dashboard .menu.card,
 .dashboard #interventions .card {
   // @include grid-visual($card-grid-color, $card-grid);
-  // @include grid-column(12, $card-grid);
-  width: calc(100% - #{$gutter*2});
-  margin-left: $gutter;
+  @include grid-column(12, $card-grid);
+  // width: 100%;
+  // margin-left: 0;
 }
 
 .indent_b, .col_9 {
@@ -37,10 +38,9 @@ footer .footer {
   @include grid-column(3);
 }
 
-.hero {
+.hero-wrap {
   .message, .sub {
-    @include grid-column(10, $card-grid);
-    @include grid-push(1, $card-grid);
+    @include grid-column(12);
   }
 }
 
