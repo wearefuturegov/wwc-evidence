@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :interventions
     resources :tags
+    resources :pages
 
     root to: 'interventions#index'
   end
