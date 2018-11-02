@@ -5,7 +5,7 @@
   }
   img {
     @include borderbox;
-    height: $logo;
+    height: auto;
     width: $logo;
   }
 }

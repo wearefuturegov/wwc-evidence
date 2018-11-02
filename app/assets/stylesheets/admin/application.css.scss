@@ -4,6 +4,13 @@
 
 @import "fields/*";
 
+.app-header {
+  text-align: right;
+  padding: 0.7rem;
+  border-bottom: 1px solid #dfe0e1;
+  font-size: 0.9em;
+}
+
 .field-unit {
   display: block;
   
@@ -41,7 +48,7 @@
   }
 }
 
-.field-unit--nested-has-many .remove_fields, 
+.field-unit--nested-has-many .remove_fields,
 .field-unit--nested-has-many .add_fields {
   float: left;
 }

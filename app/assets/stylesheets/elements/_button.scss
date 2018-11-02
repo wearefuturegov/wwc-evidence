@@ -12,3 +12,34 @@
     color: $black;
   }
 }
+
+// from website
+.button {
+  border: $style $medium $brand;
+  background: $brand;
+  text-align: center;
+  padding: $baseline*0.5 $baseline;
+  color: $black;
+  position: relative;
+  transition: none;
+
+  &:focus {
+    outline: $brand $medium/2 solid;
+  }
+
+  &:hover {
+    background: $black;
+    border-color: $black;
+  }
+
+  &:active {
+    top: $medium;
+    border-bottom: none;
+    background: $black;
+    margin-bottom: $medium;
+  }
+
+  a.button {
+    color: $black;
+  }
+}

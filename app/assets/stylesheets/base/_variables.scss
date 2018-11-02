@@ -4,28 +4,28 @@ $stack-b: 'Playfair Display', serif;
 $hd-desktop-width: 1360px;
 $desktop-width: 960px;
 
-$body: 19px;
+$body: 20px;
 $baseline: 1.45em;
-$gutter: 40px;
+$gutter: 20px;
 
 $small: 16px;
 $smaller: 14px;
 $tiny: 12px;
 
-$black: #333;
+$black: #000;
 $white: #fff;
 $gray: #666;
 $gray-b: #f0f0f0;
 $gray-c: #bbbbbb;
 
-$logo: $gutter*2.5;
+$logo: 135px;
 
 // Unique Colors
 $blue: #1565c0;
 $red: #c71f16;
 
 $h1: 50px;
-$h2: 32px;
+$h2: 30px;
 $h3: 20px;
 $h4: 28px;
 $p: $body;
@@ -42,7 +42,7 @@ $amount: 0.4;
 
 // border
 $thin: 1px;
-$medium: 2px;
+$medium: 3px;
 $thick: 10px;
 $style: solid;
 $color: $gray-c;
@@ -67,6 +67,6 @@ $card-grid-color: rgba(255, 0, 255, 0.25);
 
 $card-grid: (
   columns: 12,
-  gutter: $gutter*0.5, // 20
+  gutter: $gutter, 20
   color: $card-grid-color,
 );

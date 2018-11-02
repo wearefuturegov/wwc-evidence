@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :interventions
     resources :tags
     resources :pages
+    resources :users, only: %i[index new create show]
 
     root to: 'interventions#index'
   end
