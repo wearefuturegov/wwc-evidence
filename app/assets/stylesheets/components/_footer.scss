@@ -1,6 +1,9 @@
 footer {
   color: $white;
   background: $black;
+  h2 {
+    font-family: $stack-b;
+  }
   strong {
     font-weight: 600;
   }
@@ -9,6 +12,15 @@ footer {
     color: $white;
   }
   .footer {
+    .button {
+      font-size: $small;
+      text-decoration: none;
+      &:hover {
+        color: $black;
+        background: $white;
+        border-color: $white;
+      }
+    }
     ul {
       list-style: none;
     }

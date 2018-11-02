@@ -31,25 +31,23 @@
 %footer
   .footer
     .signup
-      %strong
-        Sign up to keep updated
-      %ul
-        %li
-          Get news about the Centre’s development, blogs, jobs, events and how to get involved.
-        %li
-          =link_to "Sign up now", "https://nesta.us1.list-manage.com/subscribe?u=db62b5694f0d8093140a6b62e&id=4ed5659990", target: '_blank'
+      %h2 Sign up to keep updated
+      %p Get news about the Centre’s development, blogs, jobs, events and how to get involved.
+      =link_to "Sign up now", "https://nesta.us1.list-manage.com/subs", class: 'button'
     .contact
-      %strong Contact us
-      %ul
-        %li
-          =mail_to "wwccsc@nesta.org.uk"
-        %li
-          For Press enquiries
-          =mail_to "media@scie.org.uk"
-        %li.social
-          =link_to "https://twitter.com/whatworksCSC", target: "_blank" do
-            Follow us on Twitter @whatworksCSC
+      %h2 Contact us
+      .chevron_link
+        %span.chevron.r
+        =mail_to "wwccsc@nesta.org.uk"
+      %p
+        For Press enquiries
+        =mail_to "guy.goodwin@nesta.org.uk"
+
+      .twitter_feed
         / =twitter
+        / .chevron_link
+        /   =fa_icon "twitter"
+        /   =link_to "Follow us on Twitter", "https://twitter.com/whatworksCSC", target: "_blank"
     %nav.nav
       %ul
         %li
