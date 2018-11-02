@@ -30,6 +30,7 @@ footer {
     }
     nav.nav {
       font-size: $smaller;
+      line-height: initial;
       ul {
         li {
           font-size: $body;
