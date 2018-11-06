@@ -1,0 +1,12 @@
+.partners {
+  @include grid-column(12);
+  .development {
+    @include grid-column(4);
+  }
+  .research {
+    @include grid-column(2);
+  }
+  .funders, .network {
+
+  }
+}
