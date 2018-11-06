@@ -62,7 +62,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-html-matchers'
   gem 'rspec-rails'
-  gem 'rubocop', '~> 0.59.0', require: false
+  gem 'rubocop', '~> 0.60.0', require: false
   gem 'turnip'
 end
 
