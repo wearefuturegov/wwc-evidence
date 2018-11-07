@@ -32,10 +32,10 @@
     top: 0;
     border-bottom: $thin $brand $style;
     z-index: 100;
-    max-width: 1270px;
     left: 0;
     right: 0;
     margin: 0 auto;
+    max-width: 1270px;
   }
 }
 #interventions .card {
@@ -91,3 +91,7 @@
     cursor: pointer;
   }
 }
+
+// #interventions {
+//   @include max-width;
+// }
