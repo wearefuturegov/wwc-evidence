@@ -1,14 +1,10 @@
 .partners {
-  padding-top: $baseline;
-  padding-bottom: $baseline;
   h2 {
-    font-family: $stack-b;
     @include grid-column(4, $mobile);
   }
   .development {
     @include grid-column(4, $mobile);
     img {
-      display: inline-block;
       width: calc(100% / 3 - #{$gutter});
     }
   }
