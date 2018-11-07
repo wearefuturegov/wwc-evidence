@@ -21,6 +21,14 @@ nav.nav {
           color: $black;
         }
       }
+      &.selected {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        border-top: 2px solid #000;
+      }
     }
   }
 }
