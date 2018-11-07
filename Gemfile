@@ -43,11 +43,13 @@ gem 'administrate-field-simple_mde_markdown'
 gem 'aws-sdk-s3', require: false
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
+gem 'dotenv-rails'
 gem 'draper'
 gem 'fabrication'
 gem 'friendly_id', '~> 5.2.0'
 gem 'haml-rails', '~> 1.0'
 gem 'kramdown'
+gem 'twitter'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
