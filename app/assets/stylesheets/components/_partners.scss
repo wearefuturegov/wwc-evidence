@@ -1,12 +1,28 @@
 .partners {
-  @include grid-column(12);
+  padding-top: $baseline;
+  padding-bottom: $baseline;
+  h2 {
+    font-family: $stack-b;
+    @include grid-column(12);
+  }
+  // h3 {
+  //   text-align: left;
+  // }
+  // .development, .research, .funders, .network {
+  //   text-align: center;
+  // }
   .development {
-    @include grid-column(4);
+    @include grid-column(6);
+    img {
+      display: inline-block;
+      width: calc(100% / 3 - #{$gutter});
+    }
   }
-  .research {
+  .research, .funders, .network {
     @include grid-column(2);
-  }
-  .funders, .network {
-
+    img {
+      display: inline-block;
+      width: calc(100% - #{$gutter*2});
+    }
   }
 }
