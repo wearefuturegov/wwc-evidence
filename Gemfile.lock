@@ -176,7 +176,7 @@ GEM
       i18n (< 2)
     io-like (0.3.0)
     jaro_winkler (1.5.1)
-    jbuilder (2.7.0)
+    jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
     jmespath (1.4.0)
@@ -400,7 +400,7 @@ DEPENDENCIES
   friendly_id (~> 5.2.0)
   haml-rails (~> 1.0)
   i18n-debug
-  jbuilder (~> 2.5)
+  jbuilder (~> 2.8)
   kramdown
   launchy
   listen (>= 3.0.5, < 3.2)
