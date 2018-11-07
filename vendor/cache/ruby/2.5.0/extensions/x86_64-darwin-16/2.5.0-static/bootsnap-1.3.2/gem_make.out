@@ -1,0 +1,15 @@
+current directory: /Users/martinthompson/futuregov/wwc-evidence/vendor/cache/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+/Users/martinthompson/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20181107-4104-1us5f8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/martinthompson/futuregov/wwc-evidence/vendor/cache/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/martinthompson/futuregov/wwc-evidence/vendor/cache/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/martinthompson/futuregov/wwc-evidence/vendor/cache/ruby/2.5.0/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20181107-4104-c3x832/bootsnap
