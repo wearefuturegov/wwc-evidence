@@ -8,11 +8,11 @@
         - pages.all.each do |p|
           %li= link_to p.title, p
         %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "Why an ES?", 'why-an-evidence-store'
+          = link_to "Why an ES?", '/why-an-evidence-store'
         %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "How we built…", 'how-we-built'
+          = link_to "How we built…", '/how-we-built'
         %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "Evidence standards", 'evidence-standards'
+          = link_to "Evidence standards", '/evidence-standards'
         %li{ class: @section&.slug == '#' ? 'selected' : '' }
-          = link_to "FAQs", 'faqs'
+          = link_to "FAQs", '/faqs'
 = render template: "partials/sub" if @section
