@@ -1,4 +1,8 @@
 section.section {
   margin-top: $baseline*2;
-  margin-bottom: $baseline*3;
+  margin-bottom: $baseline*2;
+}
+
+section.section + section.section {
+  margin-top: 0;
 }

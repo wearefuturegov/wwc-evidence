@@ -18,3 +18,7 @@ ul, ol {
 ol {
   list-style: decimal;
 }
+
+section.section ul li {
+  margin-left: $gutter;
+}

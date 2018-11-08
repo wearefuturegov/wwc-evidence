@@ -36,7 +36,48 @@ en:
       nested_has_many:
         add: Add item
         remove: Remove item
+
+  intervention:
+    titles:
+      what_is_it: What is this?
+      how: How is is meant to work?
+      outcomes: What are the evaluated outcomes?
+      effective: How effective is it?
+      studies: Where has it been studied?
+      who_does_it_work_for: Who does this work for?
+      when_where_how: When, where and how does it work?
+      costs_benefits: What are the costs and benefits?
+      how_is_it_delivered: How is it delivered?
+      contacts: Useful contacts
+      resources: Further resources
+      links: Links and files
+  implementation:
+    titles:
+      intro: How is it implemented?
+      how_is_it_delivered: How is it delivered?
+      deliverer: Who can deliver it?
+      training_requirements: What are the training and supervision requirements?
+      fidelity: What are the systems for maintaining fidelity?
+      support: What else supports good implementation?
+  outcome:
+    titles:
+      heading: What are the evaluated outcomes?
+    description:
+      effect:
+        not_effective: "Overall, this intervention was <strong>not effective</strong>. "
+        low_effect: "Overall, this intevention had a <strong>low effect</strong>. "
+        moderate_effect: "Overall, this intevention had a <strong>moderate effect</strong>. "
+        high_effect: "Overall, this intevention had a <strong>high effect</strong>. "
+      evidence:
+        poor_quality: This is based on <strong>poor quality</strong> evidence.
+        low_quality: This is based on <strong>low quality</strong> evidence.
+        moderate_quality: This is based on <strong>moderate quality</strong> evidence.
+        high_quality: This is based on <strong>high quality</strong> evidence.
+
   helpers:
+    array_field:
+      headline_points:
+        add: 'Add item'
     label:
       intervention:
         what_is_it: What is this?
@@ -48,7 +89,7 @@ en:
         who_does_it_work_for: Who does this work for?
         when_where_how: When, where and how does it work?
         costs_benefits: What are the costs and benefits?
-        contacts: Useful contacts and case studies
+        contacts: Useful contacts
         resources: Further resources
         links: Links and files
       implementation:

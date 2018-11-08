@@ -1,0 +1,14 @@
+.info-box.card
+  %strong Headline Points
+  
+  %ul
+    %li Point 1
+    %li Point 2
+    %li Point 3
+  
+  = render 'contacts/contacts', contacts: intervention.contacts
+  
+  - intervention.outcomes.each do |outcome|
+    = render 'outcomes/outcome_card', outcome: outcome
+    
+    

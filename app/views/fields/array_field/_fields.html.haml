@@ -1,0 +1,4 @@
+- hide_minus_button = true
+- field.data.each do |value|
+  = render partial: 'fields/array_field/field', locals: { f: f, field: field, hide_minus_button: hide_minus_button, value: value }
+  - hide_minus_button = false

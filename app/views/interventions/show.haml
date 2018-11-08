@@ -1,48 +1,47 @@
-%section
-  .container.bump
-    .contents
-      = render 'nav'
-      
-    .col_9
+%section.section
+  .container
+    .info-title
       %h1= intervention.title
-      
+
       %h4= intervention.intro
 
-      %section.section
-        = intervention.what_is_it
-        
-      %section.section
-        = intervention.how
-        
-      %section.section
-        = intervention.outcomes.list_with_header
+    = render 'info_box'
 
-      %section.section
-        %h2#effective= t('helpers.label.intervention.effective')
-                
-        = render intervention.outcomes
+  .contents
+    = render 'nav'
+    
+  .col_9
+    %section.section
+      = intervention.what_is_it
+      
+    %section.section
+      = intervention.how
+      
+    %section.section
+      = intervention.outcomes.list_with_header
 
-        %p= intervention.outcome_notes
-            
-      %section.section
-        %p= intervention.studies
-        
-      %section.section
-        = intervention.who_does_it_work_for
+    %section.section
+      %h2#effective= t('intervention.titles.effective')
+              
+      / = render intervention.outcomes
 
-      %section.section
-        = intervention.when_where_how
-
-      %section.section
-        %p= intervention.costs_benefits
-
-      = render intervention.implementation
+      %p= intervention.outcome_notes
           
-      %section.section
-        %h2#resources= t('helpers.label.intervention.resources')
+    %section.section
+      %p= intervention.studies
+      
+    %section.section
+      = intervention.who_does_it_work_for
+
+    %section.section
+      = intervention.when_where_how
+
+    %section.section
+      %p= intervention.costs_benefits
+
+    = render intervention.implementation
         
-        = intervention.further_resources
-        
-        %ul
-          = render intervention.links
-          = render intervention.files
+    %section.section
+      %h2#resources= t('intervention.titles.resources')
+
+      = render 'links/links', links: intervention.links

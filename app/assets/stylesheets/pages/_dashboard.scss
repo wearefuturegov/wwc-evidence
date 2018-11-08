@@ -31,7 +31,8 @@
   }
 }
 
-.dashboard {
+.dashboard,
+.info-box {
   // @include off-brand-d;
   padding-top: $baseline;
   padding-bottom: $baseline*2;
@@ -125,5 +126,26 @@
 
   h2, h3 {
     margin-bottom: $baseline*0.125;
+  }
+}
+
+.info-box.card {
+  @include borderbox;
+  padding: $gutter;
+  padding-bottom: 0;
+  border: 1px solid $gray;
+  margin-bottom: $baseline*2;
+  .effect {
+    .meter {
+      height: 32px;
+    }
+  }
+  .measure-wrap {
+    padding-bottom: $baseline*0.5;
+    margin-bottom: $baseline*0.5;
+    border-bottom: 1px solid $gray-b;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
