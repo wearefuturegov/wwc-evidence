@@ -8,7 +8,8 @@
   .details, .label, .effect, .evidence {
     font-size: $smaller;
     line-height: $body;
-    font-weight: 400;
+    font-weight: 600;
+    color: $gray;
     text-transform: uppercase;
     text-align: center;
   }
@@ -69,6 +70,7 @@
   h3 {
     font-family: $stack;
     font-size: $h2*0.9;
+    font-weight: 700;
     line-height: calc(#{$h3} + #{$baseline*0.2});
     margin-bottom: $baseline*0.5;
   }
@@ -79,7 +81,7 @@
   }
   .effect {
     .meter {
-      height: 38px;
+      height: 32px;
     }
   }
 }

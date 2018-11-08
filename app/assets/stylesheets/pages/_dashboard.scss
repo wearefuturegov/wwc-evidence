@@ -36,7 +36,12 @@
   padding-top: $baseline;
   padding-bottom: $baseline*2;
   #interventions .measure-wrap {
-    margin-bottom: $baseline;
+    padding-bottom: $baseline*0.5;
+    margin-bottom: $baseline*0.5;
+    border-bottom: 1px solid $gray-b;
+    &:last-child {
+      border-bottom: none;
+    }
   }
   section.section {
     margin-top: $baseline*2.5;
@@ -98,7 +103,7 @@
   }
 
   p {
-    color: $black;
+    // color: $black;
     margin-bottom: $baseline;
   }
 
