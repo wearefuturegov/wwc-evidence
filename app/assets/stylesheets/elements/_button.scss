@@ -14,7 +14,10 @@
 }
 
 // from website
-.button {
+.button,
+.sessions.new form.new_user .actions input,
+.passwords.new form.new_user .actions input,
+.passwords.create form.new_user .actions input {
   border: $style $medium $brand;
   background: $brand;
   text-align: center;
@@ -30,6 +33,8 @@
   &:hover {
     background: $black;
     border-color: $black;
+    color: $white;
+    cursor: pointer;
   }
 
   &:active {

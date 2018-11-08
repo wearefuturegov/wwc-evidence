@@ -149,3 +149,17 @@
     }
   }
 }
+
+.dashboard #interventions {
+  .main {
+    min-height: $baseline*6;
+  }
+  .measure-wrap {
+    float: right;
+    margin-right: $gutter;
+    &:last-child {
+      float: right;
+      margin-right: $gutter;
+    }
+  }
+}

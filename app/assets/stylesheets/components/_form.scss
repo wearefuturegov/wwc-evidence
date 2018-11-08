@@ -20,3 +20,59 @@ form {
     height: $baseline*4;
   }
 }
+
+.sessions.new,
+.passwords.new,
+.passwords.create {
+  #error_explanation {
+    h2 {
+      font-size: $body;
+    }
+  }
+  .actions {
+    float: left;
+    margin-top: $baseline*0.25;
+    width: 100%;
+  }
+  input {
+    border: 1px solid $black;
+  }
+  h2 {
+    margin-top: $baseline;
+    margin-bottom: $baseline;
+    text-align: center;
+  }
+  form.new_user {
+    width: 600px;
+    margin: 0 auto;
+    label {
+      margin-bottom: $baseline*0.25;
+    }
+    label, input {
+      float: left;
+      width: 100%;
+    }
+    input {
+      margin-bottom: $baseline;
+    }
+    #user_remember_me {
+      margin-top: 0.4em;
+      float: left;
+      width: auto;
+      + label {
+        float: left;
+        width: auto;
+      }
+    }
+    .field {
+      margin-bottom: $baseline;
+      width: 100%;
+    }
+    + a {
+      float: left;
+      width: 100%;
+      margin: $baseline auto;
+      text-align: center;
+    }
+  }
+}
