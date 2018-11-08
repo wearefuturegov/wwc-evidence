@@ -5,10 +5,10 @@
         <circle cx="50" cy="50" r="50" style="fill:rgb(0,172,95);"/>
         <g>
             <g transform="matrix(1,0,0,1,0,15)">
-                <path d="M50,50L50,20" style="fill:none;stroke:rgb(235,235,235);stroke-width:10px;"/>
+                <path d="M50,50L50,20" style="fill:none;stroke:white;stroke-width:10px;"/>
             </g>
             <g transform="matrix(6.12323e-17,1,-1,6.12323e-17,85,-1.12217e-14)">
-                <path d="M50,50L50,20" style="fill:none;stroke:rgb(235,235,235);stroke-width:10px;"/>
+                <path d="M50,50L50,20" style="fill:none;stroke:white;stroke-width:10px;"/>
             </g>
         </g>
     </g>
