@@ -6,6 +6,7 @@
     padding-bottom: $baseline;
     h2 {
       font-family: $stack-b;
+      text-align: left;
       @include grid-column(12);
     }
     .development {
