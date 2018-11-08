@@ -1,49 +1,50 @@
-%section
-  .container.bump
-    %section.section
+%section.section
+  .container
+    .info-title
       %h1= intervention.title
-      
+
       %h4= intervention.intro
 
-      .info-box
-        %ul#interventions
-          = render interventions
-    .contents
-      = render 'nav'
+    .info-box
+      %ul#interventions
+        = render interventions
+
+  .contents
+    = render 'nav'
+    
+  .col_9
+    %section.section
+      = intervention.what_is_it
       
-    .col_9
-      %section.section
-        = intervention.what_is_it
-        
-      %section.section
-        = intervention.how
-        
-      %section.section
-        = intervention.outcomes.list_with_header
+    %section.section
+      = intervention.how
+      
+    %section.section
+      = intervention.outcomes.list_with_header
 
-      %section.section
-        %h2#effective= t('intervention.titles.effective')
-                
-        / = render intervention.outcomes
+    %section.section
+      %h2#effective= t('intervention.titles.effective')
+              
+      / = render intervention.outcomes
 
-        %p= intervention.outcome_notes
-            
-      %section.section
-        %p= intervention.studies
-        
-      %section.section
-        = intervention.who_does_it_work_for
-
-      %section.section
-        = intervention.when_where_how
-
-      %section.section
-        %p= intervention.costs_benefits
-
-      = render intervention.implementation
+      %p= intervention.outcome_notes
           
-      %section.section
-        %h2#resources= t('intervention.titles.resources')
+    %section.section
+      %p= intervention.studies
+      
+    %section.section
+      = intervention.who_does_it_work_for
 
-        = render 'contacts/contacts', contacts: intervention.contacts
-        = render 'links/links', links: intervention.links
+    %section.section
+      = intervention.when_where_how
+
+    %section.section
+      %p= intervention.costs_benefits
+
+    = render intervention.implementation
+        
+    %section.section
+      %h2#resources= t('intervention.titles.resources')
+
+      = render 'contacts/contacts', contacts: intervention.contacts
+      = render 'links/links', links: intervention.links

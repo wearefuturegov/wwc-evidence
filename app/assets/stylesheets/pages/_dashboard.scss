@@ -130,5 +130,9 @@
 }
 
 .info-box {
-  
+  border: 1px solid $gray;
+  #interventions .card {
+    @include borderbox;
+    padding: $gutter;
   }
+}
