@@ -10,7 +10,7 @@ class Intervention < ApplicationRecord
 
   belongs_to :implementation
 
-  accepts_nested_attributes_for :implementation, :outcomes, :links, :contacts, :tags
+  accepts_nested_attributes_for :implementation, :outcomes, :links, :contacts, :tags, allow_destroy: true
 
   attr_accessor :files_to_delete
 
