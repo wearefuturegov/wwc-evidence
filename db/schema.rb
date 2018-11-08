@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_131543) do
+ActiveRecord::Schema.define(version: 2018_11_08_165636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_131543) do
     t.text "who_does_it_work_for"
     t.text "when_where_how"
     t.text "outcome_notes"
+    t.text "further_resources"
     t.index ["implementation_id"], name: "index_interventions_on_implementation_id"
   end
 

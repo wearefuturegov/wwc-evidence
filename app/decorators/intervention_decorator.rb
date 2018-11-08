@@ -37,6 +37,10 @@ class InterventionDecorator < ApplicationDecorator
     parse_markdown(super).html_safe
   end
 
+  def further_resources
+    parse_markdown(super).html_safe
+  end
+
   def implementation
     super.decorate
   end

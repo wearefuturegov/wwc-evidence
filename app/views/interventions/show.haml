@@ -40,6 +40,8 @@
           
       %section.section
         %h2#resources= t('intervention.titles.resources')
+        
+        = intervention.further_resources
 
         = render 'contacts/contacts', contacts: intervention.contacts
         = render 'links/links', links: intervention.links
