@@ -21,3 +21,9 @@ body.interventions.index {
     width: 100px;
   }
 }
+
+.interventions #implementation {
+  @include borderbox;
+  background: $gray-b;
+  padding: $baseline;
+}

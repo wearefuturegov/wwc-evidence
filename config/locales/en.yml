@@ -47,7 +47,7 @@ en:
       when_where_how: When, where and how does it work?
       costs_benefits: What are the costs and benefits?
       how_is_it_delivered: How is it delivered?
-      contacts: Useful contacts and case studies
+      contacts: Useful contacts
       resources: Further resources
       links: Links and files
   implementation:
@@ -86,7 +86,7 @@ en:
         who_does_it_work_for: Who does this work for?
         when_where_how: When, where and how does it work?
         costs_benefits: What are the costs and benefits?
-        contacts: Useful contacts and case studies
+        contacts: Useful contacts
         resources: Further resources
         links: Links and files
       implementation:

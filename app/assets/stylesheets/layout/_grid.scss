@@ -28,11 +28,11 @@ section.section {
 }
 
 .info-title {
-  @include grid-column(7);
+  @include grid-column(6);
 }
 
 .info-box {
-  @include grid-column(5);
+  @include grid-column(6);
 }
 
 .indent {
@@ -87,9 +87,21 @@ section.section {
   }
 }
 
-.info-box #interventions {
+.info-box.card {
   h3 {
     font-size: 20px;
+  }
+  p {
+    font-size: $small;
+  }
+  ul {
+    list-style: disc;
+    margin-top: $baseline*0.5;
+    margin-bottom: $baseline;
+    li {
+      font-size: $small;
+      line-height: $baseline;
+    }
   }
   .tags {
     display: none;

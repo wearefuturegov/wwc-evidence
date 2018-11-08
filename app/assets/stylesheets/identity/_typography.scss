@@ -67,12 +67,23 @@ h1 {
   margin-bottom: $baseline;
 }
 
+.info-title h1 {
+  margin-bottom: $baseline*0.5;
+}
+
 h2 {
   font-family: $stack;
   font-size: $h2;
   font-weight: 700;
   line-height: calc(#{$h2} + #{$baseline*0.05});
   margin-bottom: $baseline*0.5;
+}
+
+#implementation h2 {
+  margin-top: $baseline*2;
+  &:first-child {
+    margin-top: $baseline*0.5;
+  }
 }
 
 .team h2 {

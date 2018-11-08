@@ -129,10 +129,23 @@
   }
 }
 
-.info-box {
+.info-box.card {
+  @include borderbox;
+  padding: $gutter;
+  padding-bottom: 0;
   border: 1px solid $gray;
-  #interventions .card {
-    @include borderbox;
-    padding: $gutter;
+  margin-bottom: $baseline*2;
+  .effect {
+    .meter {
+      height: 32px;
+    }
+  }
+  .measure-wrap {
+    padding-bottom: $baseline*0.5;
+    margin-bottom: $baseline*0.5;
+    border-bottom: 1px solid $gray-b;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
