@@ -1,13 +1,17 @@
 %section
   .container.bump
-    .contents
-      = render 'nav'
-      
-    .col_9
+    %section.section
       %h1= intervention.title
       
       %h4= intervention.intro
 
+      .info-box
+        %ul#interventions
+          = render interventions
+    .contents
+      = render 'nav'
+      
+    .col_9
       %section.section
         = intervention.what_is_it
         
@@ -20,7 +24,7 @@
       %section.section
         %h2#effective= t('intervention.titles.effective')
                 
-        = render intervention.outcomes
+        / = render intervention.outcomes
 
         %p= intervention.outcome_notes
             

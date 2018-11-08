@@ -92,3 +92,12 @@
     cursor: pointer;
   }
 }
+
+.info-box #interventions a.card {
+  &:hover {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: initial;
+  }
+}

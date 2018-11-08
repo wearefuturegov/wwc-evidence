@@ -31,7 +31,8 @@
   }
 }
 
-.dashboard {
+.dashboard,
+.info-box {
   // @include off-brand-d;
   padding-top: $baseline;
   padding-bottom: $baseline*2;
@@ -127,3 +128,7 @@
     margin-bottom: $baseline*0.125;
   }
 }
+
+.info-box {
+  
+  }
