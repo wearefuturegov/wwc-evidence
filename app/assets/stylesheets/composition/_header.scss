@@ -1,4 +1,5 @@
 header {
+  background: $white;
   .header {
     .logo {
       @include grid-column(2);

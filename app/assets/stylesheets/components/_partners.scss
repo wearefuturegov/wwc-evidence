@@ -1,22 +1,26 @@
-.partners {
-  padding-top: $baseline;
-  padding-bottom: $baseline;
-  h2 {
-    font-family: $stack-b;
-    @include grid-column(12);
-  }
-  .development {
-    @include grid-column(6);
-    img {
-      display: inline-block;
-      width: calc(100% / 3 - #{$gutter});
+.partners-full {
+  background: $white;
+  section.partners {
+    margin-top: $baseline;
+    padding-top: $baseline;
+    padding-bottom: $baseline;
+    h2 {
+      font-family: $stack-b;
+      @include grid-column(12);
     }
-  }
-  .research, .funders, .network {
-    @include grid-column(2);
-    img {
-      display: inline-block;
-      width: calc(100% - #{$gutter*2});
+    .development {
+      @include grid-column(6);
+      img {
+        display: inline-block;
+        width: calc(100% / 3 - #{$gutter});
+      }
+    }
+    .research, .funders, .network {
+      @include grid-column(2);
+      img {
+        display: inline-block;
+        width: calc(100% - #{$gutter*2});
+      }
     }
   }
 }

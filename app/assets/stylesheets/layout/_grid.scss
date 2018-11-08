@@ -7,14 +7,24 @@ section  {
 
 header .header,
 .sub nav.nav,
-.container,
 .partners,
 footer .footer,
-.hero-wrap {
+.hero-wrap,
+section.section {
   // @include grid-visual;
   width: 100%;
   margin: 0 auto;
   @include max-width;
+}
+
+.dashboard, .card {
+  width: 100%;
+  margin: 0 auto;
+  @include max-width;
+}
+
+.title {
+  @include grid-column(12);
 }
 
 .indent {
