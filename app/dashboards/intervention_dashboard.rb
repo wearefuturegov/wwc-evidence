@@ -23,6 +23,7 @@ class InterventionDashboard < Administrate::BaseDashboard
     when_where_how: Field::SimpleMDEMarkdown,
     costs_benefits: Field::SimpleMDEMarkdown,
     implementation: Field::HasOne,
+    further_resources: Field::SimpleMDEMarkdown,
     contacts: Field::NestedHasMany,
     links: Field::NestedHasMany,
     files: MultifileField,
@@ -63,6 +64,7 @@ class InterventionDashboard < Administrate::BaseDashboard
     when_where_how
     costs_benefits
     implementation
+    further_resources
     contacts
     links
     files

@@ -80,7 +80,7 @@ h2 {
 }
 
 #implementation h2 {
-  margin-top: $baseline*2;
+  margin-top: $baseline*1.5;
   &:first-child {
     margin-top: $baseline*0.5;
   }

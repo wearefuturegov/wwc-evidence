@@ -11,7 +11,7 @@ RSpec.describe InterventionsController, type: :controller do
 
     it 'gets interventions' do
       get :index
-      expect(controller.interventions).to eq(interventions)
+      expect(controller.interventions).to eq(interventions.sort_by(&:title))
     end
   end
 

@@ -36,6 +36,7 @@ en:
       nested_has_many:
         add: Add item
         remove: Remove item
+
   intervention:
     titles:
       what_is_it: What is this?
@@ -72,12 +73,14 @@ en:
         low_quality: This is based on <strong>low quality</strong> evidence.
         moderate_quality: This is based on <strong>moderate quality</strong> evidence.
         high_quality: This is based on <strong>high quality</strong> evidence.
+
   helpers:
     array_field:
       headline_points:
         add: 'Add item'
     label:
       intervention:
+        what_is_it: What is this?
         intro: Introduction
         how: How is is meant to work?
         outcomes: What are the evaluated outcomes?
@@ -96,6 +99,18 @@ en:
         training_requirements: What are the training and supervision requirements?
         fidelity: What are the systems for maintaining fidelity?
         support: What else supports good implementation?
+      outcome:
+        description:
+          effect:
+            not_effective: "Overall, this intervention was <strong>not effective</strong>. "
+            low_effect: "Overall, this intevention had a <strong>low effect</strong>. "
+            moderate_effect: "Overall, this intevention had a <strong>moderate effect</strong>. "
+            high_effect: "Overall, this intevention had a <strong>high effect</strong>. "
+          evidence:
+            poor_quality: This is based on <strong>poor quality</strong> evidence.
+            low_quality: This is based on <strong>low quality</strong> evidence.
+            moderate_quality: This is based on <strong>moderate quality</strong> evidence.
+            high_quality: This is based on <strong>high quality</strong> evidence.
       intervention[outcomes_attributes][new_outcomes]:
         title: Title
         description: Descripion
