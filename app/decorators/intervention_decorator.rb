@@ -22,11 +22,11 @@ class InterventionDecorator < ApplicationDecorator
   end
 
   def who_does_it_work_for
-    parse_markdown(super).html_safe
+    field_with_header(:who_does_it_work_for, 'h2', true)
   end
 
   def when_where_how
-    parse_markdown(super).html_safe
+    field_with_header(:when_where_how, 'h2', true)
   end
 
   def outcomes

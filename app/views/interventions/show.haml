@@ -1,53 +1,20 @@
 %section
   .container.bump
     .contents
-      %ul
-        %li
-          Contents
-        %li
-          = link_to t('intervention.titles.what_is_it'), '#what_is_it'
-        %li
-          = link_to t('intervention.titles.how'), '#how'
-        %li
-          = link_to t('intervention.titles.outcomes'), '#outcomes'
-        %li
-          = link_to t('intervention.titles.effective'), '#effective'
-        %li
-          = link_to t('intervention.titles.studies'), '#studies'
-        %li
-          = link_to t('intervention.titles.who_does_it_work_for'), '#work_for'
-        %li
-          = link_to t('intervention.titles.when_where_how'), '#when_where_how'
-        %li
-          = link_to t('intervention.titles.costs_benefits'), '#costs_benefits'
-        %li
-          = link_to t('implementation.titles.intro'), '#intro'
-        %li
-          = link_to t('implementation.titles.how_is_it_delivered'), '#how_is_it_delivered'
-        %li
-          = link_to t('implementation.titles.deliverer'), '#deliverer'
-        %li
-          = link_to t('implementation.titles.training_requirements'), '#training_requirements'
-        %li
-          = link_to t('implementation.titles.fidelity'), '#fidelity'
-        %li
-          = link_to t('implementation.titles.support'), '#support'
-        %li
-          = link_to t('intervention.titles.key_points'), '#key_points'
-        %li
-          = link_to t('intervention.titles.resources'), '#contacts'
+      = render 'nav'
+      
     .col_9
       %h1= intervention.title
       
       %h4= intervention.intro
 
-      %section.section#what_is_it
+      %section.section
         = intervention.what_is_it
         
-      %section.section#how
+      %section.section
         = intervention.how
         
-      %section.section#outcomes
+      %section.section
         = intervention.outcomes.list_with_header
 
       %section.section
@@ -57,24 +24,22 @@
 
         %p= intervention.outcome_notes
             
-      %section.section#studies
+      %section.section
         %p= intervention.studies
         
       %section.section
-        %h2#work_for= t('intervention.titles.who_does_it_work_for')
-        %p= intervention.who_does_it_work_for
+        = intervention.who_does_it_work_for
 
       %section.section
-        %h2#when_where_how= t('intervention.titles.when_where_how')
-        %p= intervention.when_where_how
+        = intervention.when_where_how
 
-      %section.section#costs_benefits
+      %section.section
         %p= intervention.costs_benefits
 
       = render intervention.implementation
           
       %section.section
-        %h2#contacts= t('intervention.titles.resources')
+        %h2#resources= t('intervention.titles.resources')
 
         = render 'contacts/contacts', contacts: intervention.contacts
         = render 'links/links', links: intervention.links

@@ -4,7 +4,9 @@ module DecoratorHelpers
   end
 
   def field_with_header(field_name, heading_tag = 'h3', markdown = false)
-    content = object.send(field_name) || 'DK'
+    content = object.send(field_name)
+    return unless content.present?
+
     parsed_content = markdown ? parse_markdown(content) : h.content_tag('p', content)
     output_html(
       header(field_name, heading_tag),
@@ -27,7 +29,20 @@ module DecoratorHelpers
     )
   end
 
+  def item_title(field_name)
+    I18n.t("#{object.class.name.parameterize}.titles.#{field_name}")
+  end
+
   def header(field_name, heading_tag)
-    h.content_tag(heading_tag, I18n.t("#{object.class.name.parameterize}.titles.#{field_name}"))
+    h.content_tag(heading_tag, item_title(field_name), id: field_name)
+  end
+
+  def nav_item(field_name)
+    content = object.send(field_name)
+    return unless content
+
+    h.content_tag(:li) do
+      h.link_to item_title(field_name), "##{field_name}"
+    end.html_safe
   end
 end
