@@ -11,7 +11,7 @@ class OutcomesDecorator < Draper::CollectionDecorator
   def list
     h.content_tag('ul') do
       object.map do |o|
-        h.content_tag('li', "#{o.title} - #{o.description}")
+        h.content_tag('li', [o.title, o.description].join(' - '))
       end.reduce(&:+)
     end
   end
