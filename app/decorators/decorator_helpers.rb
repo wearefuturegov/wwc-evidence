@@ -39,7 +39,7 @@ module DecoratorHelpers
 
   def nav_item(field_name)
     content = object.send(field_name)
-    return unless content
+    return unless content.present?
 
     h.content_tag(:li) do
       h.link_to item_title(field_name), "##{field_name}"
