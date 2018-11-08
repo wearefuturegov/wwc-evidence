@@ -9,7 +9,6 @@ class OutcomeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     title: Field::String,
-    description: Field::Text,
     effect: EnumField,
     evidence: EnumField,
     intervention_notes: Field::SimpleMDEMarkdown
@@ -22,7 +21,6 @@ class OutcomeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     title
-    description
     effect
     evidence
   ].freeze
@@ -31,7 +29,6 @@ class OutcomeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     title
-    description
     effect
     evidence
   ].freeze
@@ -41,7 +38,6 @@ class OutcomeDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     title
-    description
     effect
     evidence
     intervention_notes

@@ -23,7 +23,6 @@ module InterventionSteps
 
     intervention.outcomes.each_with_index do |outcome, i|
       expect(outcome.title).to eq(@intervention.outcomes[i].title)
-      expect(outcome.description).to eq(@intervention.outcomes[i].description)
       expect(outcome.effect).to eq(@intervention.outcomes[i].effect)
       expect(outcome.evidence).to eq(@intervention.outcomes[i].evidence)
     end
@@ -134,7 +133,6 @@ module InterventionSteps
         click_on I18n.t('administrate.fields.nested_has_many.add', resource: 'Outcome')
         within :xpath, '(//div[@class="nested-fields"])[last()]' do
           complete_outcome_field :title, outcome
-          complete_outcome_field :description, outcome
           complete_outcome_select_field :effect, outcome
           complete_outcome_select_field :evidence, outcome
         end
