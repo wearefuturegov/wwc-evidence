@@ -42,5 +42,7 @@
         %h2#resources= t('helpers.label.intervention.resources')
         
         = intervention.further_resources
-
-        = render 'contacts/contacts', contacts: intervention.contacts
+        
+        %ul
+          = render intervention.links
+          = render intervention.files
