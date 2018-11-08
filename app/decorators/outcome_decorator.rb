@@ -5,9 +5,9 @@ class OutcomeDecorator < ApplicationDecorator
     h.content_tag('p') do
       [
         h.content_tag('strong', title.to_s),
-        I18n.t("outcome.description.effect.#{effect}"),
-        I18n.t("outcome.description.evidence.#{evidence}")
-      ].join.html_safe
+        I18n.t("helpers.label.outcome.description.effect.#{effect}"),
+        I18n.t("helpers.label.outcome.description.evidence.#{evidence}")
+      ].join(' ').html_safe
     end
   end
 

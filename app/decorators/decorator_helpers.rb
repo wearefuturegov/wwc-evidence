@@ -30,7 +30,7 @@ module DecoratorHelpers
   end
 
   def item_title(field_name)
-    I18n.t("#{object.class.name.parameterize}.titles.#{field_name}")
+    I18n.t("helpers.label.#{object.class.name.parameterize}.#{field_name}")
   end
 
   def header(field_name, heading_tag)

@@ -18,7 +18,7 @@
         = intervention.outcomes.list_with_header
 
       %section.section
-        %h2#effective= t('intervention.titles.effective')
+        %h2#effective= t('helpers.label.intervention.effective')
                 
         = render intervention.outcomes
 
@@ -39,9 +39,8 @@
       = render intervention.implementation
           
       %section.section
-        %h2#resources= t('intervention.titles.resources')
+        %h2#resources= t('helpers.label.intervention.resources')
         
         = intervention.further_resources
 
         = render 'contacts/contacts', contacts: intervention.contacts
-        = render 'links/links', links: intervention.links
