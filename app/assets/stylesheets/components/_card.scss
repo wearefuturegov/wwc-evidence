@@ -6,11 +6,10 @@
   padding-bottom: $baseline;
   margin-bottom: $thin;
   .details, .label, .effect, .evidence {
-    font-size: $smaller;
+    font-size: $small;
     line-height: $body;
     font-weight: 600;
     color: $gray;
-    text-transform: uppercase;
     text-align: center;
   }
   .measure-wrap {
