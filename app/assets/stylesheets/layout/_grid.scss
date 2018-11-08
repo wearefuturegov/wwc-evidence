@@ -68,6 +68,8 @@ section.section {
   }
   .measure-wrap {
     @include grid-column(5, $card-grid);
+    float: right;
+    margin-right: $gutter;
     .outcome, .effect, .evidence {
       margin-right: 20px;
       float: left;
