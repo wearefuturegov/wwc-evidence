@@ -13,6 +13,7 @@ class InterventionDashboard < Administrate::BaseDashboard
     title: Field::String,
     summary: Field::Text,
     intro: Field::SimpleMDEMarkdown,
+    headline_points: ArrayField,
     what_is_it: Field::SimpleMDEMarkdown,
     how: Field::SimpleMDEMarkdown,
     outcomes: Field::NestedHasMany,
@@ -52,6 +53,7 @@ class InterventionDashboard < Administrate::BaseDashboard
     title
     summary
     intro
+    headline_points
     what_is_it
     how
     outcomes
@@ -68,7 +70,7 @@ class InterventionDashboard < Administrate::BaseDashboard
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], tag_ids: []]
+    super + [files: [], files_to_delete: [], tag_ids: [], headline_points: []]
   end
 
   # Overwrite this method to customize how evidences are displayed

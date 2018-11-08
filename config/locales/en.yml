@@ -73,6 +73,9 @@ en:
         moderate_quality: This is based on <strong>moderate quality</strong> evidence.
         high_quality: This is based on <strong>high quality</strong> evidence.
   helpers:
+    array_field:
+      headline_points:
+        add: 'Add item'
     label:
       intervention:
         intro: Introduction

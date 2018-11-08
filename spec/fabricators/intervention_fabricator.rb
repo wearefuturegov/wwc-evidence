@@ -11,4 +11,5 @@ Fabricator(:intervention) do
   links(rand: 5)
   contacts(rand: 5)
   tags(rand: 5) { Fabricate.build(:tag) }
+  headline_points(rand: 5) { FFaker::BaconIpsum.phrase }
 end

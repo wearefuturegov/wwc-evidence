@@ -17,6 +17,7 @@ module InterventionSteps
 
     expect(intervention.title).to eq(@intervention.title)
     expect(intervention.intro).to eq(@intervention.intro)
+    expect(intervention.headline_points).to eq(@intervention.headline_points)
     expect(intervention.how).to eq(@intervention.how)
     expect(intervention.studies).to eq(@intervention.studies)
     expect(intervention.costs_benefits).to eq(@intervention.costs_benefits)
@@ -61,6 +62,7 @@ module InterventionSteps
     complete_field :title
     complete_field :summary
     complete_markdown_field :intro
+    complete_array_field :headline_points
     complete_markdown_field :what_is_it
     complete_markdown_field :how
     complete_outcomes
@@ -105,6 +107,14 @@ module InterventionSteps
 
   def complete_contact_field(field_name, contact)
     fill_in I18n.t("helpers.label.intervention[contacts_attributes][new_contacts].#{field_name}"), with: contact.send(field_name)
+  end
+
+  def complete_array_field(field_name)
+    array = @intervention.send(field_name)
+    array.each_with_index do |item, i|
+      all(:css, "textarea[name='intervention[#{field_name}][]']").last.set(item)
+      find(:css, "a#add_#{field_name}").click unless (i + 1) == array.length
+    end
   end
 
   def complete_implementation_field(field_name)
