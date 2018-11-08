@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
-    <title>scale / 6 outline icons / -1 negative</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="scale-/-6-outline-icons-/--1-negative" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" transform="translate(2.000000, 2.000000)">
-            <path d="M14.9270833,3.98958333 C15.6423647,5.21181167 16,6.54860385 16,8 C16,9.45139615 15.6423647,10.7899244 14.9270833,12.015625 C14.211802,13.2413256 13.2413256,14.211802 12.015625,14.9270833 C10.7899244,15.6423647 9.45139615,16 8,16 C6.54860385,16 5.21007557,15.6423647 3.984375,14.9270833 C2.75867443,14.211802 1.78819802,13.2413256 1.07291667,12.015625 C0.357635313,10.7899244 0,9.45139615 0,8 C0,6.54860385 0.357635313,5.21007557 1.07291667,3.984375 C1.78819802,2.75867443 2.75867443,1.78819802 3.984375,1.07291667 C5.21007557,0.357635313 6.54860385,0 8,0 C9.45139615,0 10.7899244,0.357635313 12.015625,1.07291667 C13.2413256,1.78819802 14.211802,2.76041052 14.9270833,3.98958333 Z" id="minus-circle---FontAwesome" stroke="#DB2322"></path>
-            <path d="M10.505,8.5725 L10.505,7.8575 C10.505,7.7606766 10.4696227,7.67688837 10.3988672,7.60613281 C10.3281116,7.53537725 10.2443234,7.5 10.1475,7.5 L5.8575,7.5 C5.7606766,7.5 5.67688837,7.53537725 5.60613281,7.60613281 C5.53537725,7.67688837 5.5,7.7606766 5.5,7.8575 L5.5,8.5725 C5.5,8.6693234 5.53537725,8.75311163 5.60613281,8.82386719 C5.67688837,8.89462275 5.7606766,8.93 5.8575,8.93 L10.1475,8.93 C10.2443234,8.93 10.3281116,8.89462275 10.3988672,8.82386719 C10.4696227,8.75311163 10.505,8.6693234 10.505,8.5725 Z" id="Path" fill="#D61F1F" fill-rule="nonzero"></path>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="_-" serif:id="+">
+        <circle cx="50" cy="50" r="50" style="fill:rgb(255,65,65);"/>
+        <g transform="matrix(6.12323e-17,1,-1,6.12323e-17,85,-1.12217e-14)">
+            <g>
+                <path d="M50,50L50,20" style="fill:none;stroke:rgb(235,235,235);stroke-width:10px;"/>
+            </g>
         </g>
     </g>
 </svg>
