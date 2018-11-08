@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_08_182628) do
-=======
-ActiveRecord::Schema.define(version: 2018_11_08_165636) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,10 +83,7 @@ ActiveRecord::Schema.define(version: 2018_11_08_165636) do
     t.text "when_where_how"
     t.text "outcome_notes"
     t.text "further_resources"
-<<<<<<< HEAD
     t.string "headline_points", default: [], array: true
-=======
->>>>>>> master
     t.index ["implementation_id"], name: "index_interventions_on_implementation_id"
   end
 
