@@ -9,6 +9,11 @@
     color: $white;
   }
   .sub {
-
+    a {
+      font-weight: 600;
+      &:hover {
+        color: $white;
+      }
+    }
   }
 }
