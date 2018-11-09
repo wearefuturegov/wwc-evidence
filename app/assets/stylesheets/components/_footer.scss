@@ -1,6 +1,8 @@
 footer {
   color: $white;
   background: $black;
+  font-size: $small;
+  line-height: $baseline;
   h2 {
     font-family: $stack-b;
   }
@@ -33,12 +35,12 @@ footer {
       line-height: initial;
       ul {
         li {
-          font-size: $body;
+          font-size: $small;
           font-weight: 400;
           margin-left: 0;
           margin-right: $gutter*0.5;
           a {
-            font-size: $body;
+            font-size: $small;
             text-decoration: underline;
             font-weight: 400;
           }

@@ -4,14 +4,17 @@
 }
 
 .header nav.nav, .sub nav.nav {
-  ul li {
-    display: block;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+    }
   }
 }
 
 .header nav.nav,
 .sub nav.nav {
-  @include grid-column(2, $mobile);
+  @include grid-column(4, $mobile);
   line-height: $baseline;
 }
 

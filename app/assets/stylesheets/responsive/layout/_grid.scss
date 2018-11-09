@@ -11,11 +11,30 @@ footer .footer {
   @include grid-column(12);
 }
 
+.dashboard .main {
+  @include grid-column(4, $mobile);
+}
+
+.dashboard .measure-wrap {
+  @include grid-column(4, $mobile);
+}
+
+.title {
+  @include grid-column(12);
+}
+
+.indent {
+  @include grid-column(12);
+}
+
 .dashboard {
-  .main,
-  .outcome, 
-  .effect,
-  .evidence {
-    @include grid-column(12, $card-grid);
+  .main {
+    @include grid-column(4, $mobile);
+  }
+  .measure-wrap {
+    @include grid-column(4, $mobile);
+    .outcome, .effect, .evidence {
+      width: 100%;
+    }
   }
 }
