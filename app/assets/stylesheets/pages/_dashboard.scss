@@ -133,23 +133,24 @@
   @include borderbox;
   background: $gray-b;
   padding: $gutter;
-  padding-bottom: 0;
   margin-bottom: $baseline*2;
-  .spot {
-    background: $white;
-    &.fill {
-      background: $brand;
-    }
-  }
+  // .spot {
+  //   background: $white;
+  //   &.fill {
+  //     background: $brand;
+  //   }
+  // }
   .effect {
     .meter {
       height: 32px;
     }
   }
   .measure-wrap {
-    padding-bottom: $baseline*0.5;
-    margin-bottom: $baseline*0.5;
-    border-bottom: 1px solid $white;
+    @include borderbox;
+    background: $white;
+    padding: $baseline*0.5;
+    margin-bottom: 0;
+    border-bottom: 1px solid $gray-b;
     &:last-child {
       border-bottom: none;
     }
