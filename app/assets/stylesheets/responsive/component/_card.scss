@@ -2,12 +2,15 @@
   .card {
     padding-top: $baseline;
     padding-bottom: $baseline*0.5;
+    .outcome .label {
+      margin-bottom: $baseline*0.5;
+    }
     .tags {
       margin-bottom: $baseline*0.5;
     }
     .effect, .evidence {
       margin-top: $baseline*0.125;
-      margin-bottom: $baseline*0.25;
+      margin-bottom: $baseline*0.125;
       width: calc(100%);
       &:before {
         color: $gray;
@@ -29,6 +32,9 @@
           content: "Evidence strength";
         }
       }
+      p {
+        margin-bottom: $baseline*0.5;
+      }
     }  
   }
   .menu.item {
@@ -39,4 +45,9 @@
       }
     }
   }
+}
+
+.measure-wrap .effect img {
+  margin: 0;
+  width: auto;
 }

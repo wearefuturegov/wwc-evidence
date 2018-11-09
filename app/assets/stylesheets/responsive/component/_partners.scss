@@ -1,15 +1,18 @@
-.partners {
+.partners-full section.partners {
   h2 {
     @include grid-column(4, $mobile);
   }
   .development {
     @include grid-column(4, $mobile);
+    margin-bottom: $baseline;
     img {
       width: calc(100% / 3 - #{$gutter});
     }
   }
   .research, .funders, .network {
-    @include grid-column(1, $mobile);
+    // @include grid-column(1, $mobile);
+    float: left;
+    width: calc(33.3% - #{$gutter*1.25});
     img {
       display: inline-block;
       width: calc(100%);

@@ -2,11 +2,12 @@ h1 {
   // color: $brand;
   font-size: $h1;
   line-height: calc(#{$h1} + #{$baseline*0.15});
+  margin-bottom: $baseline*0.5;
 }
 
 h2 {
   font-size: $h2;
-  line-height: calc(#{$h2} + #{$baseline*0.05});
+  line-height: calc(#{$h2} + #{$baseline*0.43});
 }
 
 .impact h2 {
