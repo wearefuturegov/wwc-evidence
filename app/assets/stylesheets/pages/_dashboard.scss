@@ -131,10 +131,16 @@
 
 .info-box.card {
   @include borderbox;
+  background: $gray-b;
   padding: $gutter;
   padding-bottom: 0;
-  border: 1px solid $gray;
   margin-bottom: $baseline*2;
+  .spot {
+    background: $white;
+    &.fill {
+      background: $brand;
+    }
+  }
   .effect {
     .meter {
       height: 32px;
