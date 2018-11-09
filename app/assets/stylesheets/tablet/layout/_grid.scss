@@ -1,0 +1,8 @@
+.dashboard {
+  .main {
+    @include grid-column(4, $card-grid);
+  }
+  .measure-wrap {
+    @include grid-column(8, $card-grid);
+  }
+}
