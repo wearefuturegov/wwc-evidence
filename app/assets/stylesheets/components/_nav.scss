@@ -15,14 +15,6 @@ nav.nav {
         position: relative;
         padding-bottom: 5px;
       }
-      // &.selected {
-      //   background: transparentize($brand, $amount);
-      //   margin-left: 0;
-      //   padding-left: $gutter;
-      //   a {
-      //     color: $black;
-      //   }
-      // }
       &.selected {
         a {
           font-weight: 600;
