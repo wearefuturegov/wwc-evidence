@@ -46,3 +46,14 @@ footer .footer {
     }
   }
 }
+
+.interventions.show .info-box.card {
+  .measure-wrap {
+    float: left;
+    width: 100%;
+    .outcome, .effect, .evidence {
+      float: left;
+      width: 100%;
+    }
+  }
+}

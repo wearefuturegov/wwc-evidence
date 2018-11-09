@@ -1,6 +1,8 @@
 footer {
   clear: both;
   .footer {
+    padding-top: $baseline;
+    padding-bottom: $baseline;
     .signup, .contact {
       margin-top: $baseline;
       margin-bottom: $baseline;
@@ -11,6 +13,9 @@ footer {
     }
     nav.nav {
       @include grid-column(10);
+    }
+    .signup {
+      margin-top: 0;
     }
   }
 }

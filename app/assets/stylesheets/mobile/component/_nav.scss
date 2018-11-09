@@ -21,3 +21,9 @@
 .sub nav.nav {
   margin-left: 0;
 }
+
+.sub, footer .footer {
+  nav.nav {
+    line-height: $baseline;
+  }
+}
