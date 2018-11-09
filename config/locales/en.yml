@@ -101,12 +101,12 @@ en:
         support: What else supports good implementation?
       outcome:
         effect:
-            not_effective: Not effective
-            low_effect: Low effect
-            moderate_effect: Moderate effect
-            high_effect: High effect
+            not_effective: Negative effect
+            low_effect: Mixed or no effect
+            moderate_effect: Tends to positive
+            high_effect: Consistently positive
         evidence:
-            poor_quality: Poor Quality
+            poor_quality: Very low quality
             low_quality: Low Quality
             moderate_quality: Moderate Quality
             high_quality: High Quality
