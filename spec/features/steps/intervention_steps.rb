@@ -98,7 +98,7 @@ module InterventionSteps
   end
 
   def complete_outcome_select_field(field_name, outcome)
-    level = I18n.t("helpers.label.outcome.#{field_name}.#{outcome.send(field_name)}")
+    level = I18n.t("helpers.options.outcome.#{field_name}.#{outcome.send(field_name)}")
     select level, from: I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}")
   end
 

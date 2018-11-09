@@ -7,7 +7,7 @@ class EnumField < Administrate::Field::Base
 
   def key_translation(klass, key, value)
     class_name = klass.to_s.downcase
-    I18n.t("helpers.label.#{class_name}.#{key}.#{value}")
+    I18n.t("helpers.options.#{class_name}.#{key}.#{value}")
   end
 
   def select_field_values(form_builder)

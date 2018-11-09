@@ -78,6 +78,18 @@ en:
     array_field:
       headline_points:
         add: 'Add item'
+    options:
+      outcome:
+        effect:
+          not_effective: Negative effect
+          low_effect: Mixed or no effect
+          moderate_effect: Tends to positive
+          high_effect: Consistently positive
+        evidence:
+          poor_quality: Very low quality
+          low_quality: Low Quality
+          moderate_quality: Moderate Quality
+          high_quality: High Quality
     label:
       intervention:
         what_is_it: What is this?
@@ -100,16 +112,6 @@ en:
         fidelity: What are the systems for maintaining fidelity?
         support: What else supports good implementation?
       outcome:
-        effect:
-            not_effective: Negative effect
-            low_effect: Mixed or no effect
-            moderate_effect: Tends to positive
-            high_effect: Consistently positive
-        evidence:
-            poor_quality: Very low quality
-            low_quality: Low Quality
-            moderate_quality: Moderate Quality
-            high_quality: High Quality
         description:
           effect:
             not_effective: "Overall, this intervention was <strong>not effective</strong>. "
