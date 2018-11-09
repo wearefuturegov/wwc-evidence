@@ -98,7 +98,7 @@ module InterventionSteps
   end
 
   def complete_outcome_select_field(field_name, outcome)
-    select outcome.send(field_name).titleize, from: I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}")
+    select I18n.t("helpers.label.outcome.#{field_name}.#{outcome.send(field_name)}"), from: I18n.t("helpers.label.intervention[outcomes_attributes][new_outcomes].#{field_name}")
   end
 
   def complete_link_field(field_name, link)
