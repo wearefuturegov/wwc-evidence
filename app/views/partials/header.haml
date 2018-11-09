@@ -6,11 +6,10 @@
     %nav.nav
       %ul
         - pages.all.each do |p|
-          %li= link_to p.title, p
-        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
-        -#   = link_to "How to use the store", 'how'
-        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
-        -#   = link_to "Outcomes framework", 'outcome-framework'
-        -# %li{ class: @section&.slug == '#' ? 'selected' : '' }
-        -#   = link_to "About the evidence store", 'about'
-= render template: "partials/sub" if @section
+          - if defined?(page)
+            %li{class: (page&.slug == p.slug ? 'selected' : '')}
+              = link_to p.title, p
+          - else
+            %li
+              = link_to p.title, p
+          
