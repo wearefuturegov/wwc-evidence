@@ -27,6 +27,14 @@ footer .footer {
   @include grid-column(12);
 }
 
+.info-title {
+  @include grid-column(12);
+}
+
+.info-box {
+  @include grid-column(4, $mobile);
+}
+
 .dashboard {
   .main {
     @include grid-column(4, $mobile);
