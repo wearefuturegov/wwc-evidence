@@ -43,8 +43,8 @@
   display: block;
   background: $white;
   margin-bottom: $baseline*0.125;
-  padding-top: $baseline;
-  padding-bottom: $baseline;
+  padding-top: $baseline*0.75;
+  padding-bottom: $baseline*0.75;
   text-transform: initial;
   .details, .label, .effect, .evidence {
     text-transform: initial;
@@ -69,10 +69,14 @@
   }
   h3 {
     font-family: $stack;
-    font-size: $h2*0.9;
+    font-size: $h2*1.1;
     font-weight: 700;
-    line-height: calc(#{$h3} + #{$baseline*0.2});
+    line-height: calc(#{$h3} + #{$baseline*0.3});
     margin-bottom: $baseline*0.5;
+  }
+  .details p {
+    font-size: $small;
+    line-height: $baseline;
   }
   p {
     font-size: $smaller;

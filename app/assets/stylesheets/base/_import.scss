@@ -15,4 +15,5 @@
 @import "pages/import"; // Pages: Page specific, context driven design.
 
 /* responsive styles */
-@import "responsive/import";
+@import "tablet/import";
+@import "mobile/import";

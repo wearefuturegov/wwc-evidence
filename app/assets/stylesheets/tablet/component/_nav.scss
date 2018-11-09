@@ -1,0 +1,17 @@
+.header nav.nav, .sub nav.nav {
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.header nav.nav {
+  line-height: $baseline*2;
+  width: 100%;
+}
+
+.sub nav.nav {
+  margin-left: 0;
+}

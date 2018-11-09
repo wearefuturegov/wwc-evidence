@@ -55,3 +55,13 @@ nav.nav {
     }
   }
 }
+
+header {
+  nav.nav {
+    @include grid-column(10);
+  }
+}
+
+footer .footer nav.nav {
+  text-align: left;
+}
