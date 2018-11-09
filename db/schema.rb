@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_08_182628) do
+ActiveRecord::Schema.define(version: 2018_11_09_105703) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,16 +36,20 @@ ActiveRecord::Schema.define(version: 2018_11_08_182628) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "banner_messages", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "singleton_guard"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["singleton_guard"], name: "index_banner_messages_on_singleton_guard", unique: true
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "title"
     t.string "url"
     t.bigint "intervention_id"
     t.index ["intervention_id"], name: "index_contacts_on_intervention_id"
-  end
-
-  create_table "evidences", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
@@ -79,7 +83,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_182628) do
     t.text "summary"
     t.text "what_is_it"
     t.text "who_does_it_work_for"
-    t.text "work_for_intro"
     t.text "when_where_how"
     t.text "outcome_notes"
     t.text "further_resources"
@@ -106,7 +109,6 @@ ActiveRecord::Schema.define(version: 2018_11_08_182628) do
     t.integer "effect"
     t.integer "evidence"
     t.bigint "intervention_id"
-    t.text "evidence_notes"
     t.text "intervention_notes"
     t.index ["intervention_id"], name: "index_outcomes_on_intervention_id"
   end
