@@ -20,7 +20,7 @@ class OutcomeDecorator < ApplicationDecorator
   end
 
   def effect_meter
-    h.image_tag "meter_#{object.effect_before_type_cast}.svg", alt: object.effect, class: 'meter'
+    h.image_tag "meter_#{object.effect_before_type_cast}.svg", alt: I18n.t("helpers.label.outcome.effect.#{object.effect}"), class: 'meter'
   end
 
   def intervention_notes
