@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :tags
     resources :pages
     resources :users, only: %i[index new create show]
-
+    resources :banner_messages, only: %i[edit update]
     root to: 'interventions#index'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
