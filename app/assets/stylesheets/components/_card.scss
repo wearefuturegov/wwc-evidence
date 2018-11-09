@@ -99,6 +99,10 @@
 }
 
 .measure-wrap .effect img {
+  border: $medium $white $style;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
   margin: 3px auto;
   width: auto;
 }
