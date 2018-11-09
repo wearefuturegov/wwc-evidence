@@ -3,7 +3,7 @@ class OutcomesDecorator < Draper::CollectionDecorator
 
   def list_with_header
     output_html(
-      h.content_tag('h2', I18n.t('helpers.label.intervention.outcomes')),
+      h.content_tag('h2', I18n.t('helpers.label.intervention.outcomes'), id: 'outcomes'),
       list
     )
   end
