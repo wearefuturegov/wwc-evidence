@@ -1,4 +1,4 @@
-class OutcomeFrameworkDecorator < ApplicationDecorator
+class PageDecorator < ApplicationDecorator
   include DecoratorHelpers
   delegate_all
 
@@ -7,6 +7,6 @@ class OutcomeFrameworkDecorator < ApplicationDecorator
   end
 
   def body
-    parse_markdown(object.body)
+    parse_markdown(object.body).html_safe
   end
 end
