@@ -113,13 +113,12 @@ section.section {
     width: 100%;
     .outcome {
       float: left;
-      width: 50%;
+      width: 44%;
     }
-    .effect {
-      width: 25%;
-    }
-    .evidence {
-      width: 25%;
+    .effect, .evidence {
+      width: 28%;
+      text-align: center;
+      line-height: 20px;
     }
   }
 }

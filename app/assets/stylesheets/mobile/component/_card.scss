@@ -35,7 +35,7 @@
       p {
         margin-bottom: $baseline*0.5;
       }
-    }  
+    }
   }
   .menu.item {
     display: none;
@@ -50,4 +50,11 @@
 .measure-wrap .effect img {
   margin: 0;
   width: auto;
+}
+.interventions.show .info-box.card {
+  .measure-wrap {
+    .effect, .evidence {
+      text-align: left;
+    }
+  }
 }
