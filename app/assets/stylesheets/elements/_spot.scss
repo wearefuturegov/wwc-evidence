@@ -9,7 +9,7 @@ $spot-size: 32px;
   margin-top: 3px;
   margin-bottom: 3px;
   border-radius: 100%;
-  background: $gray-b;
+  background: rgba($gray, 0.8);
   &.fill {
     background: $brand;
     border-color: $brand;
