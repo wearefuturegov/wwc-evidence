@@ -2,7 +2,7 @@ class InterventionDecorator < ApplicationDecorator
   delegate_all
 
   def what_is_it
-    field_with_header(:what_is_it, 'h2')
+    field_with_header(:what_is_it, 'h2', true)
   end
 
   def intro
