@@ -7,12 +7,12 @@
   outcomes_attributes:
     -
       title: Family functioning
-      description: Did family functioning improve?
+      # description: Did family functioning improve?
       effect: moderate_effect
       evidence: low_quality
     -
       title: Entry to care
-      description: Was there reduced need for children to enter care?
+      # description: Was there reduced need for children to enter care?
       effect: not_effective
       evidence: moderate_quality
   studies: The majority of the studies have been carried out in the US. There has been one study in the UK.
@@ -59,11 +59,11 @@
       ## Most interventions involved few sessions
 
       Although the most effective intervention involved intensive psychotherapy, the other effective interventions were far less intensive. Three studies showed benefits after only 2-4 home visits, and two others had 8-16 sessions.
-      
+
       ## Most interventions started when children were 3-9 months
 
       This challenges the notion that effective interventions must begin at birth and gives more scope to implement interventions later.
-      
+
       ## Video feedback was a consistent tool
 
       Video feedback featured in all but one of the successful interventions. This may be one of the “active ingredients” that help deliver the reported benefits.
