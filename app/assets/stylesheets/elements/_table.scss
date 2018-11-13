@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  margin-bottom: $baseline;
+  border: 1px solid $black;
+  
+  th,
+  td {
+    padding: $baseline / 2;
+    vertical-align: top;
+    border: 1px solid $black;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border: 2px solid 1px;
+    text-align: left;
+    font-weight: bold;
+    background-color: $gray-b;
+  }
+
+  tbody + tbody {
+    border-top: 2px solid $black;
+  }
+}
