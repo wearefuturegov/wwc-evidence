@@ -66,9 +66,9 @@ class InterventionDashboard < Administrate::BaseDashboard
     when_where_how
     costs_benefits
     implementation
-    further_resources
     case_studies
     in_summary
+    further_resources
     contacts
     links
     files
