@@ -29,6 +29,10 @@ class InterventionDecorator < ApplicationDecorator
     field_with_header(:when_where_how, 'h2', true)
   end
 
+  def case_studies
+    field_with_header(:case_studies, 'h2', true)
+  end
+
   def outcomes
     OutcomeDecorator.decorate_collection(super)
   end

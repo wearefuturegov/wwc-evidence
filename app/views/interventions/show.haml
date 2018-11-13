@@ -40,6 +40,16 @@
       %p= intervention.costs_benefits
 
     = render intervention.implementation
+    
+    %section.section
+      %p= intervention.case_studies
+    
+    - if intervention.in_summary.count > 0
+      %section.section
+        %h2= t('helpers.label.intervention.in_summary')
+        %ul
+          - intervention.in_summary.each do |point|
+            %li= point
         
     %section.section
       %h2#resources= t('intervention.titles.resources')

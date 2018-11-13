@@ -24,6 +24,8 @@ class InterventionDashboard < Administrate::BaseDashboard
     costs_benefits: Field::SimpleMDEMarkdown,
     implementation: Field::HasOne,
     further_resources: Field::SimpleMDEMarkdown,
+    case_studies: Field::SimpleMDEMarkdown,
+    in_summary: ArrayField,
     contacts: Field::NestedHasMany,
     links: Field::NestedHasMany,
     files: MultifileField,
@@ -65,6 +67,8 @@ class InterventionDashboard < Administrate::BaseDashboard
     costs_benefits
     implementation
     further_resources
+    case_studies
+    in_summary
     contacts
     links
     files
@@ -72,7 +76,7 @@ class InterventionDashboard < Administrate::BaseDashboard
   ].freeze
 
   def permitted_attributes
-    super + [files: [], files_to_delete: [], tag_ids: [], headline_points: []]
+    super + [files: [], files_to_delete: [], tag_ids: [], headline_points: [], in_summary: []]
   end
 
   # Overwrite this method to customize how evidences are displayed

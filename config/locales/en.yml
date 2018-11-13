@@ -104,6 +104,8 @@ en:
         contacts: Useful contacts
         resources: Further resources
         links: Links and files
+        case_studies: Case studies
+        in_summary: In summary...
       implementation:
         intro: How is it implemented?
         how_is_it_delivered: How is it delivered?
