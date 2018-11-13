@@ -15,3 +15,12 @@ $.fn.addArrayField = function() {
   });
   
 }
+
+$.fn.removeArrayField = function() {
+  if (this.length === 0) { return false; }
+  
+  $(this).click(function(e) {
+    $(this).parents('.array_group').remove();
+    e.preventDefault();
+  })
+}
