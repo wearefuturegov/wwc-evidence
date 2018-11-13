@@ -54,6 +54,8 @@
     %section.section
       %h2#resources= t('intervention.titles.resources')
       
+      = intervention.further_resources
+      
       - if intervention.files_and_links
         %ul.no-bullet
           - intervention.files_and_links.each do |link|
