@@ -4,7 +4,6 @@ footer {
     padding-top: $baseline;
     padding-bottom: $baseline;
     .signup, .contact {
-      margin-top: $baseline;
       margin-bottom: $baseline;
       @include grid-column(6);
     }
