@@ -1,5 +1,5 @@
 section.hero {
-  padding-top: $baseline; 
+  padding-top: $baseline*0.5;
   .tagline {
     @include grid-column(4, $mobile);
   }
@@ -9,4 +9,8 @@ section.hero {
   .link {
     @include grid-column(4, $mobile);
   }
+}
+.hero .sub {
+  font-size: 22px;
+  line-height: 32px;
 }

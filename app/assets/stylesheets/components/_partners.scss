@@ -20,6 +20,10 @@
         border-top: 3px solid #000;
       }
     }
+    img {
+      max-width: 160px;
+      max-height: 150px;
+    }
     .development {
       @include grid-column(6);
       img {
