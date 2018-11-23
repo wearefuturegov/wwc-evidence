@@ -1,7 +1,10 @@
 %section.section
   .container
     .title
+      .return_link.chevron_link
+        %span.chevron.r
+        =link_to "Return to the evidence store", root_path
       = page.title
-    
+
     .indent
       = page.body

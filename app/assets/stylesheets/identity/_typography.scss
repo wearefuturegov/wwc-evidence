@@ -12,7 +12,7 @@ strong {
 }
 
 a {
-  color: $black;
+  color: $brand;
   a:active, a:visited  {
     color: $black;
     font-weight: 600;
@@ -23,7 +23,13 @@ a {
   &:hover {
     color: $brand;
     border-bottom-color: $white;
+    text-decoration: none;
     @include ease;
+  }
+}
+header {
+  a {
+    color: $black;
   }
 }
 
@@ -120,7 +126,7 @@ h3,
   line-height: calc(#{$h3} + #{$baseline*0.25});
 }
 
-.page p, 
+.page p,
 .overview p {
   & + h2,
   & + h3 {
