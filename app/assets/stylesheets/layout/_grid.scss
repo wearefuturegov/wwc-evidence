@@ -31,6 +31,10 @@ section.section {
   @include grid-column(6);
 }
 
+.full_width {
+  @include grid-column(12);
+}
+
 .info-box {
   @include grid-column(6);
 }
@@ -75,8 +79,8 @@ section.section {
       float: left;
     }
     .outcome {
-      width: calc(45% - #{$gutter});
-      margin-right: $gutter*0.5;
+      width: calc(45% - 50px);
+      margin-right: 40px;
     }
     .effect {
       width: calc(30% - #{$gutter});
@@ -85,6 +89,12 @@ section.section {
     .evidence {
       width: calc(25% + #{$gutter});
       margin-right: 0;
+      text-align: center;
+
+      p {
+        max-width: 132px;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -120,5 +130,11 @@ section.section {
       text-align: center;
       line-height: 20px;
     }
+  }
+}
+
+.interventions.show {
+  header + section.section {
+    margin-top: 35px;
   }
 }

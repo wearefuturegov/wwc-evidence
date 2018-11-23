@@ -1,5 +1,8 @@
 %section.section
   .container
+    .return_link.chevron_link.full_width
+      %span.chevron.r
+      =link_to "Return to the evidence store", root_path
     .info-title
       %h1= intervention.title
 
@@ -7,29 +10,32 @@
 
     = render 'info_box'
 
-  .contents
-    = render 'nav'
-    
-  .col_9
+  .contents.sticky-contents
+    .sticky-inner
+      = render 'nav'
+    .blank_space
+      !="&nbsp;"
+
+  .col_9.intervention_main_content
     %section.section
       = intervention.what_is_it
-      
+
     %section.section
       = intervention.how
-      
+
     %section.section
       = intervention.outcomes.list_with_header
 
     %section.section
       %h2#effective= t('intervention.titles.effective')
-              
+
       / = render intervention.outcomes
 
       %p= intervention.outcome_notes
-          
+
     %section.section
       %p= intervention.studies
-      
+
     %section.section
       = intervention.who_does_it_work_for
 
@@ -40,22 +46,22 @@
       %p= intervention.costs_benefits
 
     = render intervention.implementation
-    
+
     %section.section
       %p= intervention.case_studies
-    
+
     - if intervention.in_summary.count > 0
       %section.section
         %h2= t('helpers.label.intervention.in_summary')
         %ul
           - intervention.in_summary.each do |point|
             %li= point
-        
+
     %section.section
       %h2#resources= t('intervention.titles.resources')
-      
+
       = intervention.further_resources
-      
+
       - if intervention.files_and_links
         %ul.no-bullet
           - intervention.files_and_links.each do |link|

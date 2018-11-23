@@ -1,13 +1,13 @@
 .tags {
   span {
-    font-family: $stack-b;
-    background: $gray;
+    // font-family: $stack-b;
+    background: $accessible-gray;
     padding: $baseline*0.25 $gutter*0.5;
     float: left;
     color: $white;
-    font-size: $tiny;
+    font-size: $smaller;
     line-height: $small;
-    font-weight: 300;
-    margin-right: $gutter*0.125;
+    // font-weight: 300;
+    margin-right: $gutter*0.5;
     }
 }

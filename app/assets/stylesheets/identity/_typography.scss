@@ -6,7 +6,15 @@ body {
   line-height: $baseline;
   background: $white;
 }
-
+.force_center, .force_center p {
+  text-align: center !important;
+}
+.force_right, .force_right p {
+  text-align: right !important;
+}
+.no_desktop {
+  display: none !important;
+}
 strong {
   font-weight: 700;
 }
