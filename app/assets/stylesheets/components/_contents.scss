@@ -1,21 +1,37 @@
 .contents {
   ul {
     padding: 0;
-    @include off-brand-d;
-    padding: $baseline*0.5;
+    background: rgba($brand, 0.25);
+    padding: $baseline*0.75;
     margin: 0;
     list-style: none;
     li {
-      margin-bottom: $baseline*0.125;
+      margin-bottom: $baseline*0.1;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
     }
     & li:first-child {
       font-weight: 600;
-      margin-bottom: $baseline*0.5;
+      margin-bottom: $baseline*0.25;
     }
     li a {
       font-size: $small;
       font-weight: 400;
-
+      color: $black;
+    }
+  }
+  .sticky-inner {
+    width: 100%;
+  }
+  &.sticky {
+    .sticky-inner {
+      position: fixed;
+      top: 25px;
+    }
+  }
+  &.reached_bottom {
+    .sticky-inner {
+      position: absolute;
     }
   }
 }

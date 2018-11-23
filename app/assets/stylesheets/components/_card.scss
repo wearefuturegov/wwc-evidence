@@ -38,6 +38,10 @@
     max-width: 1270px;
   }
 }
+.sticky-bulk {
+  height: 98px;
+  width: 100%;
+}
 #interventions .card {
   float: left;
   display: block;
@@ -52,7 +56,8 @@
   .label {
     font-size: $small;
     line-height: $body;
-    float: left;
+    margin-top: 10px;
+    text-align: right;
     p {
       font-size: $smaller;
       margin-bottom: 0;
@@ -88,6 +93,9 @@
       height: 32px;
     }
   }
+  .outcome_list {
+    padding-top: 25px;
+  }
 }
 #interventions a.card {
   &:hover {
@@ -99,7 +107,7 @@
 }
 
 .measure-wrap .effect img {
-  border: $medium $white $style;
+  border: $medium transparent $style;
   border-radius: 100%;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;

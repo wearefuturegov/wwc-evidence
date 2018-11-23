@@ -131,7 +131,7 @@
 
 .info-box.card {
   @include borderbox;
-  background: $gray-b;
+  background: #F8F8F8;
   padding: $gutter;
   margin-bottom: $baseline*2;
   // .spot {
@@ -147,19 +147,23 @@
   }
   .measure-wrap {
     @include borderbox;
-    background: $white;
     padding: $baseline*0.5;
     margin-bottom: 0;
     border-bottom: 1px solid $gray-b;
     &:last-child {
       border-bottom: none;
     }
+    .outcome {
+      .label {
+        margin-top: 5px;
+      }
+    }
   }
 }
 
 .dashboard #interventions {
   .main {
-    min-height: $baseline*10;
+    // min-height: $baseline*10;
   }
   .measure-wrap {
     float: right;

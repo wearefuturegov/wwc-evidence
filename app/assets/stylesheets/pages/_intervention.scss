@@ -1,5 +1,8 @@
 body.interventions.index {
   background: $gray-b;
+  header {
+    border-bottom: none;
+  }
 }
 .interventions.show .col_9,
 .interventions.show .info-box {
