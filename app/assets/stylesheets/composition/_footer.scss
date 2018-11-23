@@ -14,7 +14,7 @@ footer {
     nav.nav {
       @include grid-column(10);
     }
-    .signup {
+    .signup, .contact {
       margin-top: 0;
     }
   }

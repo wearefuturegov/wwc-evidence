@@ -1,10 +1,9 @@
 footer {
   color: $white;
   background: $black;
-  font-size: $small;
-  line-height: $baseline;
   h2 {
     font-family: $stack-b;
+    margin-bottom: 15px;
   }
   strong {
     font-weight: 600;
@@ -26,10 +25,7 @@ footer {
     ul {
       list-style: none;
     }
-    p {
-      font-size: $smaller;
-      font-weight: 300;
-    }
+
     nav.nav {
       font-size: $smaller;
       line-height: initial;
@@ -48,7 +44,7 @@ footer {
       }
     }
   }
-  
+
   .twitter_feed {
     background-color: $white;
     padding: 15px;

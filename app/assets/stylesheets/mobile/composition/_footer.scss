@@ -3,6 +3,9 @@ footer {
     .signup, .contact {
       @include grid-column(4, $mobile);
     }
+    .contact {
+      margin-top: 25px;
+    }
     nav.nav {
       @include grid-column(4, $mobile);
     }
