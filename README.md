@@ -1,3 +1,8 @@
+[![Build Status](http://img.shields.io/circleci/project/github/wearefuturegov/wwc-evidence.svg?style=flat-square)](https://circleci.com/gh/wearefuturegov/wwc-evidence)
+[![Coverage Status](http://img.shields.io/coveralls/wearefuturegov/wwc-evidence.svg?style=flat-square)](https://coveralls.io/r/wearefuturegov/wwc-evidence)
+[![License](http://img.shields.io/:license-apache-blue.svg?style=flat-square)](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+
 # What Works Centre - Evidence Store
 
 A Rails app to show reviews carried out by the [What Works Centre for Children's Social Care](https://whatworks-csc.org.uk/) of children's social care interventions.
