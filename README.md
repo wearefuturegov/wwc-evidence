@@ -1,24 +1,42 @@
-# README
+# What Works Centre - Evidence Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails app to show reviews carried out by the [What Works Centre for Children's Social Care](https://whatworks-csc.org.uk/) of children's social care interventions.
 
-Things you may want to cover:
+# Development
 
-* Ruby version
+## Prerequisites
 
-* System dependencies
+* PostgreSQL
+* Ruby 2.4+
 
-* Configuration
+## Setup
 
-* Database creation
+### Clone the repo
 
-* Database initialization
+```
+git clone https://github.com/wearefuturegov/hackney-fostering.git
+```
 
-* How to run the test suite
+### Install dependencies
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+bundle install
+```
 
-* Deployment instructions
+### Setup database
 
-* ...
+```
+bundle exec db:setup
+```
+
+### Run server
+
+```
+bundle exec rails s
+```
+
+The server is now running at http://localhost:3000
+
+## CMS
+
+The evidence store has a CMS located at `/admin`. The seed task sets up a user with the username `dev@wearefuturegov.com` and password `Password123`. You can set up additional users in the admin too.
