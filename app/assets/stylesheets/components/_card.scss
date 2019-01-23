@@ -96,6 +96,28 @@
   .outcome_list {
     padding-top: 25px;
   }
+
+  &.coming_soon {
+    background: rgba(255, 170, 65, 0.25);
+    margin-top: 1.45em;
+    h3 {
+      margin-bottom: 0.4em;
+    }
+
+    .chevron_link {
+      margin-top: 15px;
+
+      a {
+        margin-bottom: 0em;
+        &:hover {
+          text-decoration: none;
+        }
+        &:active {
+          margin-bottom: 0em;
+        }
+      }
+    }
+  }
 }
 #interventions a.card {
   &:hover {
