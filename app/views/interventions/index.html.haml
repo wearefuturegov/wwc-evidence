@@ -21,7 +21,7 @@
           %p
             Quality of evidence
     %ul#interventions
-      = render interventions
+      = render interventions.sort_by(&:title)
 
       %li
         .card.coming_soon
