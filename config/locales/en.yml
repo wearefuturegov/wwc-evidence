@@ -44,7 +44,7 @@ en:
       outcomes: What are the evaluated outcomes?
       effective: How effective is it?
       studies: Where has it been studied?
-      who_does_it_work_for: Who does this work for?
+      who_does_it_work_for: Who does it work for?
       when_where_how: When, where and how does it work?
       costs_benefits: What are the costs and benefits?
       how_is_it_delivered: How is it delivered?
@@ -58,7 +58,7 @@ en:
       deliverer: Who can deliver it?
       training_requirements: What are the training and supervision requirements?
       fidelity: What are the systems for maintaining fidelity?
-      support: What else supports good implementation?
+      support: What supports good implementation?
   outcome:
     titles:
       heading: What are the evaluated outcomes?
@@ -98,13 +98,13 @@ en:
         outcomes: What are the evaluated outcomes?
         effective: How effective is it?
         studies: Where has it been studied?
-        who_does_it_work_for: Who does this work for?
+        who_does_it_work_for: Who does it work for?
         when_where_how: When, where and how does it work?
         costs_benefits: What are the costs and benefits?
         contacts: Useful contacts
         resources: Further resources
         links: Links and files
-        case_studies: Case studies
+        case_studies: Case study
         in_summary: In summary...
       implementation:
         intro: How is it implemented?
@@ -112,7 +112,7 @@ en:
         deliverer: Who can deliver it?
         training_requirements: What are the training and supervision requirements?
         fidelity: What are the systems for maintaining fidelity?
-        support: What else supports good implementation?
+        support: What supports good implementation?
       outcome:
         description:
           effect:
