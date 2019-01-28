@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).bind("load", function() {
   if ($(".sticky-nav").length) {
     var originalTop = $(".sticky-nav").offset().top;
   }
