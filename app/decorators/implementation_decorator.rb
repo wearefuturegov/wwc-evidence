@@ -5,6 +5,10 @@ class ImplementationDecorator < ApplicationDecorator
     field_with_header(:intro, 'h2', true)
   end
 
+  def how_is_it_delivered
+    field_with_header(:how_is_it_delivered, 'h2', true)
+  end
+
   def deliverer
     field_with_header(:deliverer, 'h2', true)
   end
