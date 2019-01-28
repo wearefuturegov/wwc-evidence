@@ -99,12 +99,15 @@
 
   &.coming_soon {
     background: rgba(255, 170, 65, 0.25);
-
+    opacity: 0.8;
+    &:hover {
+      opacity: 1;
+    }
     h3 {
       margin-bottom: 0.4em;
     }
     .main {
-      width: 100%
+      width: calc(100% - 20px);
     }
     .chevron_link {
       margin-top: 15px;
@@ -119,6 +122,13 @@
         }
       }
     }
+  }
+}
+
+.final_card {
+  .coming_soon {
+    margin-top: 50px;
+    opacity: 1;
   }
 }
 
