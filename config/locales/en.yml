@@ -40,7 +40,7 @@ en:
   intervention:
     titles:
       what_is_it: What is this?
-      how: How is is meant to work?
+      how: How is it meant to work?
       outcomes: What are the evaluated outcomes?
       effective: How effective is it?
       studies: Where has it been studied?
@@ -94,7 +94,7 @@ en:
       intervention:
         what_is_it: What is this?
         intro: Introduction
-        how: How is is meant to work?
+        how: How is it meant to work?
         outcomes: What are the evaluated outcomes?
         effective: How effective is it?
         studies: Where has it been studied?
