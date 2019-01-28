@@ -69,10 +69,10 @@ en:
         moderate_effect: "Overall, this intevention had a <strong>moderate effect</strong>. "
         high_effect: "Overall, this intevention had a <strong>high effect</strong>. "
       evidence:
-        poor_quality: This is based on <strong>poor quality</strong> evidence.
-        low_quality: This is based on <strong>low quality</strong> evidence.
-        moderate_quality: This is based on <strong>moderate quality</strong> evidence.
-        high_quality: This is based on <strong>high quality</strong> evidence.
+        poor_quality: This is based on <strong>poor strength</strong> evidence.
+        low_quality: This is based on <strong>low strength</strong> evidence.
+        moderate_quality: This is based on <strong>moderate strength</strong> evidence.
+        high_quality: This is based on <strong>high strength</strong> evidence.
 
   helpers:
     array_field:
@@ -86,10 +86,10 @@ en:
           moderate_effect: Tends to positive
           high_effect: Consistently positive
         evidence:
-          poor_quality: Very low quality
-          low_quality: Low Quality
-          moderate_quality: Moderate Quality
-          high_quality: High Quality
+          poor_quality: Very low Strength
+          low_quality: Low Strength
+          moderate_quality: Moderate Strength
+          high_quality: High Strength
     label:
       intervention:
         what_is_it: What is this?
@@ -121,10 +121,10 @@ en:
             moderate_effect: "Overall, this intevention had a <strong>moderate effect</strong>. "
             high_effect: "Overall, this intevention had a <strong>high effect</strong>. "
           evidence:
-            poor_quality: This is based on <strong>poor quality</strong> evidence.
-            low_quality: This is based on <strong>low quality</strong> evidence.
-            moderate_quality: This is based on <strong>moderate quality</strong> evidence.
-            high_quality: This is based on <strong>high quality</strong> evidence.
+            poor_quality: This is based on <strong>poor strength</strong> evidence.
+            low_quality: This is based on <strong>low strength</strong> evidence.
+            moderate_quality: This is based on <strong>moderate strength</strong> evidence.
+            high_quality: This is based on <strong>high strength</strong> evidence.
       intervention[outcomes_attributes][new_outcomes]:
         title: Title
         description: Descripion
