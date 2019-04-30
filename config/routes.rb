@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
 
-  get '/', to: redirect('https://whatworks-csc.org.uk')
+  get '/', to: redirect('https://whatworks-csc.org.uk/evidence/evidence-store/')
   get '/pages/why-an-evidence-store', to: redirect('https://whatworks-csc.org.uk/evidence/evidence-store/why-an-evidence-store/')
   get '/pages/how-we-built-the-evidence-store', to: redirect('https://whatworks-csc.org.uk/evidence/evidence-store/evidence-standards/')
   get '/pages/evidence-standards', to: redirect('https://whatworks-csc.org.uk/evidence/evidence-store/our-ratings-explained/')
